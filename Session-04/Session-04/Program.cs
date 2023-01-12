@@ -44,7 +44,8 @@
             Console.WriteLine(secConverterNet.Convert());
             
             Console.WriteLine();
-           
+            Console.WriteLine("Exercise 7");
+
 
         }
     }
