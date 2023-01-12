@@ -21,6 +21,14 @@
             
             Console.WriteLine();
             Console.WriteLine("Exercise 3");
+            AdvancedCalculator advancedCalculator = new AdvancedCalculator(); 
+            Console.WriteLine(advancedCalculator.CalculationOne());
+            Console.WriteLine(advancedCalculator.CalculationTwo());
+            Console.WriteLine(advancedCalculator.CalculationThree());
+            Console.WriteLine(advancedCalculator.CalculationFour());
+            Console.WriteLine(advancedCalculator.CalculationFive());
+
+            Console.WriteLine();
 
 
         }
