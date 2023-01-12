@@ -22,7 +22,7 @@ namespace Session_04
             int numberOne = 10;
             int numberTwo = 5;
                 
-            return ("The division  of : "  + numberOne + " and " + numberTwo + " = " + numberOne / numberTwo) ; 
+            return ("The division  of : "  + numberOne + " / " + numberTwo + " = " + numberOne / numberTwo) ; 
 
         }
     }
