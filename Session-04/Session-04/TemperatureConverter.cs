@@ -10,9 +10,14 @@ namespace Session_04
     {
 
         public double ConvertFarenheit()
+
+
         {
+            int celcius = 35;
             double result = 0;
             //TODO convert celcius to Farenheit
+
+            result = ((celcius * 1.8) + 32);
 
 
 
@@ -22,8 +27,11 @@ namespace Session_04
 
         public double ConvertKelvin()
         {
+            int celcius = 35; 
             double result = 0;
             //TODO convert celcius to Kelvin
+
+            result = celcius + 271.15; 
 
 
             return result;
