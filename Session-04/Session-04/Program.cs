@@ -38,6 +38,13 @@
             SecConverter secConverter = new SecConverter();
             Console.WriteLine(secConverter.Convert());
 
+            Console.WriteLine();
+            Console.WriteLine("Exercise 6");
+            SecConverterNet secConverterNet = new SecConverterNet();
+            Console.WriteLine(secConverterNet.Convert());
+            
+            Console.WriteLine();
+           
 
         }
     }
