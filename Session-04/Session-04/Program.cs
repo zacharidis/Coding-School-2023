@@ -15,6 +15,12 @@
 
             Console.WriteLine();
             Console.WriteLine("Exercise 2");
+            SumDiv sumDiv = new SumDiv();
+            Console.WriteLine(sumDiv.Sum());
+            Console.WriteLine(sumDiv.Div());
+            
+            Console.WriteLine();
+            Console.WriteLine("Exercise 3");
 
 
         }
