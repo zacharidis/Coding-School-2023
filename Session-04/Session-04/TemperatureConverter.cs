@@ -15,7 +15,7 @@ namespace Session_04
         {
             int celcius = 35;
             double result = 0;
-            //TODO convert celcius to Farenheit
+            //TODO convert celsius to Farenheit
 
             result = ((celcius * 1.8) + 32);
 
@@ -29,7 +29,7 @@ namespace Session_04
         {
             int celcius = 35; 
             double result = 0;
-            //TODO convert celcius to Kelvin
+            //TODO convert celsius to Kelvin
 
             result = celcius + 271.15; 
 
