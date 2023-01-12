@@ -8,7 +8,7 @@ namespace Session_04
 {
     internal class HelloPrinter
     {
-
+        // Exercise 1
         public String Print() {
 
             string myName = "Georgios";

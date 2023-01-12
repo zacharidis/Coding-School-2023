@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_04
 {
+    // Exercise 2
     internal class SumDiv
 
     {
