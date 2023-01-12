@@ -29,7 +29,9 @@
             Console.WriteLine(advancedCalculator.CalculationFive());
 
             Console.WriteLine();
-
+            Console.WriteLine("Exercise 4");
+            AgeGenderPrinter ageGenderPrinter = new AgeGenderPrinter();
+            Console.WriteLine(ageGenderPrinter.Print());
 
         }
     }
