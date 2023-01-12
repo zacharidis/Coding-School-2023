@@ -32,6 +32,8 @@
             Console.WriteLine("Exercise 4");
             AgeGenderPrinter ageGenderPrinter = new AgeGenderPrinter();
             Console.WriteLine(ageGenderPrinter.Print());
+            
+            Console.WriteLine();
 
         }
     }
