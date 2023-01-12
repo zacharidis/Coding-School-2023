@@ -31,7 +31,7 @@ namespace Session_04
 
         public double CalculationFour()
         {
-            double result = (2 + ((13/6)*6) + Math.Sqrt(7));
+            double result = 2 + ((13/6)*6) + Math.Sqrt(7);
             return (result);
 
         }
