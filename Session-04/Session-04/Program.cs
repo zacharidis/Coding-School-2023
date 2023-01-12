@@ -34,6 +34,10 @@
             Console.WriteLine(ageGenderPrinter.Print());
             
             Console.WriteLine();
+            Console.WriteLine("Exercise 5");
+            SecConverter secConverter = new SecConverter();
+            Console.WriteLine(secConverter.Convert());
+
 
         }
     }
