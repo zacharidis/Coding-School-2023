@@ -9,7 +9,8 @@ namespace Session_05
 {
     internal class NameReversal
     {
-
+        // Exercise 1
+        // Reverse a string -- my name --
 
         public string Reverse(string name)
         {
