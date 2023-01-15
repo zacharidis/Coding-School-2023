@@ -81,7 +81,7 @@
                 } else
                 {
                     // call the calculator 
-                    Console.WriteLine(primeCalculator.Find(50));
+                    Console.WriteLine(primeCalculator.Find(inputPrime));
                     exitFlag = true;
 
                 }
