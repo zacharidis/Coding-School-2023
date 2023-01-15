@@ -66,6 +66,7 @@
 
             Console.WriteLine();
             Console.WriteLine("Exercise 3");
+            PrimeCalculator primeCalculator = new PrimeCalculator();    
 
             exitFlag = false;
             do
@@ -76,10 +77,12 @@
 
                 if (inputPrime == 1 || inputPrime == 0)
                 {
-                    Console.WriteLine("Something is wrong  please try again");
+                    Console.WriteLine("Please enter a value of 2 or greater. Try again");
                 } else
                 {
                     // call the calculator 
+                    Console.WriteLine(primeCalculator.Find(50));
+                    exitFlag = true;
 
                 }
 
