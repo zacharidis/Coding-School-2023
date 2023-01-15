@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_05
 {
-    internal class ArrayOragnizer
+    internal class ArrayOrganizer
     {
 
 
