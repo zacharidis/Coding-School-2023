@@ -95,8 +95,28 @@
             Console.WriteLine("Exercise 4 : ");
             Console.WriteLine("Calcuate the cartesian product of  : ");
             Console.WriteLine("[2,4,9,12] and [1,3,7,10]");
-            //call the function
+            
+            
+            DescartesCalculator descartesCalculator = new DescartesCalculator();
+            
 
+            // send the 2 arrays to the object method
+            int[] arrayOne = { 2, 4, 9, 12 };
+            int[] arrayTwo = { 1, 3, 7, 10 }; 
+            int length = arrayOne.Length * arrayTwo.Length;
+            
+            int[] localArray = new int[length];
+
+            Console.WriteLine("The Cartesian product of these arrays is : ");
+
+
+            localArray = descartesCalculator.Calculate(arrayOne, arrayTwo, length);
+
+             for (int i = 0; i < localArray.Length; i ++ )
+            {
+                Console.Write(localArray[i]);
+                 Console.Write(',');
+            }
 
 
 
