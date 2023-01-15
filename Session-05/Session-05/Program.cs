@@ -109,7 +109,7 @@
 
             Console.WriteLine("The Cartesian product of these arrays is : ");
 
-
+            // createing new local array to hold the returned array vals
             localArray = descartesCalculator.Calculate(arrayOne, arrayTwo, length);
 
              for (int i = 0; i < localArray.Length; i ++ )
