@@ -1,4 +1,6 @@
-﻿namespace Session_05
+﻿using System;
+
+namespace Session_05
 {
     internal class Program
     {
@@ -122,6 +124,21 @@
 
 
 
-        }
+
+
+
+
+
+
+            Console.WriteLine();
+            Console.WriteLine("Exercise 5 : ");
+            Console.WriteLine("Sort the following array: [ 0, -2, 1, 20, -31, 50 , -4, 17, 89, 100 ] from the lowest to the highest value ");
+
+            int[] arrayUnsorted = { 0, -2, 1, 20, -31, 50, -4, 17, 89, 100 };
+
+            // call the
+
+
+    }
     }
 }
