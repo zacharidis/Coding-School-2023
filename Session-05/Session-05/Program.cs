@@ -17,6 +17,9 @@
             Console.WriteLine("The reverse is " + nameReversal.Reverse(myName));
 
 
+
+
+
             Console.WriteLine();
             Console.WriteLine("Exercise 2");
             SumProductCalculator calculator = new SumProductCalculator();
@@ -57,7 +60,37 @@
 
 
             } while(!exitFlag);
-            
+
+
+
+
+            Console.WriteLine();
+            Console.WriteLine("Exercise 3");
+
+            exitFlag = false;
+            do
+            {
+                Console.WriteLine("Please enter a positive integer to calculate the prime numbers in the range of 1...n");
+                int inputPrime = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"Your number is : {inputPrime}");
+
+                if (inputPrime == 1 || inputPrime == 0)
+                {
+                    Console.WriteLine("Something is wrong  please try again");
+                } else
+                {
+                    // call the calculator 
+
+                }
+
+
+            } while(!exitFlag);
+         
+
+
+
+
+
 
 
 
