@@ -19,6 +19,7 @@
 
             Console.WriteLine();
             Console.WriteLine("Exercise 2");
+            SumProductCalculator calculator = new SumProductCalculator();
 
             bool exitFlag = false;
 
@@ -40,10 +41,11 @@
 
                     if (inputChoice == 1)
                     {
-                        // call sum calculation
+                        Console.WriteLine($"The sum of numbers 1 to {inputNumber} is : {calculator.CalculateSum(inputNumber)}");
+                        
                     } else
                     {
-                        // call product calculation
+                        Console.WriteLine($"The product of numbers 1 to {inputNumber} is : {calculator.CalculateProduct(inputNumber)}");
                     }
                     
 
