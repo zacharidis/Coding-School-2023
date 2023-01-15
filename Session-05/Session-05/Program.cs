@@ -88,9 +88,14 @@
 
 
             } while(!exitFlag);
-         
 
 
+
+            Console.WriteLine();
+            Console.WriteLine("Exercise 4 : ");
+            Console.WriteLine("Calcuate the cartesian product of  : ");
+            Console.WriteLine("[2,4,9,12] and [1,3,7,10]");
+            //call the function
 
 
 
