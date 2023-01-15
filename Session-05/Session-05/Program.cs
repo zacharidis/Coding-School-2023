@@ -134,9 +134,26 @@ namespace Session_05
             Console.WriteLine("Exercise 5 : ");
             Console.WriteLine("Sort the following array: [ 0, -2, 1, 20, -31, 50 , -4, 17, 89, 100 ] from the lowest to the highest value ");
 
-            int[] arrayUnsorted = { 0, -2, 1, 20, -31, 50, -4, 17, 89, 100 };
+            ArrayOragnizer arrayOragnizer   = new ArrayOragnizer();
 
-            // call the
+            int[] arrayUnsorted = { 0, -2, 1, 20, -31, 50, -4, 17, 89, 100 };
+            int[] arraySorted = arrayOragnizer.Sort(arrayUnsorted);
+            Console.WriteLine("The sorted array is : ");
+
+            for (int i = 0; i < 
+                arraySorted.Length; i ++ )
+            {
+                Console.WriteLine(arraySorted[i]);
+            }
+
+
+            Console.WriteLine();
+            Console.WriteLine("End of Session-05");
+
+
+
+
+     
 
 
     }
