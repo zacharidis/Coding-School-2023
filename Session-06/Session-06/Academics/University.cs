@@ -44,7 +44,7 @@ namespace Session_06.Academics
         
         public University(Guid id, string name , int yearsInService , Student[] students): base(id, name, yearsInService) {}
 
-        public University(Guid id , string name , int yearsInService , Student[] students, Grade[] grades, Course[] courses, Schedule[] scheduledCourse) : base(id,name,yearsInService)
+        public University(Guid id , string name , int yearsInService , Student[] students, Grade[] grades, Course[] courses, Schedule[] scheduledCourses) : base(id,name,yearsInService)
         {
 
         }
