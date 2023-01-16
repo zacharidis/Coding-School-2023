@@ -39,5 +39,10 @@ namespace Session_06.Academics
         }
 
 
+        public string GetName() { return this.Name; }
+
+        public void SetName(string name) { this.Name = name;}
+
+
     }
 }
