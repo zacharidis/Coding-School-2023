@@ -1,6 +1,7 @@
 ﻿using Session_06.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -61,7 +62,18 @@ namespace Session_06.Stuff
         }
 
 
-    }
+
+        // methods 
+
+        public void Teach(Course course , DateTime datetime){}
+
+        public void SetGrade(Student studentId , Course courseId , int grade){}
+
+        public string GetName()
+        {
+            return "Dr." + this.Name;
+
+        }
 
 
 
