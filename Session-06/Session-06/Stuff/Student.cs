@@ -73,7 +73,7 @@ namespace Session_06.Stuff
 
         }
 
-        public void WriteExam(Course course , DateTime date) {}
+        public void WriteExam(Course course , DateTime datetime) {}
 
 
     }
