@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,9 +22,50 @@ namespace Session_06.Stuff
 
         }
 
-       
+
+        public Professor(Guid id) : base(id)
+        {
+            this.Id = id;
+        }
+
+
+        public Professor(Guid id, string name) : base(id,name)
+        {
+            this.Id = id;
+            this.Name = name;
+            
+        }
+
+        public Professor(Guid id , string name , int age) :base(id,name,age)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Age = age;
+        }
+
+        public Professor(Guid id, string name, int age ,string rank) : base(id, name, age)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Age = age;
+            this.Rank = rank;
+        }
+
+        public Professor(Guid id, string name, int age,string rank , Course[] courses) : base(id, name, age)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Age = age;
+            this.Rank = rank;
+            this.Courses = courses;
+        }
+
+
+    }
+
+
 
 
 
     }
-}
+

@@ -27,6 +27,8 @@ namespace Session_06.Stuff
 
         public Person(Guid  id, string name )
         {
+            this.Id = id;
+            this.Name = name;
 
         }
         public Person(Guid id , string name , int age)
@@ -37,6 +39,7 @@ namespace Session_06.Stuff
             this.Age = age;
         }
 
+        
 
         // methods 
         public string GetName()
