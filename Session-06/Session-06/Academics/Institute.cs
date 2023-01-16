@@ -35,7 +35,7 @@ namespace Session_06.Academics
         {
             this.YearsInService = yearsInService;
             this.Name = name;
-            this.YearsInService = yearsInService;
+            
         }
 
 
