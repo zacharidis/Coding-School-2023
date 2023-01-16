@@ -71,7 +71,7 @@ namespace Session_06.Stuff
 
         public string GetName()
         {
-            return "Dr." + this.Name;
+            return "Dr. " + this.Name;
 
         }
 
