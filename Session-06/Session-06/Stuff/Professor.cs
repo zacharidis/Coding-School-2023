@@ -13,7 +13,7 @@ namespace Session_06.Stuff
     {
         // properties
         public string? Rank { get; set; }
-        public Course[]? Courses    { get; set; }
+        public Course[]? Courses { get; set; }
 
         // constructors 
 
@@ -30,21 +30,21 @@ namespace Session_06.Stuff
         }
 
 
-        public Professor(Guid id, string name) : base(id,name)
+        public Professor(Guid id, string name) : base(id, name)
         {
             this.Id = id;
             this.Name = name;
-            
+
         }
 
-        public Professor(Guid id , string name , int age) :base(id,name,age)
+        public Professor(Guid id, string name, int age) : base(id, name, age)
         {
             this.Id = id;
             this.Name = name;
             this.Age = age;
         }
 
-        public Professor(Guid id, string name, int age ,string rank) : base(id, name, age)
+        public Professor(Guid id, string name, int age, string rank) : base(id, name, age)
         {
             this.Id = id;
             this.Name = name;
@@ -52,7 +52,7 @@ namespace Session_06.Stuff
             this.Rank = rank;
         }
 
-        public Professor(Guid id, string name, int age,string rank , Course[] courses) : base(id, name, age)
+        public Professor(Guid id, string name, int age, string rank, Course[] courses) : base(id, name, age)
         {
             this.Id = id;
             this.Name = name;
@@ -65,9 +65,9 @@ namespace Session_06.Stuff
 
         // methods 
 
-        public void Teach(Course course , DateTime datetime){}
+        public void Teach(Course course, DateTime datetime) { }
 
-        public void SetGrade(Student studentId , Course courseId , int grade){}
+        public void SetGrade(Student studentId, Course courseId, int grade) { }
 
         public string GetName()
         {
@@ -80,4 +80,5 @@ namespace Session_06.Stuff
 
 
     }
+}
 
