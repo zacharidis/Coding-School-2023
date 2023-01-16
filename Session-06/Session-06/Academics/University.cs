@@ -11,12 +11,16 @@ namespace Session_06.Academics
     internal class University:Institute
     {
         // properties
-        public Student[]? Students { get; set; }
-        public Course[]? Courses { get; set; }
+
+        public Student[] Students = new Student[30];
+
+        public Course[] Courses = new Course[20];
+        
+        public Schedule[] Schedules = new Schedule[60];
 
         public Grade[]? Grades { get; set; }
 
-        public Schedule[]? ScheduledCourse { get; set; }
+     
 
 
         // Constructor 
