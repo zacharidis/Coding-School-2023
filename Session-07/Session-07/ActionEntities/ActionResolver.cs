@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.Tracing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,12 +12,7 @@ namespace Session_07.ActionEntities
 {
     internal class ActionResolver
     {
-        public enum ActionEnum
-        {
-            Convert,
-            Uppercase,
-            Reverse
-        }
+      
 
         //methods
         public MessageLogger? Logger{ get; set; }
@@ -46,24 +42,26 @@ namespace Session_07.ActionEntities
         }
 
 
-        public void Convert(Message message)
+       
+         public void Convert(ActionRequest request)
         {
-            decimal inputValue;
-           
-            String inputMessage = message.MessageBody.ToString(); 
+            decimal inputNumber = 0m;
 
-            if(Decimal.TryParse(inputMessage, out inputValue))
+            if(Decimal.TryParse(request.Input, out inputNumber))
             {
-
+                //convert to binary 
             }
 
-          
+           
+        }
 
+         
+         public void Uppercase(ActionRequest request)
+        {
 
 
 
         }
-
 
 
 

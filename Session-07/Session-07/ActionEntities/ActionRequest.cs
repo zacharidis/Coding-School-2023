@@ -8,10 +8,19 @@ namespace Session_07.ActionEntities
 {
     internal class ActionRequest
     {
+
+        public enum ActionEnum
+        {
+            Convert,
+            Uppercase,
+            Reverse
+        }
+
+        public ActionEnum Action { get; set; }
         // properties 
         public Guid RequestID { get; set; }
         public String Input { get; set; }
-        public Action ActionEnum { get; set; }
+        
 
 
         public ActionRequest()
