@@ -24,6 +24,21 @@ namespace Session_07.MessagingEntities
 
         // methods 
 
+        public Message[] ReadAll()
+        {
+            return Messages;
+        }
         
+        public void Clear()
+        {
+            Message[] messages = null;
+           
+        }
+
+        public void Write(Message message)
+        {
+           
+        }
+
     }
 }
