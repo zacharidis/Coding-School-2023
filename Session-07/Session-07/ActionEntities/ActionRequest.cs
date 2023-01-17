@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace Session_07.ActionEntities
 {
+
+    public enum ActionEnum
+    {
+        Convert,
+        Uppercase,
+        Reverse
+    }
     internal class ActionRequest
     {
 
-        public enum ActionEnum
-        {
-            Convert,
-            Uppercase,
-            Reverse
-        }
+     
 
         public ActionEnum Action { get; set; }
         // properties 
