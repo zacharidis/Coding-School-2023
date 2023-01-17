@@ -63,6 +63,12 @@ namespace Session_07.ActionEntities
 
         }
 
+         public void Reverse(ActionRequest request)
+        {
+
+
+
+        }
 
 
 
