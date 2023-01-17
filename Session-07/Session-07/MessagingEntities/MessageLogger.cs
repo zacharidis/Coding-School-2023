@@ -24,6 +24,7 @@ namespace Session_07.MessagingEntities
 
         // methods 
 
+
         public Message[] ReadAll()
         {
             return Messages;
@@ -31,6 +32,7 @@ namespace Session_07.MessagingEntities
         
         public void Clear()
         {
+            // null the messages array
             Message[] messages = null;
            
         }
