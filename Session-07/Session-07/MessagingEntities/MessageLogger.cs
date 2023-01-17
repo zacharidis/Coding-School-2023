@@ -8,5 +8,22 @@ namespace Session_07.MessagingEntities
 {
     internal class MessageLogger
     {
+
+        //properties
+        public Message[] Messages { get; set; }
+
+        // constructor 
+
+        public MessageLogger() { }
+
+        public MessageLogger(Message[] messages)
+        {
+
+            Messages = messages;
+        }
+
+        // methods 
+
+        
     }
 }
