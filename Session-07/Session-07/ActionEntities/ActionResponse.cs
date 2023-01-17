@@ -8,5 +8,14 @@ namespace Session_07.ActionEntities
 {
     internal class ActionResponse
     {
+        public Guid RequestID { get; set; }
+        public Guid ResponseID { get; set; }    
+        public String Output { get; set; }
+
+
+        public ActionResponse()
+        {
+
+        }
     }
 }
