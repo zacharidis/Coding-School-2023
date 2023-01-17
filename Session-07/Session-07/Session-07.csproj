@@ -8,9 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="ActionEntities\" />
-    <Folder Include="MessagingEntities\" />
-  </ItemGroup>
-
 </Project>
