@@ -8,5 +8,9 @@ namespace Session_07.MessagingEntities
 {
     internal class Message
     {
+        public Guid ID { get; set; }
+        public DateTime TimeStamp { get; set; }
+
+        public String? MessageBody { get; set; }
     }
 }
