@@ -30,10 +30,31 @@ namespace Session_07.ActionEntities
         }
 
         
-        public ActionResponse Execute(ActionRequest request)
+        public ActionResponse Execute(ActionEnum actionEnum)
         {
 
+            ActionResponse response;
+          
+
+
+
+
+            if (actionEnum == ActionEnum.Uppercase) {
+
+              
             
+            } else if(actionEnum == ActionEnum.Convert)
+            {
+
+
+            } else if (actionEnum==ActionEnum.Reverse)
+            {
+
+            }
+            else
+            {
+                response = new ActionResponse();
+            }
 
 
 
