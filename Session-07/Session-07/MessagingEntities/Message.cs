@@ -12,5 +12,22 @@ namespace Session_07.MessagingEntities
         public DateTime TimeStamp { get; set; }
 
         public String? MessageBody { get; set; }
+
+
+
+        public Message()
+        {
+
+        }
+
+        public Message(Guid id , DateTime dateTime , String messageBody)
+        {
+
+            ID = id;
+            TimeStamp = dateTime;
+            MessageBody = messageBody;
+        }
     }
+
+  
 }
