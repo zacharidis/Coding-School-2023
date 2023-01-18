@@ -25,7 +25,7 @@ namespace Session_07.ActionEntities
 
         public ActionRequest()
         {
-            RequestId= Guid.NewGuid();
+            RequestID= Guid.NewGuid();
         }
     }
 }
