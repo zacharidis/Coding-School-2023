@@ -25,58 +25,81 @@ namespace Session_07.ActionEntities
     internal class ActionResolver
     {
       
+        
 
-        //methods
+        //properties
         public MessageLogger? Logger{ get; set; }
 
         // Constuctors 
 
         public ActionResolver()
         {
+            Logger = new MessageLogger();
 
         }
+
+        // methods 
+
+      
+
+        
+        public ActionResponse Execute(ActionRequest request)
+        {
+
+            ActionResponse response = new ActionResponse();
+            response.ResponseID = Guid.NewGuid();  // the guid gets initialized
+            response.RequestID = request.RequestID;
+
+            //TODO add logger functionality
+
+            try
+            {
+                switch (request.Action)
+                {
+                    case ActionEnum.Convert:
+                        //log convert action 
+                        // response.Output = Convert(request.Input);
+                        break;
+                        case ActionEnum.Uppercase:
+                        //Log uppercase string converstion 
+                        //Response.Output = Uppercase(request.Input);
+                        break; 
+                        case ActionEnum.Reverse:
+                        // log the string reversal 
+                       // response.Output = Reverse(request.Input); 
+                        break;
+
+                         default:
+
+                        // show an error message 
+                        break;
+
+                }
+            } catch (Exception ex)
+            {
+               // goes to logger Log(ex.Message);
+            } 
+             finally
+            {
+                // log the end of execution 
+            }
+
+
+
+
+
+            return response;
+
+        }
+
 
         public ActionResolver(MessageLogger messageLogger)
         {
 
         }
 
-        
-        public ActionResponse Execute(ActionEnum actionEnum)
-        {
 
-            ActionResponse response;
-          
-
-
-
-
-            if (actionEnum == ActionEnum.Uppercase) {
-
-              
-            
-            } else if(actionEnum == ActionEnum.Convert)
-            {
-
-
-            } else if (actionEnum==ActionEnum.Reverse)
-            {
-
-            }
-            else
-            {
-                response = new ActionResponse();
-            }
-
-
-
-            return null;
-
-        }
-
-
-       
-         public void Convert(ActionRequest request)
+        public void Convert(ActionRequest request)
         {
             decimal inputNumber = 0m;
 
