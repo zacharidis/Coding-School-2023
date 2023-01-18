@@ -10,36 +10,45 @@ namespace Session_07.MessagingEntities
     {
 
         //properties
-        public Message[] Messages { get; set; }
+         public Message[] Messages { get; set; }
+         private int _messageCounter = 0; // pinpoints the array pointer
 
         // constructor 
 
-        public MessageLogger() { }
+        
 
-        public MessageLogger(Message[] messages)
+        public MessageLogger()
         {
 
-            Messages = messages;
+           Messages = new Message[1000];
         }
 
         // methods 
 
 
-        public Message[] ReadAll()
+        public void ReadAll()
         {
-            return Messages;
+            foreach (Message message in Messages)
+            {
+                if(message != null )
+                {
+                    Console.WriteLine(message.Text);
+                }
+            }
         }
         
         public void Clear()
         {
             // null the messages array
             Message[] messages = null;
+            _messageCounter = 0; // pointer goes to 0
            
         }
 
         public void Write(Message message)
         {
-           
+            Messages[_messageCounter] = message;
+            _messageCounter++;
         }
 
     }
