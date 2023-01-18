@@ -93,37 +93,36 @@ namespace Session_07.ActionEntities
         }
 
 
-        public ActionResolver(MessageLogger messageLogger)
+         private void Log(X500DistinguishedName text)
         {
+            Logger.Write(new Message("----------"));
 
+            Message message = new Message(text);
+            Logger.Write(message);
         }
 
 
-        public void Convert(ActionRequest request)
+        public void Convert(string input)
         {
-            decimal inputNumber = 0m;
-
-            if(Decimal.TryParse(request.Input, out inputNumber))
-            {
-                //convert to binary 
-            }
-
+            StringConvert convert = new StringConvert();
+            convert.Text = input;
+            return convert.Manipulate();
            
         }
 
          
-         public void Uppercase(ActionRequest request)
+         public string Uppercase(string input)
         {
+            string converted = input.ToString();
 
-
-
+            return converted.ToUpper();
         }
 
-         public void Reverse(ActionRequest request)
+         public string Reverse(string input)
         {
+            //
 
-
-
+            return string.Empty;
         }
 
 
