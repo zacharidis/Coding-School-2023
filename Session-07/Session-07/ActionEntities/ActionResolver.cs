@@ -1,6 +1,7 @@
 ﻿using Session_07.MessagingEntities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.Tracing;
 using System.Linq;
@@ -57,9 +58,10 @@ namespace Session_07.ActionEntities
                 switch (request.Action)
                 {
                     case ActionEnum.Convert:
-                        //log convert action 
-                        // response.Output = Convert(request.Input);
+                        Log("CONVERT:");
+                        response.Output = Convert(request.Input);
                         break;
+
                         case ActionEnum.Uppercase:
                         //Log uppercase string converstion 
                         //Response.Output = Uppercase(request.Input);
@@ -102,11 +104,11 @@ namespace Session_07.ActionEntities
         }
 
 
-        public void Convert(string input)
+        public string Convert(string input)
         {
-            //
-            convert.Text = input;
-            return convert.Manipulate();
+            string converted = input.ToString();
+            return converted;
+
            
         }
 
