@@ -10,6 +10,18 @@ using System.Threading.Tasks;
 
 namespace Session_07.ActionEntities
 {
+
+
+
+
+      // the enum for possible actions 
+    public enum ActionEnum { 
+    Convert,
+    Uppercase,
+    Reverse 
+    
+     }
+
     internal class ActionResolver
     {
       
