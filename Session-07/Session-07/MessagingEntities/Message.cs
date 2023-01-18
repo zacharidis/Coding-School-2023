@@ -11,21 +11,22 @@ namespace Session_07.MessagingEntities
         public Guid ID { get; set; }
         public DateTime TimeStamp { get; set; }
 
-        public String? MessageBody { get; set; }
+        public String? Text { get; set; }
 
 
 
         public Message()
         {
-
+            ID = Guid.NewGuid();
         }
 
-        public Message(Guid id , DateTime dateTime , String messageBody)
+        public Message(string text)
         {
 
-            ID = id;
-            TimeStamp = dateTime;
-            MessageBody = messageBody;
+            ID = Guid.NewGuid();
+            TimeStamp = DateTime.Now;
+            Text = text;
+
         }
     }
 
