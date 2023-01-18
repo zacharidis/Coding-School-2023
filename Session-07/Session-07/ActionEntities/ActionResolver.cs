@@ -83,7 +83,7 @@ namespace Session_07.ActionEntities
             } 
              finally
             {
-                Log("EXECTION ENDED")
+                Log("EXECTION ENDED");
             }
 
 
