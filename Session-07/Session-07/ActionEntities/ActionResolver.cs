@@ -73,17 +73,17 @@ namespace Session_07.ActionEntities
 
                          default:
 
-                        // show an error message 
+                        Log("INVALID ACTION");
                         break;
 
                 }
             } catch (Exception ex)
             {
-               // goes to logger Log(ex.Message);
+               Log(ex.ToString());
             } 
              finally
             {
-                // log the end of execution 
+                Log("EXECTION ENDED")
             }
 
 
