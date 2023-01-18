@@ -104,7 +104,7 @@ namespace Session_07.ActionEntities
 
         public void Convert(string input)
         {
-            StringConvert convert = new StringConvert();
+            //
             convert.Text = input;
             return convert.Manipulate();
            

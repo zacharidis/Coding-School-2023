@@ -9,7 +9,7 @@ namespace Session_07.ActionEntities
 
      public class ActionEntity
     {
-        public Guid RequestId { get; set; }
+        public Guid RequestID { get; set; }
     }
   
     internal class ActionRequest : ActionEntity 
