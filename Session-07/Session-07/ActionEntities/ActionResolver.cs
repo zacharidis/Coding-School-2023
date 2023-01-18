@@ -93,7 +93,7 @@ namespace Session_07.ActionEntities
         }
 
 
-         private void Log(X500DistinguishedName text)
+         private void Log(string text)
         {
             Logger.Write(new Message("----------"));
 
