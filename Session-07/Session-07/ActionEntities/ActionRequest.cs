@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 namespace Session_07.ActionEntities
 {
 
+     public class ActionEntity
+    {
+        public Guid RequestId { get; set; }
+    }
   
     internal class ActionRequest
     {
