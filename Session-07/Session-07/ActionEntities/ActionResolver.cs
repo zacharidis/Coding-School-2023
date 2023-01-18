@@ -63,12 +63,12 @@ namespace Session_07.ActionEntities
                         break;
 
                         case ActionEnum.Uppercase:
-                        //Log uppercase string converstion 
-                        //Response.Output = Uppercase(request.Input);
+                        Log("UPPERCASE");
+                        response.Output = Uppercase(request.Input);
                         break; 
                         case ActionEnum.Reverse:
-                        // log the string reversal 
-                       // response.Output = Reverse(request.Input); 
+                        Log("RERVERSE");
+                        response.Output = Reverse(request.Input); 
                         break;
 
                          default:
