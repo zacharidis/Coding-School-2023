@@ -12,21 +12,20 @@ namespace Session_07.ActionEntities
         public Guid RequestId { get; set; }
     }
   
-    internal class ActionRequest
+    internal class ActionRequest : ActionEntity 
     {
 
      
 
+        public string Input { get; set; }
         public ActionEnum Action { get; set; }
-        // properties 
-        public Guid RequestID { get; set; }
-        public String Input { get; set; }
+
         
 
 
         public ActionRequest()
         {
-
+            RequestId= Guid.NewGuid();
         }
     }
 }
