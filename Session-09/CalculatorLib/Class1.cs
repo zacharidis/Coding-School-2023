@@ -44,5 +44,29 @@ namespace CalculatorLib
             return (inputOne + inputTwo).ToString();
         }
 
+        public string Subtract(decimal inputOne , decimal inputTwo)
+        {
+            return (inputOne - inputTwo).ToString();
+        }
+
+        public string Divide(decimal inputOne , decimal inputTwo)
+        {
+            return (inputOne / inputTwo).ToString();
+        }
+
+        public string Multiply(decimal inputOne , decimal inputTwo) { 
+            
+            return (inputOne * inputTwo).ToString();
+            } 
+
+        public string Power(decimal inputOne , decimal inputTwo)
+        {
+            return (Math.Pow((double)inputOne, (double)inputTwo).ToString());
+        }
+
+        public string Root(decimal inputOne)
+        {
+            return (Math.Sqrt((double)inputOne).ToString());
+        }
     }
 }
