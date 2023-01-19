@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorLib
 {
-    internal class Root
+    public  class Root
     {
         public string Calculate(double inputOne)
         {
