@@ -14,25 +14,16 @@ namespace Session_09
         public bool isValid(string lastInput)
 
         {
-            if (lastInput.EndsWith("/") ) { 
-
-                return false;
-            } else if (lastInput.EndsWith("+") )
-            {
-                return false;
-            } else if (lastInput.EndsWith("-") )
-            {
-                return false;
-            } else if (lastInput.EndsWith("^")) {
-                return false;
-            } else if (lastInput.EndsWith("r") ) {
-                return false;
-             } else
-            {
+            if ((lastInput.EndsWith("/")) || 
+                ((lastInput.EndsWith("+")) ||
+                ((lastInput.EndsWith("-")) ||
+                ((lastInput.EndsWith("^")) ||
+                ((lastInput.EndsWith("r")))))))
+           {
                 return false;
             }
-
             return true;
+            
             
         }
 
@@ -92,6 +83,59 @@ namespace Session_09
         private void button12_Click(object sender, EventArgs e)
         {
             ctrlTxtExpression.Text = ctrlTxtExpression.Text + "0";
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (isValid(ctrlTxtExpression.Text)) {
+
+                ctrlTxtExpression.Text = ctrlTxtExpression.Text + "+";
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (isValid(ctrlTxtExpression.Text))
+            {
+
+                ctrlTxtExpression.Text = ctrlTxtExpression.Text + "-";
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (isValid(ctrlTxtExpression.Text))
+            {
+
+                ctrlTxtExpression.Text = ctrlTxtExpression.Text + "*";
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (isValid(ctrlTxtExpression.Text))
+            {
+
+                ctrlTxtExpression.Text = ctrlTxtExpression.Text + "/";
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (isValid(ctrlTxtExpression.Text))
+            {
+
+                ctrlTxtExpression.Text = ctrlTxtExpression.Text + "^";
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (isValid(ctrlTxtExpression.Text))
+            {
+
+                ctrlTxtExpression.Text = ctrlTxtExpression.Text + "r";
+            }
         }
     }
 }
