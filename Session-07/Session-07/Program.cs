@@ -16,7 +16,7 @@ namespace Session_07
             ActionRequest request = new ActionRequest()
             {
                 Input = "ABCDEFGHIJKLM",
-                Action = ActionEnum.Reverse
+                Action = ActionEnum.Uppercase
             };
 
         // bootstraping some objects 
