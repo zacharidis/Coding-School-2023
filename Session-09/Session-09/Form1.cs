@@ -1,5 +1,6 @@
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Windows.Forms;
+using CalculatorLib;
 
 namespace Session_09
 {
@@ -136,6 +137,14 @@ namespace Session_09
 
                 ctrlTxtExpression.Text = ctrlTxtExpression.Text + "r";
             }
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+
+        {
+            CalculatorLib.Class1 class1= new CalculatorLib.Class1();
+            class1.Calculate("1+1");
+            
         }
     }
 }

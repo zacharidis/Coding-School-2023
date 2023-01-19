@@ -144,6 +144,7 @@
             this.button19.TabIndex = 18;
             this.button19.Text = "=";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button11
             // 
