@@ -154,5 +154,10 @@ namespace Session_09
             ctrlTxtExpression.Text = string.Empty;
             
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ctrlTxtExpression.Text = ctrlTxtExpression.Text + ".";
+        }
     }
 }
