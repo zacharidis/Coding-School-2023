@@ -135,7 +135,7 @@ namespace Session_09
             if (isValid(ctrlTxtExpression.Text))
             {
 
-                CalculatorLib.Class1 root = new CalculatorLib.Class1();
+                CalculatorLib.Calculator root = new CalculatorLib.Calculator();
                 ctrlTxtResults.Text = root.Root(double.Parse(ctrlTxtExpression.Text));
             }
         }
@@ -143,7 +143,7 @@ namespace Session_09
         private void button19_Click(object sender, EventArgs e)
 
         {
-            CalculatorLib.Class1 class1= new CalculatorLib.Class1();
+            CalculatorLib.Calculator class1= new CalculatorLib.Calculator();
             ctrlTxtResults.Text =  class1.Parser(ctrlTxtExpression.Text);
             ctrlTxtExpression.Text = string.Empty;
             
