@@ -143,8 +143,8 @@ namespace Session_09
         private void button19_Click(object sender, EventArgs e)
 
         {
-            CalculatorLib.Calculator class1= new CalculatorLib.Calculator();
-            ctrlTxtResults.Text =  class1.Parser(ctrlTxtExpression.Text);
+            CalculatorLib.Calculator calculator= new CalculatorLib.Calculator();
+            ctrlTxtResults.Text =  calculator.Parser(ctrlTxtExpression.Text);
             ctrlTxtExpression.Text = string.Empty;
             
         }
