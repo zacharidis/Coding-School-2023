@@ -33,7 +33,9 @@ namespace CalculatorLib
 
             } else if (inputExpression.Contains("-")) {
             
-                 outputExpression = Subtract(inputNumberOne, inputNumberTwo);
+                Subtract subtract = new Subtract();
+                 outputExpression = subtract.Calculate(inputNumberOne, inputNumberTwo);
+
                 } else if (inputExpression.Contains("/"))
             {
                 outputExpression = Divide(inputNumberOne, inputNumberTwo);
@@ -58,10 +60,7 @@ namespace CalculatorLib
 
        
 
-        public string Subtract(double inputOne , double inputTwo)
-        {
-            return (inputOne - inputTwo).ToString();
-        }
+    
 
         public string Divide(double inputOne , double inputTwo)
         {

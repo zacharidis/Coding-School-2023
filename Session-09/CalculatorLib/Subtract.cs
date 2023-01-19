@@ -8,5 +8,10 @@ namespace CalculatorLib
 {
     internal class Subtract
     {
+
+        public string Calculate(double inputOne, double inputTwo)
+        {
+            return (inputOne - inputTwo).ToString();
+        }
     }
 }
