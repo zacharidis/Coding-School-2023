@@ -141,7 +141,7 @@
             this.button18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button18.Location = new System.Drawing.Point(214, 266);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(83, 43);
+            this.button18.Size = new System.Drawing.Size(136, 43);
             this.button18.TabIndex = 17;
             this.button18.Text = "root";
             this.button18.UseVisualStyleBackColor = false;
@@ -153,7 +153,7 @@
             this.button17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button17.Location = new System.Drawing.Point(214, 217);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(83, 43);
+            this.button17.Size = new System.Drawing.Size(136, 43);
             this.button17.TabIndex = 16;
             this.button17.Text = "power";
             this.button17.UseVisualStyleBackColor = false;
@@ -165,7 +165,7 @@
             this.button16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button16.Location = new System.Drawing.Point(214, 169);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(83, 43);
+            this.button16.Size = new System.Drawing.Size(136, 43);
             this.button16.TabIndex = 15;
             this.button16.Text = "/";
             this.button16.UseVisualStyleBackColor = false;
@@ -177,7 +177,7 @@
             this.button15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button15.Location = new System.Drawing.Point(214, 119);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(83, 43);
+            this.button15.Size = new System.Drawing.Size(136, 43);
             this.button15.TabIndex = 14;
             this.button15.Text = "*";
             this.button15.UseVisualStyleBackColor = false;
@@ -189,7 +189,7 @@
             this.button14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button14.Location = new System.Drawing.Point(214, 71);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(83, 43);
+            this.button14.Size = new System.Drawing.Size(136, 43);
             this.button14.TabIndex = 13;
             this.button14.Text = "-";
             this.button14.UseVisualStyleBackColor = false;
@@ -201,7 +201,7 @@
             this.button13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button13.Location = new System.Drawing.Point(214, 22);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(83, 43);
+            this.button13.Size = new System.Drawing.Size(136, 43);
             this.button13.TabIndex = 12;
             this.button13.Text = "+";
             this.button13.UseVisualStyleBackColor = false;
