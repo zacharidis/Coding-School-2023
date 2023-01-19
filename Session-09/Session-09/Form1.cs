@@ -135,7 +135,8 @@ namespace Session_09
             if (isValid(ctrlTxtExpression.Text))
             {
 
-                ctrlTxtExpression.Text = ctrlTxtExpression.Text + "r";
+                CalculatorLib.Class1 root = new CalculatorLib.Class1();
+                ctrlTxtResults.Text = root.Root(double.Parse(ctrlTxtExpression.Text));
             }
         }
 
