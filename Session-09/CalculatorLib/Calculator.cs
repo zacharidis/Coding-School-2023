@@ -50,8 +50,9 @@ namespace CalculatorLib
                
 
             }  else if (inputExpression.Contains("^")) {
-
-                outputExpression = Power(inputNumberOne, inputNumberTwo);
+                RaisePower raisePower = new RaisePower();
+                outputExpression = raisePower.Calculate(inputNumberOne, inputNumberTwo);
+              
             } else
             {
                 outputExpression = Root(inputNumberOne);
@@ -71,10 +72,7 @@ namespace CalculatorLib
 
        
 
-        public string Power(double inputOne , double inputTwo)
-        {
-            return (Math.Pow(inputOne, inputTwo)).ToString();
-        }
+       
 
         public string Root(double inputOne)
         {

@@ -8,5 +8,10 @@ namespace CalculatorLib
 {
     internal class RaisePower
     {
+
+        public string Calculate(double inputOne, double inputTwo)
+        {
+            return (Math.Pow(inputOne, inputTwo)).ToString();
+        }
     }
 }
