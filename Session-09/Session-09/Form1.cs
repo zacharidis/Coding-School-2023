@@ -143,7 +143,14 @@ namespace Session_09
 
         {
             CalculatorLib.Class1 class1= new CalculatorLib.Class1();
-            class1.Parser("1+1");
+            ctrlTxtResults.Text =  class1.Parser(ctrlTxtExpression.Text);
+            ctrlTxtExpression.Text = string.Empty;
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ctrlTxtExpression.Text = string.Empty;
             
         }
     }

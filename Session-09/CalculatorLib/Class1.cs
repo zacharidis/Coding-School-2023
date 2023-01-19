@@ -32,7 +32,7 @@ namespace CalculatorLib
             } else if (inputExpression.Contains("-")) {
             
                  outputExpression = Subtract(inputNumberOne, inputNumberTwo);
-                } else if (!inputExpression.Contains("/"))
+                } else if (inputExpression.Contains("/"))
             {
                 outputExpression = Divide(inputNumberOne, inputNumberTwo);
 
