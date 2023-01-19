@@ -72,6 +72,7 @@
             // 
             this.ctrlTxtResults.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ctrlTxtResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ctrlTxtResults.Enabled = false;
             this.ctrlTxtResults.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ctrlTxtResults.ForeColor = System.Drawing.Color.White;
             this.ctrlTxtResults.Location = new System.Drawing.Point(16, 122);
@@ -121,6 +122,7 @@
             // 
             this.ctrlTxtExpression.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ctrlTxtExpression.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ctrlTxtExpression.Enabled = false;
             this.ctrlTxtExpression.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ctrlTxtExpression.ForeColor = System.Drawing.Color.White;
             this.ctrlTxtExpression.Location = new System.Drawing.Point(16, 22);
