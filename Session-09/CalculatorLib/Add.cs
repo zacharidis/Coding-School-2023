@@ -8,5 +8,9 @@ namespace CalculatorLib
 {
     internal class Add
     {
+        public string Calculate(double inputOne, double inputTwo)
+        {
+            return (inputOne + inputTwo).ToString();
+        }
     }
 }

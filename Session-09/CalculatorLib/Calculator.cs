@@ -27,7 +27,9 @@ namespace CalculatorLib
 
             } else if (inputExpression.Contains('+')) {
 
-                outputExpression = Add(inputNumberOne, inputNumberTwo);
+                Add add = new Add();
+
+                outputExpression = add.Calculate(inputNumberOne,inputNumberTwo);
 
             } else if (inputExpression.Contains("-")) {
             
@@ -54,10 +56,7 @@ namespace CalculatorLib
 
 
 
-         public string Add(double inputOne , double inputTwo)
-        {
-            return (inputOne + inputTwo).ToString();
-        }
+       
 
         public string Subtract(double inputOne , double inputTwo)
         {
