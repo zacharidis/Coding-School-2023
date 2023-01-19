@@ -55,7 +55,9 @@ namespace CalculatorLib
               
             } else
             {
-                outputExpression = Root(inputNumberOne);
+                Root root   = new Root();
+                outputExpression = root.Calculate(inputNumberOne);
+               
             }
 
             return outputExpression; 
@@ -74,9 +76,6 @@ namespace CalculatorLib
 
        
 
-        public string Root(double inputOne)
-        {
-            return (Math.Sqrt(inputOne).ToString());
-        }
+       
     }
 }
