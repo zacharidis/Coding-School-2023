@@ -10,6 +10,32 @@ namespace Session_09
             InitializeComponent();
         }
 
+        // check if the last character is either - or + or / or * or ^ or  r
+        public bool isValid(string lastInput)
+
+        {
+            if (lastInput.EndsWith("/") ) { 
+
+                return false;
+            } else if (lastInput.EndsWith("+") )
+            {
+                return false;
+            } else if (lastInput.EndsWith("-") )
+            {
+                return false;
+            } else if (lastInput.EndsWith("^")) {
+                return false;
+            } else if (lastInput.EndsWith("r") ) {
+                return false;
+             } else
+            {
+                return false;
+            }
+
+            return true;
+            
+        }
+
         private void btnAbout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to Super Calc " , "By Georgios Zacharidis" ,MessageBoxButtons.OK);
