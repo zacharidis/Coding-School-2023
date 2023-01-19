@@ -8,5 +8,11 @@ namespace CalculatorLib
 {
     internal class Multiply
     {
+
+        public string Calculate(double inputOne, double inputTwo)
+        {
+
+            return (inputOne * inputTwo).ToString();
+        }
     }
 }

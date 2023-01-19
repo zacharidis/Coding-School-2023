@@ -38,11 +38,16 @@ namespace CalculatorLib
 
                 } else if (inputExpression.Contains("/"))
             {
-                outputExpression = Divide(inputNumberOne, inputNumberTwo);
+                Divide divide = new Divide();
+                outputExpression = divide.Calculate(inputNumberOne, inputNumberTwo);
+                
 
             }  else if (inputExpression.Contains('*'))
-            {
-                outputExpression = Multiply(inputNumberOne, inputNumberTwo);
+
+
+            {   Multiply multiply   = new Multiply();
+                outputExpression = multiply.Calculate(inputNumberOne, inputNumberTwo);
+               
 
             }  else if (inputExpression.Contains("^")) {
 
@@ -62,15 +67,9 @@ namespace CalculatorLib
 
     
 
-        public string Divide(double inputOne , double inputTwo)
-        {
-            return (inputOne / inputTwo).ToString();
-        }
+      
 
-        public string Multiply (double inputOne , double  inputTwo) { 
-            
-            return (inputOne * inputTwo).ToString();
-            } 
+       
 
         public string Power(double inputOne , double inputTwo)
         {

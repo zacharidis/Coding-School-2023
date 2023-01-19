@@ -8,5 +8,10 @@ namespace CalculatorLib
 {
     internal class Divide
     {
+
+        public string Calculate(double inputOne, double inputTwo)
+        {
+            return (inputOne / inputTwo).ToString();
+        }
     }
 }
