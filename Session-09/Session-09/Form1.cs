@@ -143,7 +143,7 @@ namespace Session_09
 
         {
             CalculatorLib.Class1 class1= new CalculatorLib.Class1();
-            class1.Calculate("1+1");
+            class1.Parser("1+1");
             
         }
     }

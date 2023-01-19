@@ -8,29 +8,44 @@ namespace CalculatorLib
 
         public string Parser(string inputExpression)
         {
-            string outputExpression;
+            string outputExpression = "";
+            double inputNumberOne = 0;
+            double inputNumberTwo = 0;
+
+
+            char[] delimiterChars = { '+', ',' ,'/','r','*','^'};
             
+
+            string[] words = inputExpression.Split(delimiterChars);
+
+            inputNumberOne = Double.Parse(words[0]);
+            inputNumberTwo = Double.Parse(words[1]);
+
             if (inputExpression == null)
             {
                 return "Invalid Expression";
+
             } else if (inputExpression.Contains('+')) {
-                
-                // call the Add function 
+
+                outputExpression = Add(inputNumberOne, inputNumberTwo);
 
             } else if (inputExpression.Contains("-")) {
             
-                // call the  Subtract function 
+                 outputExpression = Subtract(inputNumberOne, inputNumberTwo);
                 } else if (!inputExpression.Contains("/"))
             {
-                // call the division function
+                outputExpression = Divide(inputNumberOne, inputNumberTwo);
+
             }  else if (inputExpression.Contains('*'))
             {
-                // call the multiplication function 
+                outputExpression = Multiply(inputNumberOne, inputNumberTwo);
+
             }  else if (inputExpression.Contains("^")) {
-                // call the power function 
+
+                outputExpression = Power(inputNumberOne, inputNumberTwo);
             } else
             {
-                // call the root function
+                outputExpression = Root(inputNumberOne);
             }
 
             return outputExpression; 
@@ -39,34 +54,34 @@ namespace CalculatorLib
 
 
 
-         public string Add(decimal inputOne , decimal inputTwo)
+         public string Add(double inputOne , double inputTwo)
         {
             return (inputOne + inputTwo).ToString();
         }
 
-        public string Subtract(decimal inputOne , decimal inputTwo)
+        public string Subtract(double inputOne , double inputTwo)
         {
             return (inputOne - inputTwo).ToString();
         }
 
-        public string Divide(decimal inputOne , decimal inputTwo)
+        public string Divide(double inputOne , double inputTwo)
         {
             return (inputOne / inputTwo).ToString();
         }
 
-        public string Multiply(decimal inputOne , decimal inputTwo) { 
+        public string Multiply (double inputOne , double  inputTwo) { 
             
             return (inputOne * inputTwo).ToString();
             } 
 
-        public string Power(decimal inputOne , decimal inputTwo)
+        public string Power(double inputOne , double inputTwo)
         {
-            return (Math.Pow((double)inputOne, (double)inputTwo).ToString());
+            return (Math.Pow(inputOne, inputTwo)).ToString();
         }
 
-        public string Root(decimal inputOne)
+        public string Root(double inputOne)
         {
-            return (Math.Sqrt((double)inputOne).ToString());
+            return (Math.Sqrt(inputOne).ToString());
         }
     }
 }

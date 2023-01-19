@@ -400,7 +400,7 @@
             this.Controls.Add(this.ctrlGrougBoxResults);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Simple Calculator by GZ";
             this.ctrlGrougBoxResults.ResumeLayout(false);
             this.ctrlGrougBoxResults.PerformLayout();
             this.groupBox1.ResumeLayout(false);
