@@ -14,5 +14,20 @@ namespace Session_09
         {
             MessageBox.Show("Welcome to Super Calc " , "By Georgios Zacharidis" ,MessageBoxButtons.OK);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ctrlTxtExpression.Text = ctrlTxtExpression.Text + "1";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ctrlTxtExpression.Text = ctrlTxtExpression.Text + "2";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ctrlTxtExpression.Text = ctrlTxtExpression.Text + "3";
+        }
     }
 }
