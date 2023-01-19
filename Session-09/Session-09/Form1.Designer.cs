@@ -295,7 +295,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(152, 43);
             this.button14.TabIndex = 13;
-            this.button14.Text = "1";
+            this.button14.Text = "-";
             this.button14.UseVisualStyleBackColor = false;
             // 
             // button15
@@ -307,7 +307,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(152, 43);
             this.button15.TabIndex = 14;
-            this.button15.Text = "1";
+            this.button15.Text = "*";
             this.button15.UseVisualStyleBackColor = false;
             // 
             // button16
@@ -319,7 +319,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(152, 43);
             this.button16.TabIndex = 15;
-            this.button16.Text = "1";
+            this.button16.Text = "/";
             this.button16.UseVisualStyleBackColor = false;
             // 
             // button17
@@ -331,7 +331,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(152, 43);
             this.button17.TabIndex = 16;
-            this.button17.Text = "1";
+            this.button17.Text = "power";
             this.button17.UseVisualStyleBackColor = false;
             // 
             // button18
@@ -343,7 +343,7 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(152, 43);
             this.button18.TabIndex = 17;
-            this.button18.Text = "1";
+            this.button18.Text = "root";
             this.button18.UseVisualStyleBackColor = false;
             // 
             // Form1
