@@ -175,6 +175,17 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+             //clear the grids before loading up data 
+
+            grvSchedule.DataSource = null;
+            grvCourses.DataSource = null;
+            grvGrades.DataSource = null;
+            grvStudents.DataSource = null;
+        }
     }
 }
     
