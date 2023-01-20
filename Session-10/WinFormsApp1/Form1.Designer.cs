@@ -118,7 +118,7 @@
             // lblStudents
             // 
             this.lblStudents.AutoSize = true;
-            this.lblStudents.Location = new System.Drawing.Point(12, 85);
+            this.lblStudents.Location = new System.Drawing.Point(390, 25);
             this.lblStudents.Name = "lblStudents";
             this.lblStudents.Size = new System.Drawing.Size(68, 15);
             this.lblStudents.TabIndex = 10;
@@ -137,7 +137,7 @@
             // lblCourses
             // 
             this.lblCourses.AutoSize = true;
-            this.lblCourses.Location = new System.Drawing.Point(24, 273);
+            this.lblCourses.Location = new System.Drawing.Point(390, 198);
             this.lblCourses.Name = "lblCourses";
             this.lblCourses.Size = new System.Drawing.Size(60, 15);
             this.lblCourses.TabIndex = 12;
@@ -146,7 +146,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 399);
+            this.label2.Location = new System.Drawing.Point(390, 353);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 15);
             this.label2.TabIndex = 13;
@@ -180,7 +180,7 @@
             // lblSchedules
             // 
             this.lblSchedules.AutoSize = true;
-            this.lblSchedules.Location = new System.Drawing.Point(22, 528);
+            this.lblSchedules.Location = new System.Drawing.Point(390, 510);
             this.lblSchedules.Name = "lblSchedules";
             this.lblSchedules.Size = new System.Drawing.Size(76, 15);
             this.lblSchedules.TabIndex = 16;
