@@ -144,7 +144,28 @@ namespace WinFormsApp1
 
 
 
-            }
+
+            };
+
+
+            Schedule scheduleTwo = new Schedule()
+            {
+                CourseID = courseOne.ID,
+                DateTime = DateTime.Now,
+
+
+
+
+            };
+
+            schedules.Add(scheduleOne);
+            schedules.Add(scheduleTwo);
+
+            grvSchedule.DataSource= schedules;
+
+
+
+
 
 
 
