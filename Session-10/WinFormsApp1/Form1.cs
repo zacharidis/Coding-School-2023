@@ -1,3 +1,4 @@
+using Session_06.Academics;
 using Session_06.Helpers;
 using Session_06.Stuff;
 
@@ -185,6 +186,15 @@ namespace WinFormsApp1
             grvCourses.DataSource = null;
             grvGrades.DataSource = null;
             grvStudents.DataSource = null;
+
+            University.MasterSerializer master = new University.MasterSerializer();
+            
+            // master.SerializeToFile()
+
+            
+
+
+
         }
     }
 }
