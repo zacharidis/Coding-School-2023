@@ -51,14 +51,23 @@ namespace WinFormsApp1
 
             Course courseOne = new Course()
             {
-                Code
-            }
+                
+                Subject = "DISCRETE Mathematics", Code = "MATH"
+            };
 
 
+            Course courseTwo = new Course()
+            {
+
+                Subject = "Programming with Pascal",
+                Code = "PROGRAMMING INTRO"
+            };
 
 
+            courses.Add(courseOne);
+            courses.Add(courseTwo);
 
-
+            grvGrades.DataSource= courses;
 
 
 
