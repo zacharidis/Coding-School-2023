@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grvStudents = new System.Windows.Forms.DataGridView();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,26 +67,27 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // button2
+            // btnLoad
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(1038, 622);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(359, 47);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Load Data";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnLoad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoad.Location = new System.Drawing.Point(1038, 622);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(359, 47);
+            this.btnLoad.TabIndex = 5;
+            this.btnLoad.Text = "Load Data";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(1038, 675);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(359, 45);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Save Data";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Location = new System.Drawing.Point(1038, 675);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(359, 45);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save Data";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
             // 
@@ -201,8 +202,8 @@
             this.Controls.Add(this.lblStudents);
             this.Controls.Add(this.grvStudents);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
@@ -224,8 +225,8 @@
 
         private Button button1;
         private PrintDialog printDialog1;
-        private Button button2;
-        private Button button3;
+        private Button btnLoad;
+        private Button btnSave;
         private Label label1;
         private DataGridView grvStudents;
         private Label lblStudents;

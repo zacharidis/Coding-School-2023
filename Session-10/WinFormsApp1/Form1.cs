@@ -187,6 +187,19 @@ namespace WinFormsApp1
             grvGrades.DataSource = null;
             grvStudents.DataSource = null;
 
+            
+           
+
+
+
+
+
+
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
             University.MasterSerializer master = new University.MasterSerializer();
 
             Student studentOne = new Student()
@@ -199,18 +212,11 @@ namespace WinFormsApp1
 
             };
 
-          
+
 
 
             master.SerializeToFile(studentOne, "students.json");
-           
-
-
-
-
-
-
-
+            MessageBox.Show(studentOne.Name + " saved to file" , "Success!");
         }
     }
 }
