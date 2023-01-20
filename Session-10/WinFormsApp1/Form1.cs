@@ -1,3 +1,4 @@
+using Session_06.Helpers;
 using Session_06.Stuff;
 
 namespace WinFormsApp1
@@ -12,7 +13,7 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            this.FormBorderStyle = FormBorderStyle.None;
+            this.FormBorderStyle = FormBorderStyle.None; // no caption
 
        
             List<Student> students= new List<Student>();
@@ -38,6 +39,20 @@ namespace WinFormsApp1
 
             students.Add(studentOne);
             students.Add(studentTwo);
+
+           
+
+            grvStudents.DataSource= students;
+
+             
+            // -- Courses 
+
+            List <Course> courses = new List<Course>();
+
+            Course courseOne = new Course()
+            {
+                Code
+            }
 
 
 

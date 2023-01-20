@@ -17,29 +17,12 @@ namespace Session_06.Helpers
 
         public Course()
         {
-
+            Guid ID = Guid.NewGuid();
         }
 
-        public Course(Guid id)
-        {
-               this.ID = id;
-        }
+       
 
-        public Course(Guid id, string? code)
-        {
-            this.ID = id;   
-            this.Code = code;
-        }
-
-        public Course(Guid iD, string? code, string? subject) 
-        {
-            
-            this.ID = iD;
-            this.Code = code;
-            this.Subject = subject;
-                
-             
-        }
+     
 
         // helper methods
 
