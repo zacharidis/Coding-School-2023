@@ -25,28 +25,7 @@ namespace Session_06.Helpers
             this.ID = id;
         }
 
-        public Schedule(Guid id, Guid courseId) 
-        {
-            this.ID = id;
-            this.CourseID = courseId;
-        }
-
-        public Schedule(Guid id, Guid courseId , Guid professorId)
-        {
-            this.ID = id;
-            this.CourseID = courseId;   
-            this.ProfessorID = professorId;
-
-        }
-
-        public Schedule(Guid id, Guid courseId, Guid professorId , Calendar calendar)
-        {
-            this.ID = id;
-            this.CourseID = courseId;
-            this.ProfessorID = professorId;
-            this.DateTime= calendar;
-
-        }
+       
 
 
 
