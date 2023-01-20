@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Session_06.Academics
 {
-    internal class University:Institute
+    public class University:Institute
     {
         // properties
 
@@ -43,4 +43,4 @@ namespace Session_06.Academics
 
 
     }
-}
+

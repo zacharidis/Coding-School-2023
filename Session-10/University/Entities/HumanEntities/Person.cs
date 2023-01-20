@@ -9,7 +9,7 @@ namespace Session_06.Stuff
 
     public enum GenderEnum {Male = 0 , Female = 1 , Other = 2} 
     public enum StudiesLevelEnum { Undergraduate = 0 , Postgraduate = 1}
-    internal class Person
+    public  class Person
     {
         public Guid Id { get; set; }
         public string? Name { get; set; }
@@ -27,6 +27,7 @@ namespace Session_06.Stuff
         {
 
         }
+
 
         public Person(Guid id)
         {

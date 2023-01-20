@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Session_06.Helpers
 {
-    internal class Schedule
+    public class Schedule
     {
 
         public Guid ID { get; set; }

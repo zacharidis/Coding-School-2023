@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_06.Academics
 {
-    internal class Institute
+    public class Institute
     {
         // properties
         public Guid ID { get; set; }

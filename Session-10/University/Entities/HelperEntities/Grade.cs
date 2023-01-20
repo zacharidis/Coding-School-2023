@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_06.Helpers
 {
-    internal class Grade
+    public class Grade
     {
         // properties
         public Guid ID { get; set; }

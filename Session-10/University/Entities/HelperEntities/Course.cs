@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_06.Helpers
 {
-    internal class Course
+    public class Course
     {
         // properties
         public Guid ID { get; set; }

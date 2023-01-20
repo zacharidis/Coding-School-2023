@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Session_06.Stuff
 {
-    internal class Student : Person
+    public class Student : Person
     {
         //properties
         public int RegistrationNumber { get; set; }
@@ -16,6 +16,8 @@ namespace Session_06.Stuff
         //constructors
         public Student() { }
 
+
+        
     
 
     
