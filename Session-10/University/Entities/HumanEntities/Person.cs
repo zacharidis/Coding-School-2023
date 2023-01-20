@@ -25,14 +25,12 @@ namespace Session_06.Stuff
         // default constructor 
         public Person()
         {
+            Id= Guid.NewGuid();
 
         }
 
 
-        public Person(Guid id)
-        {
-            this.Id = id;
-        }
+       
 
 
     }
