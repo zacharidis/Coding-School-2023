@@ -16,12 +16,11 @@ namespace Session_06.Helpers
         public int GradeValue { get; set; }
 
         // Constructors
-        public Grade() { }
-
-        public Grade(Guid id)
-        {
-            this.ID = id;   
+        public Grade() {
+            ID = Guid.NewGuid();
         }
+
+      
 
      
 
