@@ -187,8 +187,20 @@ namespace WinFormsApp1
             grvGrades.DataSource = null;
             grvStudents.DataSource = null;
 
-            
-           
+            University.MasterSerializer masterDesializer = new University.MasterSerializer();
+
+            List<Student> students = new List<Student>();
+
+
+            Student studentTwo  = masterDesializer.Deserialize<Student>("students.json");
+
+            students.Add(studentTwo);
+
+            grvStudents.DataSource = students;
+
+            MessageBox.Show(studentTwo.Name + " added to grid ! ", "Successful read from JSON file !", MessageBoxButtons.OK);
+
+
 
 
 
@@ -216,7 +228,7 @@ namespace WinFormsApp1
 
 
             master.SerializeToFile(studentOne, "students.json");
-            MessageBox.Show(studentOne.Name + " saved to file" , "Success!");
+            MessageBox.Show(studentOne.Name + " saved to file" , "Success!",MessageBoxButtons.OK);
         }
     }
 }
