@@ -182,9 +182,9 @@
             this.lblSchedules.AutoSize = true;
             this.lblSchedules.Location = new System.Drawing.Point(22, 528);
             this.lblSchedules.Name = "lblSchedules";
-            this.lblSchedules.Size = new System.Drawing.Size(38, 15);
+            this.lblSchedules.Size = new System.Drawing.Size(76, 15);
             this.lblSchedules.TabIndex = 16;
-            this.lblSchedules.Text = "label3";
+            this.lblSchedules.Text = "SCHEDULES :";
             // 
             // Form1
             // 
