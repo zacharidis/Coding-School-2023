@@ -35,43 +35,11 @@ namespace Session_06.Academics
 
         }
 
-        public University(Guid id ,string name , int yearsInService): base(id,name,yearsInService) {
-            this.ID = id;
-            this.Name = name;
-            this.YearsInService = yearsInService;
-
-        }
-        
-        public University(Guid id, string name , int yearsInService , Student[] students): base(id, name, yearsInService) {}
-
-        public University(Guid id , string name , int yearsInService , Student[] students, Grade[] grades, Course[] courses, Schedule[] scheduledCourses) : base(id,name,yearsInService)
-        {
-
-        }
-
-        // methods 
-
-
-        public Student[] GetStudents()
-        {
-            return this.Students;
-        }
-        
-        public Grade[] GetGrades()
-        {
-            return this.Grades;
-        }
-
-        public Course[] GetCourses()
-        {
-            return this.Courses;
+  
         }
         
 
-        public void SetSchedule(Course courseId , Professor professorId , DateTime dateTime)
-        {
-            // business logic goes here
-        }
+        
 
 
     }
