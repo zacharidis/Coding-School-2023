@@ -191,7 +191,7 @@ namespace WinFormsApp1
 
             Student studentOne = new Student()
             {
-                Name = "George",
+                Name = "SERIAL STUDENT 1",
                 Gender = GenderEnum.Male,
                 RegistrationNumber = 1,
                 Age = 25,
@@ -199,7 +199,13 @@ namespace WinFormsApp1
 
             };
 
-            master.SerializeToFile(studentOne, "student.json");
+          
+
+
+            master.SerializeToFile(studentOne, "students.json");
+           
+
+
 
 
 
