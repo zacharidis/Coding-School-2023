@@ -89,7 +89,7 @@
             // 
             // grvStudents
             // 
-            this.grvStudents.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grvStudents.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.grvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvStudents.Location = new System.Drawing.Point(81, 43);
             this.grvStudents.Name = "grvStudents";
@@ -108,6 +108,7 @@
             // 
             // grvGrades
             // 
+            this.grvGrades.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.grvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvGrades.Location = new System.Drawing.Point(84, 216);
             this.grvGrades.Name = "grvGrades";
