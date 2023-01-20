@@ -15,59 +15,7 @@ namespace WinFormsApp1
             
             this.FormBorderStyle = FormBorderStyle.None; // no caption
 
-       
-            List<Student> students= new List<Student>();
-
-            Student studentOne = new Student()
-            {
-                Name = "George", Gender = GenderEnum.Male,
-                RegistrationNumber= 1,
-                Age = 25 ,
-                StudiesLevel= StudiesLevelEnum.Undergraduate
-
-            };
-
-            Student studentTwo = new Student()
-            {
-                Name = "Zachs",
-                Gender = GenderEnum.Male,
-                RegistrationNumber = 2,
-                Age = 24,
-                StudiesLevel = StudiesLevelEnum.Postgraduate
-
-            };
-
-            students.Add(studentOne);
-            students.Add(studentTwo);
-
-           
-
-            grvStudents.DataSource= students;
-
-             
-            // -- Courses 
-
-            List <Course> courses = new List<Course>();
-
-            Course courseOne = new Course()
-            {
-                
-                Subject = "DISCRETE Mathematics", Code = "MATH"
-            };
-
-
-            Course courseTwo = new Course()
-            {
-
-                Subject = "Programming with Pascal",
-                Code = "PROGRAMMING INTRO"
-            };
-
-
-            courses.Add(courseOne);
-            courses.Add(courseTwo);
-
-            grvGrades.DataSource= courses;
+            FillTheGrids();
 
 
 
@@ -94,6 +42,100 @@ namespace WinFormsApp1
         {
 
         }
+
+
+        public void FillTheGrids()
+        {
+
+            List<Student> students = new List<Student>();
+
+            Student studentOne = new Student()
+            {
+                Name = "George",
+                Gender = GenderEnum.Male,
+                RegistrationNumber = 1,
+                Age = 25,
+                StudiesLevel = StudiesLevelEnum.Undergraduate
+
+            };
+
+            Student studentTwo = new Student()
+            {
+                Name = "Zachs",
+                Gender = GenderEnum.Male,
+                RegistrationNumber = 2,
+                Age = 24,
+                StudiesLevel = StudiesLevelEnum.Postgraduate
+
+            };
+
+            students.Add(studentOne);
+            students.Add(studentTwo);
+
+
+
+            grvStudents.DataSource = students;
+
+
+            // -- Courses 
+
+            List<Course> courses = new List<Course>();
+
+            Course courseOne = new Course()
+            {
+
+                Subject = "DISCRETE Mathematics",
+                Code = "MATH"
+            };
+
+
+            Course courseTwo = new Course()
+            {
+
+                Subject = "Programming with Pascal",
+                Code = "PROGRAMMING INTRO"
+            };
+
+
+            courses.Add(courseOne);
+            courses.Add(courseTwo);
+
+            grvCourses.DataSource = courses;
+
+
+
+            // -- Grades 
+
+
+            List <Grade>grades = new List<Grade>();
+            Grade gradeOne = new Grade()
+            {
+                GradeValue = 10,
+                CourseID = courseOne.ID,
+                StudentId = studentOne.Id,
+
+            };
+
+            Grade gradeTwo = new Grade()
+            {
+                GradeValue = 9,
+                CourseID = courseTwo.ID,
+                StudentId = studentTwo.Id,
+
+            };
+
+            grades.Add(gradeOne);
+            grades.Add(gradeTwo);
+
+            grvGrades.DataSource = grades;
+
+
+
+
+
+
+        }
+
     }
 }
     

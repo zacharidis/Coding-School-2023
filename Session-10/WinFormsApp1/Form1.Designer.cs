@@ -35,9 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grvStudents = new System.Windows.Forms.DataGridView();
             this.lblStudents = new System.Windows.Forms.Label();
-            this.grvGrades = new System.Windows.Forms.DataGridView();
+            this.grvCourses = new System.Windows.Forms.DataGridView();
+            this.lblCourses = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.grvGrades = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvGrades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,24 +109,43 @@
             this.lblStudents.TabIndex = 10;
             this.lblStudents.Text = "STUDENTS :";
             // 
-            // grvGrades
+            // grvCourses
             // 
-            this.grvGrades.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
-            this.grvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvGrades.Location = new System.Drawing.Point(84, 216);
-            this.grvGrades.Name = "grvGrades";
-            this.grvGrades.RowTemplate.Height = 25;
-            this.grvGrades.Size = new System.Drawing.Size(1263, 117);
-            this.grvGrades.TabIndex = 11;
+            this.grvCourses.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.grvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvCourses.Location = new System.Drawing.Point(84, 216);
+            this.grvCourses.Name = "grvCourses";
+            this.grvCourses.RowTemplate.Height = 25;
+            this.grvCourses.Size = new System.Drawing.Size(1263, 117);
+            this.grvCourses.TabIndex = 11;
+            // 
+            // lblCourses
+            // 
+            this.lblCourses.AutoSize = true;
+            this.lblCourses.Location = new System.Drawing.Point(24, 273);
+            this.lblCourses.Name = "lblCourses";
+            this.lblCourses.Size = new System.Drawing.Size(60, 15);
+            this.lblCourses.TabIndex = 12;
+            this.lblCourses.Text = "COURSES:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 273);
+            this.label2.Location = new System.Drawing.Point(24, 399);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 15);
-            this.label2.TabIndex = 12;
+            this.label2.TabIndex = 13;
             this.label2.Text = "GRADES:";
+            // 
+            // grvGrades
+            // 
+            this.grvGrades.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.grvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvGrades.Location = new System.Drawing.Point(81, 361);
+            this.grvGrades.Name = "grvGrades";
+            this.grvGrades.RowTemplate.Height = 25;
+            this.grvGrades.Size = new System.Drawing.Size(1263, 117);
+            this.grvGrades.TabIndex = 14;
             // 
             // Form1
             // 
@@ -132,8 +154,10 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1403, 732);
             this.ControlBox = false;
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.grvGrades);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCourses);
+            this.Controls.Add(this.grvCourses);
             this.Controls.Add(this.lblStudents);
             this.Controls.Add(this.grvStudents);
             this.Controls.Add(this.label1);
@@ -146,6 +170,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvGrades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,7 +186,9 @@
         private Label label1;
         private DataGridView grvStudents;
         private Label lblStudents;
-        private DataGridView grvGrades;
+        private DataGridView grvCourses;
+        private Label lblCourses;
         private Label label2;
+        private DataGridView grvGrades;
     }
 }
