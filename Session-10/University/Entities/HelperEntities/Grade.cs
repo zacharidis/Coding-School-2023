@@ -23,32 +23,7 @@ namespace Session_06.Helpers
             this.ID = id;   
         }
 
-        public Grade(Guid id , Guid studentId)
-        {
-
-            this.ID = id;
-            this.StudentId = studentId;
-
-              
-        }
-
-        public Grade(Guid id  , Guid  studentId , Guid courseId )
-        {
-            this.ID= id;
-            this.StudentId = studentId;
-            this.CourseID = courseId;
-        }
-
-
-        public Grade(Guid iD, Guid studentId, Guid courseID, int gradeValue) 
-        {
-            this .ID = iD;
-            this .StudentId = studentId;
-            this.CourseID = courseID;
-            this.GradeValue = gradeValue;
-
-        }
-
+     
 
         // methods 
 
