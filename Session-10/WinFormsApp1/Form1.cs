@@ -133,7 +133,18 @@ namespace WinFormsApp1
             grvGrades.DataSource = grades;
 
 
+            // Schedules 
 
+            List <Schedule> schedules = new List<Schedule>();
+
+            Schedule scheduleOne = new Schedule()
+            {
+                CourseID = courseOne.ID,
+                DateTime = DateTime.Now,
+
+
+
+            }
 
 
 

@@ -13,8 +13,8 @@ namespace Session_06.Helpers
         public Guid ID { get; set; }
         public Guid CourseID     { get; set; }
 
-        public Guid ProfessorID { get; set; }
-        public Calendar? DateTime { get; set; }
+      
+        public DateTime DateTime { get; set; }
 
         public Schedule()
         {
@@ -22,10 +22,5 @@ namespace Session_06.Helpers
         }
 
        
-
-       
-
-
-
     }
 }
