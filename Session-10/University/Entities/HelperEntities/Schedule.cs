@@ -18,12 +18,10 @@ namespace Session_06.Helpers
 
         public Schedule()
         {
+            ID = Guid.NewGuid();
         }
 
-        public Schedule(Guid id)
-        {
-            this.ID = id;
-        }
+       
 
        
 

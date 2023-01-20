@@ -73,8 +73,11 @@ namespace WinFormsApp1
             students.Add(studentTwo);
 
 
-
+            
+            
             grvStudents.DataSource = students;
+            
+           
 
 
             // -- Courses 
@@ -136,6 +139,10 @@ namespace WinFormsApp1
 
         }
 
+        private void grvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
     

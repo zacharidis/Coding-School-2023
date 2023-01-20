@@ -28,20 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.grvStudents = new System.Windows.Forms.DataGridView();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblStudents = new System.Windows.Forms.Label();
             this.grvCourses = new System.Windows.Forms.DataGridView();
             this.lblCourses = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.grvGrades = new System.Windows.Forms.DataGridView();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grvSchedule = new System.Windows.Forms.DataGridView();
+            this.lblSchedules = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvGrades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -62,7 +70,7 @@
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(997, 552);
+            this.button2.Location = new System.Drawing.Point(1038, 622);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(359, 47);
             this.button2.TabIndex = 5;
@@ -72,7 +80,7 @@
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(997, 605);
+            this.button3.Location = new System.Drawing.Point(1038, 675);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(359, 45);
             this.button3.TabIndex = 6;
@@ -99,6 +107,11 @@
             this.grvStudents.RowTemplate.Height = 25;
             this.grvStudents.Size = new System.Drawing.Size(1266, 140);
             this.grvStudents.TabIndex = 9;
+            this.grvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvStudents_CellContentClick);
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(Session_06.Stuff.Student);
             // 
             // lblStudents
             // 
@@ -147,6 +160,30 @@
             this.grvGrades.Size = new System.Drawing.Size(1263, 117);
             this.grvGrades.TabIndex = 14;
             // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "Courses";
+            this.coursesBindingSource.DataSource = this.studentBindingSource;
+            // 
+            // grvSchedule
+            // 
+            this.grvSchedule.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
+            this.grvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvSchedule.Location = new System.Drawing.Point(81, 484);
+            this.grvSchedule.Name = "grvSchedule";
+            this.grvSchedule.RowTemplate.Height = 25;
+            this.grvSchedule.Size = new System.Drawing.Size(1263, 117);
+            this.grvSchedule.TabIndex = 15;
+            // 
+            // lblSchedules
+            // 
+            this.lblSchedules.AutoSize = true;
+            this.lblSchedules.Location = new System.Drawing.Point(22, 528);
+            this.lblSchedules.Name = "lblSchedules";
+            this.lblSchedules.Size = new System.Drawing.Size(38, 15);
+            this.lblSchedules.TabIndex = 16;
+            this.lblSchedules.Text = "label3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -154,6 +191,8 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1403, 732);
             this.ControlBox = false;
+            this.Controls.Add(this.lblSchedules);
+            this.Controls.Add(this.grvSchedule);
             this.Controls.Add(this.grvGrades);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCourses);
@@ -170,8 +209,11 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.grvStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvCourses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvGrades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvSchedule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +232,9 @@
         private Label lblCourses;
         private Label label2;
         private DataGridView grvGrades;
+        private BindingSource studentBindingSource;
+        private BindingSource coursesBindingSource;
+        private DataGridView grvSchedule;
+        private Label lblSchedules;
     }
 }
