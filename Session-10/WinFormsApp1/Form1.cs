@@ -188,10 +188,20 @@ namespace WinFormsApp1
             grvStudents.DataSource = null;
 
             University.MasterSerializer master = new University.MasterSerializer();
-            
-            // master.SerializeToFile()
 
-            
+            Student studentOne = new Student()
+            {
+                Name = "George",
+                Gender = GenderEnum.Male,
+                RegistrationNumber = 1,
+                Age = 25,
+                StudiesLevel = StudiesLevelEnum.Undergraduate
+
+            };
+
+            master.SerializeToFile(studentOne, "student.json");
+
+
 
 
 
