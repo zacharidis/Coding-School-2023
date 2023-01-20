@@ -17,7 +17,7 @@ namespace Session_06.Helpers
 
         public Course()
         {
-            Guid ID = Guid.NewGuid();
+           ID = Guid.NewGuid();
         }
 
        
