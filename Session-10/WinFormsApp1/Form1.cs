@@ -1,3 +1,5 @@
+using Session_06.Stuff;
+
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
@@ -11,6 +13,42 @@ namespace WinFormsApp1
         {
             
             this.FormBorderStyle = FormBorderStyle.None;
+
+       
+            List<Student> students= new List<Student>();
+
+            Student studentOne = new Student()
+            {
+                Name = "George", Gender = GenderEnum.Male,
+                RegistrationNumber= 1,
+                Age = 25 ,
+                StudiesLevel= StudiesLevelEnum.Undergraduate
+
+            };
+
+            Student studentTwo = new Student()
+            {
+                Name = "Zachs",
+                Gender = GenderEnum.Male,
+                RegistrationNumber = 2,
+                Age = 24,
+                StudiesLevel = StudiesLevelEnum.Postgraduate
+
+            };
+
+            students.Add(studentOne);
+            students.Add(studentTwo);
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
