@@ -40,12 +40,14 @@
             pbFries = new PictureBox();
             pbStew = new PictureBox();
             btnAbout = new Button();
+            pictureBox1 = new PictureBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPepsi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbSalad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbFries).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbStew).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -113,6 +115,7 @@
             btnPrepare.TabIndex = 1;
             btnPrepare.Text = "Prepare";
             btnPrepare.UseVisualStyleBackColor = true;
+            btnPrepare.Click += btnPrepare_Click;
             // 
             // groupBox2
             // 
@@ -122,16 +125,16 @@
             groupBox2.Controls.Add(pbStew);
             groupBox2.Location = new Point(28, 169);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(900, 561);
+            groupBox2.Size = new Size(770, 635);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Progress";
             // 
             // pbPepsi
             // 
-            pbPepsi.Location = new Point(25, 481);
+            pbPepsi.Location = new Point(9, 481);
             pbPepsi.Name = "pbPepsi";
-            pbPepsi.Size = new Size(95, 74);
+            pbPepsi.Size = new Size(153, 132);
             pbPepsi.TabIndex = 3;
             pbPepsi.TabStop = false;
             // 
@@ -167,12 +170,23 @@
             btnAbout.TabIndex = 3;
             btnAbout.Text = "About";
             btnAbout.UseVisualStyleBackColor = true;
+            btnAbout.Click += btnAbout_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Resource1.eat;
+            pictureBox1.Location = new Point(816, 303);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(127, 225);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(955, 742);
+            ClientSize = new Size(970, 816);
+            Controls.Add(pictureBox1);
             Controls.Add(btnAbout);
             Controls.Add(groupBox2);
             Controls.Add(btnPrepare);
@@ -186,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)pbSalad).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbFries).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbStew).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -203,5 +218,6 @@
         private PictureBox pbFries;
         private PictureBox pbStew;
         private Button btnAbout;
+        private PictureBox pictureBox1;
     }
 }

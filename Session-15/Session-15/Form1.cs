@@ -26,5 +26,19 @@ namespace Session_15
         {
             pbPepsi.Image = Resource1.pepsi;
         }
+
+        private void btnPrepare_Click(object sender, EventArgs e)
+        {
+            int progress = (int) groupBox2.Width;
+            int movements = (int) (progress / pbStew.Width);
+            
+
+            pbStew.Left += movements;
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Simple Kitchen emulator that uses ASYNC / AWAIT ", "By Georgios Zacharidis", MessageBoxButtons.OK);
+        }
     }
 }
