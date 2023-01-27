@@ -164,9 +164,9 @@
             // 
             // btnAbout
             // 
-            btnAbout.Location = new Point(890, 12);
+            btnAbout.Location = new Point(875, 762);
             btnAbout.Name = "btnAbout";
-            btnAbout.Size = new Size(53, 42);
+            btnAbout.Size = new Size(68, 42);
             btnAbout.TabIndex = 3;
             btnAbout.Text = "About";
             btnAbout.UseVisualStyleBackColor = true;
@@ -185,12 +185,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(970, 816);
             Controls.Add(pictureBox1);
             Controls.Add(btnAbout);
             Controls.Add(groupBox2);
             Controls.Add(btnPrepare);
             Controls.Add(groupBox1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
             Text = "- E -  Async Kitchen";
             groupBox1.ResumeLayout(false);
