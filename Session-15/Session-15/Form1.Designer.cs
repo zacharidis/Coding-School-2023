@@ -56,7 +56,7 @@
             groupBox1.Controls.Add(chkStew);
             groupBox1.Location = new Point(28, 24);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(163, 161);
+            groupBox1.Size = new Size(163, 139);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Menu";
@@ -107,7 +107,7 @@
             // 
             // btnPrepare
             // 
-            btnPrepare.Location = new Point(227, 81);
+            btnPrepare.Location = new Point(229, 67);
             btnPrepare.Name = "btnPrepare";
             btnPrepare.Size = new Size(146, 45);
             btnPrepare.TabIndex = 1;
@@ -120,42 +120,42 @@
             groupBox2.Controls.Add(pbSalad);
             groupBox2.Controls.Add(pbFries);
             groupBox2.Controls.Add(pbStew);
-            groupBox2.Location = new Point(28, 212);
+            groupBox2.Location = new Point(28, 169);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(900, 361);
+            groupBox2.Size = new Size(900, 561);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Progress";
             // 
             // pbPepsi
             // 
-            pbPepsi.Location = new Point(22, 289);
+            pbPepsi.Location = new Point(25, 481);
             pbPepsi.Name = "pbPepsi";
-            pbPepsi.Size = new Size(76, 57);
+            pbPepsi.Size = new Size(95, 74);
             pbPepsi.TabIndex = 3;
             pbPepsi.TabStop = false;
             // 
             // pbSalad
             // 
-            pbSalad.Location = new Point(22, 203);
+            pbSalad.Location = new Point(6, 326);
             pbSalad.Name = "pbSalad";
-            pbSalad.Size = new Size(76, 67);
+            pbSalad.Size = new Size(156, 137);
             pbSalad.TabIndex = 2;
             pbSalad.TabStop = false;
             // 
             // pbFries
             // 
-            pbFries.Location = new Point(22, 119);
+            pbFries.Location = new Point(6, 162);
             pbFries.Name = "pbFries";
-            pbFries.Size = new Size(78, 68);
+            pbFries.Size = new Size(156, 136);
             pbFries.TabIndex = 1;
             pbFries.TabStop = false;
             // 
             // pbStew
             // 
-            pbStew.Location = new Point(22, 35);
+            pbStew.Location = new Point(6, 34);
             pbStew.Name = "pbStew";
-            pbStew.Size = new Size(76, 65);
+            pbStew.Size = new Size(156, 102);
             pbStew.TabIndex = 0;
             pbStew.TabStop = false;
             // 
@@ -172,7 +172,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(955, 597);
+            ClientSize = new Size(955, 742);
             Controls.Add(btnAbout);
             Controls.Add(groupBox2);
             Controls.Add(btnPrepare);
