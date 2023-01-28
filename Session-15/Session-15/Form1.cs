@@ -31,11 +31,10 @@ namespace Session_15
         private void btnPrepare_Click(object sender, EventArgs e)
         {
 
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = 100;
-            progressBar1.Step = 25;
+           
             FillImages();
             PrepareMeal();
+            
 
 
 
@@ -94,6 +93,13 @@ namespace Session_15
 
             progressBar1.PerformStep();
 
+        }
+
+        private void InitTheBars()
+        {
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            progressBar1.Step = 25;
         }
     }
 }
