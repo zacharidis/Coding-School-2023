@@ -30,10 +30,12 @@ namespace Session_15
 
         private void btnPrepare_Click(object sender, EventArgs e)
         {
-            int progress = (int)groupBox2.Width;
-            int movements = (int)(progress / pbStew.Width);
 
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            progressBar1.Step = 25;
             FillImages();
+            PrepareMeal();
 
 
 
@@ -84,6 +86,13 @@ namespace Session_15
                 MessageBox.Show("Nothing to eat !", "Empty Order", MessageBoxButtons.OK);
             }
 
+
+        }
+
+        private void PrepareMeal()
+        {
+
+            progressBar1.PerformStep();
 
         }
     }

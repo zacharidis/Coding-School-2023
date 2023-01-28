@@ -41,6 +41,7 @@
             pbStew = new PictureBox();
             btnAbout = new Button();
             pictureBox1 = new PictureBox();
+            progressBar1 = new ProgressBar();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbPepsi).BeginInit();
@@ -119,6 +120,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(progressBar1);
             groupBox2.Controls.Add(pbPepsi);
             groupBox2.Controls.Add(pbSalad);
             groupBox2.Controls.Add(pbFries);
@@ -132,15 +134,15 @@
             // 
             // pbPepsi
             // 
-            pbPepsi.Location = new Point(9, 481);
+            pbPepsi.Location = new Point(9, 491);
             pbPepsi.Name = "pbPepsi";
-            pbPepsi.Size = new Size(153, 132);
+            pbPepsi.Size = new Size(153, 122);
             pbPepsi.TabIndex = 3;
             pbPepsi.TabStop = false;
             // 
             // pbSalad
             // 
-            pbSalad.Location = new Point(6, 326);
+            pbSalad.Location = new Point(7, 338);
             pbSalad.Name = "pbSalad";
             pbSalad.Size = new Size(156, 137);
             pbSalad.TabIndex = 2;
@@ -148,7 +150,7 @@
             // 
             // pbFries
             // 
-            pbFries.Location = new Point(6, 162);
+            pbFries.Location = new Point(6, 186);
             pbFries.Name = "pbFries";
             pbFries.Size = new Size(156, 136);
             pbFries.TabIndex = 1;
@@ -180,6 +182,13 @@
             pictureBox1.Size = new Size(127, 225);
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(9, 142);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(723, 23);
+            progressBar1.TabIndex = 4;
             // 
             // Form1
             // 
@@ -223,5 +232,6 @@
         private PictureBox pbStew;
         private Button btnAbout;
         private PictureBox pictureBox1;
+        private ProgressBar progressBar1;
     }
 }
