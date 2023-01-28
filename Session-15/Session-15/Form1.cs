@@ -31,7 +31,8 @@ namespace Session_15
         private void btnPrepare_Click(object sender, EventArgs e)
         {
 
-           
+            InitTheBars();
+
             FillImages();
             PrepareMeal();
             
@@ -88,8 +89,13 @@ namespace Session_15
 
         }
 
-        private void PrepareMeal()
+        private async Task PrepareMeal()
         {
+            await Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+
+            });
 
             progressBar1.PerformStep();
 
