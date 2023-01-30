@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EF.CoffeeShop.Orm
 {
-    internal class CoffeeShopDbContext
+    internal class CoffeeShopDbContext : DbContext
     {
         public DbSet<Product> products { get; set; }
 
@@ -25,8 +25,19 @@ namespace EF.CoffeeShop.Orm
         public DbSet<Customer> customers { get; set; }
 
 
+        // overrides 
 
-     
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source =COREDEV\\SQLEXPRESS; Initial Catalog =CoffeeShopDb; Integrated Security=True;Connect Timeout=30" +
+                "Encrypt=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            base.OnConfiguring(optionsBuilder);
+        }
 
     }
 }
