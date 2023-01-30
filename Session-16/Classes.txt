@@ -1,0 +1,63 @@
+enumerations.cs: 
+    ProductCategoryID  (Coffee, Beverages, and Food)
+    employtypes (Manager, Cashier, Barista and Waiter.)
+    paymenthmethod (Cash , Card)
+    months ( mines )
+
+customer.cs
+    ID:guid
+    Code:string
+    Description:string
+
+ProductCategory.cs
+    ID:guid
+    Code:string
+    Description:string
+    ProductType:enumeration
+
+Product.cs
+    ID:guid
+    Code:string
+    Description:string
+    ProductCategoryID:enumerations
+    Price : decimal
+    Cost: decimal
+
+Employee.cs
+    ID:guid
+    Name:string
+    Surname:string
+    EmployeeType:enumeration
+    SallaryPerMonth: decimal
+
+Transaction.cs
+    ID:guid
+    Date:DateTime
+    CustomerID:GUID
+    EmployeeID:GUID
+    PaymentMethod:enumerations
+    TotalPrice: decimal
+**note: isws na 8elei ena transactionline<list>**
+
+TransactionLine.cs
+    ID:GUID
+    ProductID:Guid 
+    Quantity:int
+    Price:Decimal 
+    Discount:decimal 
+    TotalPrice:decimal
+
+MonthlyLedger
+    Year:DateTime
+    Month:enums
+    Income:decimal
+    Expenses:decimal
+    Total:decimal
+
+
+**notes:pi8anes helper classeis:**
+TransactionHandler.cs?!?
+    calculate_discount
+    add_discount
+    check_payment_method
+    
