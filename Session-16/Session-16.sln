@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33318.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Win", "Session-16\EF.CoffeeShop.Win.csproj", "{52B909B3-66E4-4D2F-A904-0044C7FABE3A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE084C5B-B845-4C76-ABE7-2162389E0A19} = {AE084C5B-B845-4C76-ABE7-2162389E0A19}
+		{C338D1F6-D230-425B-8520-159EFEF7412E} = {C338D1F6-D230-425B-8520-159EFEF7412E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Model", "EF.CoffeeShop.Model\EF.CoffeeShop.Model.csproj", "{C338D1F6-D230-425B-8520-159EFEF7412E}"
 EndProject
