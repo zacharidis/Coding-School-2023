@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Win", "Sessio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Model", "EF.CoffeeShop.Model\EF.CoffeeShop.Model.csproj", "{C338D1F6-D230-425B-8520-159EFEF7412E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Orm", "EF.CoffeeShop.Orm\EF.CoffeeShop.Orm.csproj", "{AE084C5B-B845-4C76-ABE7-2162389E0A19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C338D1F6-D230-425B-8520-159EFEF7412E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C338D1F6-D230-425B-8520-159EFEF7412E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C338D1F6-D230-425B-8520-159EFEF7412E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE084C5B-B845-4C76-ABE7-2162389E0A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE084C5B-B845-4C76-ABE7-2162389E0A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE084C5B-B845-4C76-ABE7-2162389E0A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE084C5B-B845-4C76-ABE7-2162389E0A19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
