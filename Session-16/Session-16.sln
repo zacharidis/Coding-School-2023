@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33318.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Win", "Session-16\EF.CoffeeShop.Win.csproj", "{52B909B3-66E4-4D2F-A904-0044C7FABE3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Model", "EF.CoffeeShop.Model\EF.CoffeeShop.Model.csproj", "{C338D1F6-D230-425B-8520-159EFEF7412E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{52B909B3-66E4-4D2F-A904-0044C7FABE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B909B3-66E4-4D2F-A904-0044C7FABE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52B909B3-66E4-4D2F-A904-0044C7FABE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C338D1F6-D230-425B-8520-159EFEF7412E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C338D1F6-D230-425B-8520-159EFEF7412E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C338D1F6-D230-425B-8520-159EFEF7412E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C338D1F6-D230-425B-8520-159EFEF7412E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
