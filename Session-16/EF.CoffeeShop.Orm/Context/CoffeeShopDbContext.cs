@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF.CoffeeShop.Orm
+namespace EF.CoffeeShop.Orm.Context
 {
     internal class CoffeeShopDbContext : DbContext
     {
