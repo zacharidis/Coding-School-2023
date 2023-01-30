@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Libs\Libs.csproj" />
+    <ProjectReference Include="..\Libs\EF.CoffeeShop.Model.csproj" />
   </ItemGroup>
 
 </Project>
