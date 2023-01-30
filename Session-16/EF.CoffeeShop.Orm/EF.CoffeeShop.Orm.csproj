@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Libs\EF.CoffeeShop.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+  </ItemGroup>
+
 </Project>
