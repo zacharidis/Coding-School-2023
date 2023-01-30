@@ -43,7 +43,7 @@
             btnEmployeeRedirect.Dock = DockStyle.Bottom;
             btnEmployeeRedirect.Location = new Point(0, 607);
             btnEmployeeRedirect.Name = "btnEmployeeRedirect";
-            btnEmployeeRedirect.Size = new Size(849, 86);
+            btnEmployeeRedirect.Size = new Size(889, 86);
             btnEmployeeRedirect.TabIndex = 0;
             btnEmployeeRedirect.Text = "Employee Management";
             btnEmployeeRedirect.UseVisualStyleBackColor = false;
@@ -53,7 +53,7 @@
             // 
             btnLoadLedger.BackColor = Color.SandyBrown;
             btnLoadLedger.Dock = DockStyle.Right;
-            btnLoadLedger.Location = new Point(758, 0);
+            btnLoadLedger.Location = new Point(798, 0);
             btnLoadLedger.Name = "btnLoadLedger";
             btnLoadLedger.Size = new Size(91, 607);
             btnLoadLedger.TabIndex = 1;
@@ -67,7 +67,7 @@
             btnTransactions.Dock = DockStyle.Top;
             btnTransactions.Location = new Point(0, 0);
             btnTransactions.Name = "btnTransactions";
-            btnTransactions.Size = new Size(758, 104);
+            btnTransactions.Size = new Size(798, 104);
             btnTransactions.TabIndex = 2;
             btnTransactions.Text = "Transactions";
             btnTransactions.UseVisualStyleBackColor = false;
@@ -80,7 +80,7 @@
             btnProduct.Location = new Point(0, 521);
             btnProduct.Margin = new Padding(3, 2, 3, 2);
             btnProduct.Name = "btnProduct";
-            btnProduct.Size = new Size(758, 86);
+            btnProduct.Size = new Size(798, 86);
             btnProduct.TabIndex = 3;
             btnProduct.Text = "Inventory Managment";
             btnProduct.UseVisualStyleBackColor = false;
@@ -93,7 +93,7 @@
             btnProductCategoryManagement.Location = new Point(0, 439);
             btnProductCategoryManagement.Margin = new Padding(3, 2, 3, 2);
             btnProductCategoryManagement.Name = "btnProductCategoryManagement";
-            btnProductCategoryManagement.Size = new Size(758, 82);
+            btnProductCategoryManagement.Size = new Size(798, 82);
             btnProductCategoryManagement.TabIndex = 4;
             btnProductCategoryManagement.Text = "Product Category Management";
             btnProductCategoryManagement.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(849, 693);
+            ClientSize = new Size(889, 693);
             Controls.Add(btnSaveAll);
             Controls.Add(label1);
             Controls.Add(btnProductCategoryManagement);
