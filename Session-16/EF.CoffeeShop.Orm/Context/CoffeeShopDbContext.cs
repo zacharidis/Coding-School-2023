@@ -1,4 +1,5 @@
-﻿using Libs;
+﻿using EF.CoffeeShop.Orm.Configurations;
+using Libs;
 using Microsoft.EntityFrameworkCore;
 using Session_11;
 using System;
@@ -29,6 +30,7 @@ namespace EF.CoffeeShop.Orm.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             base.OnModelCreating(modelBuilder);
         }
 

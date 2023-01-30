@@ -15,7 +15,13 @@ namespace EF.CoffeeShop.Orm.Configurations
 
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("CUSTOMER");
+            builder.HasKey(Customer => Customer.ID );
+            builder.Property(Customer => Customer.Code).HasMaxLength(10);
+
+
+
+
         }
     }
 }
