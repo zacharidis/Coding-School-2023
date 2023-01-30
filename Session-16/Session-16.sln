@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33318.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session-16", "Session-16\Session-16.csproj", "{52B909B3-66E4-4D2F-A904-0044C7FABE3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Win", "Session-16\EF.CoffeeShop.Win.csproj", "{52B909B3-66E4-4D2F-A904-0044C7FABE3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
