@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EF.CoffeeShop.Model
+namespace EF.CoffeeShop.Model.Model
 {
-    internal class Employee
+    internal class Enumerations
     {
     }
 }
