@@ -55,9 +55,10 @@ namespace Session_11
             ledgerForm.ShowDialog();
         }
 
-        private void btnTransactions_Click(object sender, EventArgs e) {
-           TransactionF f1 = new TransactionF(CoffeeShop,Transaction);
-           f1.ShowDialog();
+        private void btnTransactions_Click(object sender, EventArgs e)
+        {
+            TransactionF f1 = new TransactionF(CoffeeShop, Transaction);
+            f1.ShowDialog();
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -72,7 +73,8 @@ namespace Session_11
             productCategoryF.ShowDialog();
         }
 
-        private void btnSaveAll_Click(object sender, EventArgs e) {
+        private void btnSaveAll_Click(object sender, EventArgs e)
+        {
             string json = JsonConvert.SerializeObject(CoffeeShopWrapper, Formatting.Indented);
             File.WriteAllText("GenericSaving.json", json);
             MessageBox.Show("Exported Exerything!");

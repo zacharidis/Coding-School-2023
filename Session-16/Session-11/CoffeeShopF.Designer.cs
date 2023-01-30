@@ -28,118 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEmployeeRedirect = new System.Windows.Forms.Button();
-            this.btnLoadLedger = new System.Windows.Forms.Button();
-            this.btnTransactions = new System.Windows.Forms.Button();
-            this.btnProduct = new System.Windows.Forms.Button();
-            this.btnProductCategoryManagement = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSaveAll = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            btnEmployeeRedirect = new Button();
+            btnLoadLedger = new Button();
+            btnTransactions = new Button();
+            btnProduct = new Button();
+            btnProductCategoryManagement = new Button();
+            label1 = new Label();
+            btnSaveAll = new Button();
+            SuspendLayout();
             // 
             // btnEmployeeRedirect
             // 
-            this.btnEmployeeRedirect.BackColor = System.Drawing.Color.Moccasin;
-            this.btnEmployeeRedirect.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnEmployeeRedirect.Location = new System.Drawing.Point(0, 460);
-            this.btnEmployeeRedirect.Name = "btnEmployeeRedirect";
-            this.btnEmployeeRedirect.Size = new System.Drawing.Size(755, 86);
-            this.btnEmployeeRedirect.TabIndex = 0;
-            this.btnEmployeeRedirect.Text = "Employee Management";
-            this.btnEmployeeRedirect.UseVisualStyleBackColor = false;
-            this.btnEmployeeRedirect.Click += new System.EventHandler(this.btnEmployeeRedirect_Click);
+            btnEmployeeRedirect.BackColor = Color.Moccasin;
+            btnEmployeeRedirect.Dock = DockStyle.Bottom;
+            btnEmployeeRedirect.Location = new Point(0, 607);
+            btnEmployeeRedirect.Name = "btnEmployeeRedirect";
+            btnEmployeeRedirect.Size = new Size(849, 86);
+            btnEmployeeRedirect.TabIndex = 0;
+            btnEmployeeRedirect.Text = "Employee Management";
+            btnEmployeeRedirect.UseVisualStyleBackColor = false;
+            btnEmployeeRedirect.Click += btnEmployeeRedirect_Click;
             // 
             // btnLoadLedger
             // 
-            this.btnLoadLedger.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnLoadLedger.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLoadLedger.Location = new System.Drawing.Point(664, 0);
-            this.btnLoadLedger.Name = "btnLoadLedger";
-            this.btnLoadLedger.Size = new System.Drawing.Size(91, 460);
-            this.btnLoadLedger.TabIndex = 1;
-            this.btnLoadLedger.Text = "Ledger";
-            this.btnLoadLedger.UseVisualStyleBackColor = false;
-            this.btnLoadLedger.Click += new System.EventHandler(this.btnLoadLedger_Click);
+            btnLoadLedger.BackColor = Color.SandyBrown;
+            btnLoadLedger.Dock = DockStyle.Right;
+            btnLoadLedger.Location = new Point(758, 0);
+            btnLoadLedger.Name = "btnLoadLedger";
+            btnLoadLedger.Size = new Size(91, 607);
+            btnLoadLedger.TabIndex = 1;
+            btnLoadLedger.Text = "Ledger";
+            btnLoadLedger.UseVisualStyleBackColor = false;
+            btnLoadLedger.Click += btnLoadLedger_Click;
             // 
             // btnTransactions
             // 
-            this.btnTransactions.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnTransactions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransactions.Location = new System.Drawing.Point(0, 0);
-            this.btnTransactions.Name = "btnTransactions";
-            this.btnTransactions.Size = new System.Drawing.Size(664, 104);
-            this.btnTransactions.TabIndex = 2;
-            this.btnTransactions.Text = "Transactions";
-            this.btnTransactions.UseVisualStyleBackColor = false;
-            this.btnTransactions.Click += new System.EventHandler(this.btnTransactions_Click);
+            btnTransactions.BackColor = Color.SandyBrown;
+            btnTransactions.Dock = DockStyle.Top;
+            btnTransactions.Location = new Point(0, 0);
+            btnTransactions.Name = "btnTransactions";
+            btnTransactions.Size = new Size(758, 104);
+            btnTransactions.TabIndex = 2;
+            btnTransactions.Text = "Transactions";
+            btnTransactions.UseVisualStyleBackColor = false;
+            btnTransactions.Click += btnTransactions_Click;
             // 
             // btnProduct
             // 
-            this.btnProduct.BackColor = System.Drawing.Color.Moccasin;
-            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnProduct.Location = new System.Drawing.Point(0, 374);
-            this.btnProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(664, 86);
-            this.btnProduct.TabIndex = 3;
-            this.btnProduct.Text = "Inventory Managment";
-            this.btnProduct.UseVisualStyleBackColor = false;
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            btnProduct.BackColor = Color.Moccasin;
+            btnProduct.Dock = DockStyle.Bottom;
+            btnProduct.Location = new Point(0, 521);
+            btnProduct.Margin = new Padding(3, 2, 3, 2);
+            btnProduct.Name = "btnProduct";
+            btnProduct.Size = new Size(758, 86);
+            btnProduct.TabIndex = 3;
+            btnProduct.Text = "Inventory Managment";
+            btnProduct.UseVisualStyleBackColor = false;
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnProductCategoryManagement
             // 
-            this.btnProductCategoryManagement.BackColor = System.Drawing.Color.Moccasin;
-            this.btnProductCategoryManagement.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnProductCategoryManagement.Location = new System.Drawing.Point(0, 292);
-            this.btnProductCategoryManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnProductCategoryManagement.Name = "btnProductCategoryManagement";
-            this.btnProductCategoryManagement.Size = new System.Drawing.Size(664, 82);
-            this.btnProductCategoryManagement.TabIndex = 4;
-            this.btnProductCategoryManagement.Text = "Product Category Management";
-            this.btnProductCategoryManagement.UseVisualStyleBackColor = false;
-            this.btnProductCategoryManagement.Click += new System.EventHandler(this.btnProductCategoryManagement_Click);
+            btnProductCategoryManagement.BackColor = Color.Moccasin;
+            btnProductCategoryManagement.Dock = DockStyle.Bottom;
+            btnProductCategoryManagement.Location = new Point(0, 439);
+            btnProductCategoryManagement.Margin = new Padding(3, 2, 3, 2);
+            btnProductCategoryManagement.Name = "btnProductCategoryManagement";
+            btnProductCategoryManagement.Size = new Size(758, 82);
+            btnProductCategoryManagement.TabIndex = 4;
+            btnProductCategoryManagement.Text = "Product Category Management";
+            btnProductCategoryManagement.UseVisualStyleBackColor = false;
+            btnProductCategoryManagement.Click += btnProductCategoryManagement_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(252, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 30);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Fiesta Cafe";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(345, 236);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 30);
+            label1.TabIndex = 5;
+            label1.Text = "Fiesta Cafe";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSaveAll
             // 
-            this.btnSaveAll.BackColor = System.Drawing.Color.SandyBrown;
-            this.btnSaveAll.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnSaveAll.Location = new System.Drawing.Point(0, 104);
-            this.btnSaveAll.Name = "btnSaveAll";
-            this.btnSaveAll.Size = new System.Drawing.Size(108, 188);
-            this.btnSaveAll.TabIndex = 6;
-            this.btnSaveAll.Text = "Export";
-            this.btnSaveAll.UseVisualStyleBackColor = false;
-            this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
+            btnSaveAll.BackColor = Color.SandyBrown;
+            btnSaveAll.Dock = DockStyle.Left;
+            btnSaveAll.Location = new Point(0, 104);
+            btnSaveAll.Name = "btnSaveAll";
+            btnSaveAll.Size = new Size(108, 335);
+            btnSaveAll.TabIndex = 6;
+            btnSaveAll.Text = "Export";
+            btnSaveAll.UseVisualStyleBackColor = false;
+            btnSaveAll.Click += btnSaveAll_Click;
             // 
             // CoffeeShopF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 546);
-            this.Controls.Add(this.btnSaveAll);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnProductCategoryManagement);
-            this.Controls.Add(this.btnProduct);
-            this.Controls.Add(this.btnTransactions);
-            this.Controls.Add(this.btnLoadLedger);
-            this.Controls.Add(this.btnEmployeeRedirect);
-            this.MaximizeBox = false;
-            this.Name = "CoffeeShopF";
-            this.Text = "CoffeeShop 1.1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(849, 693);
+            Controls.Add(btnSaveAll);
+            Controls.Add(label1);
+            Controls.Add(btnProductCategoryManagement);
+            Controls.Add(btnProduct);
+            Controls.Add(btnTransactions);
+            Controls.Add(btnLoadLedger);
+            Controls.Add(btnEmployeeRedirect);
+            MaximizeBox = false;
+            Name = "CoffeeShopF";
+            Text = "CoffeeShop 1.1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
