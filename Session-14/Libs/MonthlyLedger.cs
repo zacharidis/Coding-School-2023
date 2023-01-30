@@ -13,7 +13,7 @@ using Session_11;
 namespace Libs {
 
     //TODO:Discuss and implement ledger 
-    public  class MonthlyLedger {
+    public class MonthlyLedger {
 
         public int Year { get; set; }
         public int Month { get; set; }
