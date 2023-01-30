@@ -11,18 +11,18 @@ namespace EF.CoffeeShop.Orm.Context
 {
     internal class CoffeeShopDbContext : DbContext
     {
-        public DbSet<Product> products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
-        public DbSet<ProductCategory> productCategories { get; set; }
-        public DbSet<Transaction> transactions { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
-        public DbSet<TransactionLine> transactionLines { get; set; }
+        public DbSet<TransactionLine> TransactionLines { get; set; }
 
-        public DbSet<MonthlyLedger> monthlyLedgers { get; set; }
+        public DbSet<MonthlyLedger> MonthlyLedgers { get; set; }
 
-        public DbSet<Employee> employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
-        public DbSet<Customer> customers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
 
         // overrides 
