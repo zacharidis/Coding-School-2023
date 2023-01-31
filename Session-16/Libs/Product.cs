@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Libs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,9 @@ namespace Session_11
         public Guid ProductCategoryID { get; set; }
         public decimal Price { get; set; }
         public decimal Cost { get; set; }
+
+        public TransactionLine TransactionLine { get; set; }
+
         public Product()
         {
             ProductID = Guid.NewGuid();

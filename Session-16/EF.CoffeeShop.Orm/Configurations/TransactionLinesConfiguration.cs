@@ -36,6 +36,8 @@ namespace EF.CoffeeShop.Orm.Configurations
 
             //relationships 
 
+            builder.HasOne(transactionLine => transactionLine.Product).WithOne(product => product.TransactionLine).HasForeignKey<TransactionLine>(transactionLine => transactionLine.ID);
+
 
         }
     }
