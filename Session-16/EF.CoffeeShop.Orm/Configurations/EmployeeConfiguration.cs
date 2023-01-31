@@ -13,7 +13,13 @@ namespace EF.CoffeeShop.Orm.Configurations
     {
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Employee> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("EMPLOYEE");
+            builder.HasKey(Employee => Employee.ID);
+            builder.Property(Employee => Employee.Name).HasMaxLength(20);
+            builder.Property(Employee => Employee.Surname).HasMaxLength(20);
+            builder.Property(Employee => Employee.Salary);
+            
+
         }
     }
 }
