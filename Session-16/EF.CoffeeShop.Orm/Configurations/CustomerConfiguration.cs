@@ -21,6 +21,7 @@ namespace EF.CoffeeShop.Orm.Configurations
             builder.Property(Customer => Customer.Description).HasMaxLength(20);
             
             //define the relationships
+           
 
             
 
