@@ -20,7 +20,7 @@ namespace EF.CoffeeShop.Orm.Configurations
             builder.Property(productCategory => productCategory.ProductCategoryID).ValueGeneratedOnAdd();
             builder.Property(productCategory => productCategory.Code).HasMaxLength(50);
             builder.Property(productCategory => productCategory.Description).HasMaxLength(250);
-            // builder.Property(ProductCategory => ProductCategory.ProductType).GetType();
+            
         }
     }
 }
