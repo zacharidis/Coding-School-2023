@@ -32,6 +32,8 @@ namespace EF.CoffeeShop.Orm.Context
         {
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductCategoryConfiguration());
 
 
             base.OnModelCreating(modelBuilder);
