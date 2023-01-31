@@ -31,6 +31,9 @@ namespace EF.CoffeeShop.Orm.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+
+
             base.OnModelCreating(modelBuilder);
         }
 
