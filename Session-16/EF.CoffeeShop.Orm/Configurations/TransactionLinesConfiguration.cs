@@ -23,10 +23,10 @@ namespace EF.CoffeeShop.Orm.Configurations
             builder.Property(transactionLine => transactionLine.ID);
 
             builder.Property(transactionLine => transactionLine.Quantity)
-                .HasColumnType("decimal(6,2)").HasPrecision(5, 2);
+                .HasColumnType("decimal(5,2)").HasPrecision(5, 2);
 
             builder.Property(transactionLine => transactionLine.Discount)
-                .HasColumnType("decimal(6,2)").HasPrecision(5, 2);
+                .HasColumnType("decimal(5,2)").HasPrecision(5, 2);
             
             builder.Property(transactionLine => transactionLine.Description)
                 .HasMaxLength(250);
