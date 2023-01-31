@@ -19,11 +19,15 @@ namespace EF.CoffeeShop.Orm.Configurations
             builder.HasKey(customer => customer.ID );
             builder.Property(customer => customer.Code).HasMaxLength(5);
             builder.Property(customer => customer.Description).HasMaxLength(20);
-            
-            //define the relationships
-           
 
-            
+            //define the relationships
+
+            // One to one , customer is always the same ("Retail Customer")
+            builder.HasOne(customer => customer.Transaction)
+                .WithOne(transaction => transaction.Customer)
+                .HasForeignKey<Transaction>(transaction => transaction.ID);
+
+
 
 
         }
