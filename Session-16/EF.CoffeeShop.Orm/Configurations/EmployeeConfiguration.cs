@@ -15,6 +15,7 @@ namespace EF.CoffeeShop.Orm.Configurations
         {
             builder.ToTable("EMPLOYEE");
             builder.HasKey(Employee => Employee.ID);
+            builder.Property(Employee => Employee.ID).ValueGeneratedOnAdd();
             builder.Property(Employee => Employee.Name).HasMaxLength(20);
             builder.Property(Employee => Employee.Surname).HasMaxLength(20);
             builder.Property(Employee => Employee.Salary);
