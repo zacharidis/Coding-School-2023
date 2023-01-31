@@ -11,6 +11,8 @@ namespace Libs {
         public string? Surname { get; set; }
         public decimal Salary { get; set; }
 
+        public Transaction Transaction { get; set; }
+
         public EmployeeType EmployeeType { get; set; }
 
 
