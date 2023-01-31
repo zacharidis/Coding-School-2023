@@ -17,7 +17,8 @@ namespace EF.CoffeeShop.Orm.Configurations
         {
             builder.ToTable("CUSTOMER");
             builder.HasKey(Customer => Customer.ID );
-            builder.Property(Customer => Customer.Code).HasMaxLength(10);
+            builder.Property(Customer => Customer.Code).HasMaxLength(5);
+            builder.Property(Customer => Customer.Description).HasMaxLength(20);
 
 
 

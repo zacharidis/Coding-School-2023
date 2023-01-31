@@ -19,6 +19,6 @@ namespace Libs {
             Description = "Retail Customer";
         }
 
-    } //nikos
+    } 
 
 }
