@@ -11,14 +11,18 @@ namespace Libs
     {
         public Guid ID { get; set; }
         public DateTime Date { get; set; }
+
+        public Customer Customer { get; set; }
         public Guid CustomerID { get; set; }
+        
+        public Employee Employee { get; set; }
         public Guid EmployeeID { get; set; }
+
         public PaymentMethod PaymentMethod { get; set; }
         public List<TransactionLine> TransactionLines { get; set; }
         public decimal TotalPrice { get; set; }
-
        
-    
+
         public Transaction()
         {
             ID= Guid.NewGuid();
