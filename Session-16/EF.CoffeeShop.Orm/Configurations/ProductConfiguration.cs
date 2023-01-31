@@ -13,11 +13,11 @@ namespace EF.CoffeeShop.Orm.Configurations
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Product> builder)
         {
             builder.ToTable("PRODUCT");
-            builder.HasKey(Product => Product.ProductID);
-            builder.Property(Product=>Product.ProductID).ValueGeneratedOnAdd();
-            builder.Property(Product => Product.Code).HasMaxLength(50);
-            builder.Property(Product=>Product.Description).HasMaxLength(250);
-            builder.Property(Product => Product.ProductCategoryID);
+            builder.HasKey(product => product.ProductID);
+            builder.Property(product=>product.ProductID).ValueGeneratedOnAdd();
+            builder.Property(product => product.Code).HasMaxLength(50);
+            builder.Property(product => product.Description).HasMaxLength(250);
+            builder.Property(product => product.ProductCategoryID);
             
                 
 

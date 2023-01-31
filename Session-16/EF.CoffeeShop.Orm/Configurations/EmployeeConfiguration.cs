@@ -14,11 +14,11 @@ namespace EF.CoffeeShop.Orm.Configurations
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Employee> builder)
         {
             builder.ToTable("EMPLOYEE");
-            builder.HasKey(Employee => Employee.ID);
-            builder.Property(Employee => Employee.ID).ValueGeneratedOnAdd();
-            builder.Property(Employee => Employee.Name).HasMaxLength(20);
-            builder.Property(Employee => Employee.Surname).HasMaxLength(20);
-            builder.Property(Employee => Employee.Salary);
+            builder.HasKey(employee => employee.ID);
+            builder.Property(employee => employee.ID).ValueGeneratedOnAdd();
+            builder.Property(employee => employee.Name).HasMaxLength(20);
+            builder.Property(employee => employee.Surname).HasMaxLength(20);
+            builder.Property(employee => employee.Salary);
             
 
         }

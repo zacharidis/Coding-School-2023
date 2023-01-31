@@ -14,7 +14,10 @@ namespace EF.CoffeeShop.Orm.Configurations
     {
         public void Configure(EntityTypeBuilder<Transaction> builder)
         {
-            throw new NotImplementedException();
+
+            builder.HasKey(transaction => transaction.ID);
+            builder.Property(transaction=> transaction.Date);
+
         }
     }
 }

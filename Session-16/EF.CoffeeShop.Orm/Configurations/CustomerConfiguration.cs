@@ -16,9 +16,9 @@ namespace EF.CoffeeShop.Orm.Configurations
         public void Configure(EntityTypeBuilder<Customer> builder)
         {
             builder.ToTable("CUSTOMER");
-            builder.HasKey(Customer => Customer.ID );
-            builder.Property(Customer => Customer.Code).HasMaxLength(5);
-            builder.Property(Customer => Customer.Description).HasMaxLength(20);
+            builder.HasKey(customer => customer.ID );
+            builder.Property(customer => customer.Code).HasMaxLength(5);
+            builder.Property(customer => customer.Description).HasMaxLength(20);
             
             //define the relationships
            

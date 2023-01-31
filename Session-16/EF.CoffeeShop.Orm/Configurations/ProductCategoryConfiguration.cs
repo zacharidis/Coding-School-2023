@@ -15,11 +15,11 @@ namespace EF.CoffeeShop.Orm.Configurations
         {
             builder.ToTable("PRODUCT CATEGORY");
            
-            builder.HasKey(ProductCategory => ProductCategory.ProductCategoryID);
+            builder.HasKey(productCategory => productCategory.ProductCategoryID);
 
-            builder.Property(ProductCategory => ProductCategory.ProductCategoryID).ValueGeneratedOnAdd();
-            builder.Property(ProductCategory => ProductCategory.Code).HasMaxLength(50);
-            builder.Property(ProductCategory => ProductCategory.Description).HasMaxLength(250);
+            builder.Property(productCategory => productCategory.ProductCategoryID).ValueGeneratedOnAdd();
+            builder.Property(productCategory => productCategory.Code).HasMaxLength(50);
+            builder.Property(productCategory => productCategory.Description).HasMaxLength(250);
             // builder.Property(ProductCategory => ProductCategory.ProductType).GetType();
         }
     }
