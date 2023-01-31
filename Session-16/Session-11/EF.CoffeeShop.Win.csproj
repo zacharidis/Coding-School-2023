@@ -18,7 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EF.CoffeeShop.Orm\EF.CoffeeShop.Orm.csproj" />
     <ProjectReference Include="..\Libs\EF.CoffeeShop.Model.csproj" />
+	
   </ItemGroup>
 
 </Project>

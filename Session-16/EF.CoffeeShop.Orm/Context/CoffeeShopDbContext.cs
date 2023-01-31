@@ -19,7 +19,7 @@ namespace EF.CoffeeShop.Orm.Context
 
         public DbSet<TransactionLine> TransactionLines { get; set; }
 
-        public DbSet<MonthlyLedger> MonthlyLedgers { get; set; }
+       
 
         public DbSet<Employee> Employees { get; set; }
 

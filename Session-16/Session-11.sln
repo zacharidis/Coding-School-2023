@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.CoffeeShop.Win", "Session-11\EF.CoffeeShop.Win.csproj", "{1BBFE489-8329-4257-BE2D-8AC72C7D2F34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2FFA6D6-0BD2-4479-A724-8A66E4363823} = {F2FFA6D6-0BD2-4479-A724-8A66E4363823}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.CoffeeShop.Model", "Libs\EF.CoffeeShop.Model.csproj", "{82C4111B-035F-48E3-8259-30A38C0184B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CoffeeShop.Orm", "EF.CoffeeShop.Orm\EF.CoffeeShop.Orm.csproj", "{F2FFA6D6-0BD2-4479-A724-8A66E4363823}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.CoffeeShop.Orm", "EF.CoffeeShop.Orm\EF.CoffeeShop.Orm.csproj", "{F2FFA6D6-0BD2-4479-A724-8A66E4363823}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
