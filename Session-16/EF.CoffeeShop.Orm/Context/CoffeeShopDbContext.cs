@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EF.CoffeeShop.Orm.Context
 {
-    internal class CoffeeShopDbContext : DbContext
+    public class CoffeeShopDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
 
