@@ -19,8 +19,10 @@ namespace EF.CoffeeShop.Orm.Configurations
             builder.HasKey(Customer => Customer.ID );
             builder.Property(Customer => Customer.Code).HasMaxLength(5);
             builder.Property(Customer => Customer.Description).HasMaxLength(20);
+            
+            //define the relationships
 
-
+            
 
 
         }
