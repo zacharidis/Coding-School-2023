@@ -23,11 +23,18 @@ namespace EF.CoffeeShop.Orm.Configurations
             //relationships Employee , Customer , TransactionLine 
 
             // one to one
-            builder.HasOne(transaction => transaction.Employee).WithOne(employee => employee.Transaction).HasForeignKey<Transaction>(transaction => transaction.ID);
-            builder.HasOne(transaction => transaction.Customer).WithOne(customer => customer.Transaction).HasForeignKey<Transaction>(transaction => transaction.ID);
+            builder.HasOne(transaction => transaction.Employee)
+                .WithOne(employee => employee.Transaction)
+                .HasForeignKey<Transaction>(transaction => transaction.ID);
+
+            builder.HasOne(transaction => transaction.Customer)
+                .WithOne(customer => customer.Transaction)
+                .HasForeignKey<Transaction>(transaction => transaction.ID);
 
             //oone to many
-            builder.HasMany(transaction => transaction.TransactionLines).WithOne(transactionLine => transactionLine.Transaction).HasForeignKey(transactionLine => transactionLine.ID);
+            builder.HasMany(transaction => transaction.TransactionLines)
+                .WithOne(transactionLine => transactionLine.Transaction)
+                .HasForeignKey(transactionLine => transactionLine.ID);
 
 
         }
