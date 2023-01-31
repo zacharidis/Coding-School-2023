@@ -13,7 +13,14 @@ namespace EF.CoffeeShop.Orm.Configurations
     {
         public void Configure(EntityTypeBuilder<ProductCategory> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("PRODUCT CATEGORY");
+           
+            builder.HasKey(ProductCategory => ProductCategory.ProductCategoryID);
+
+            builder.Property(ProductCategory => ProductCategory.ProductCategoryID).ValueGeneratedOnAdd();
+            builder.Property(ProductCategory => ProductCategory.Code).HasMaxLength(50);
+            builder.Property(ProductCategory => ProductCategory.Description).HasMaxLength(250);
+            builder.Property(ProductCategory => ProductCategory.ProductType).GetType();
         }
     }
 }
