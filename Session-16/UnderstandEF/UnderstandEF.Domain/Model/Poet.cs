@@ -12,6 +12,8 @@ namespace UnderstandEF.Domain.Model
         public string Name { get; set; }
         public string Surname { get; set; }
 
+        public List<Poem> Poems { get; set; } = new List<Poem>();
+
 
 
     }
