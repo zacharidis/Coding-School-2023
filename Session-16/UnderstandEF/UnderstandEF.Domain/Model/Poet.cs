@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnderstandEF.Domain.Model
 {
-    internal class Poet
+    public class Poet
     {
         public int Id { get; set; }
         public string Name { get; set; }

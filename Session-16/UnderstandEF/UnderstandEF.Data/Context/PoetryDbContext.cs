@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace UnderstandEF.Orm.Context
 {
-    internal class PoetryDbContext
+    public  class PoetryDbContext : DbContext
     {
+        DbSet<Poet> poets { }
+
     }
 }
