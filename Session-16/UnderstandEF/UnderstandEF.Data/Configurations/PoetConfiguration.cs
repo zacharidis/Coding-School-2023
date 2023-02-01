@@ -13,7 +13,15 @@ namespace UnderstandEF.Orm.Configurations
     {
         public void Configure(EntityTypeBuilder<Poet> builder)
         {
-           
+
+            builder.ToTable("POET");
+            builder.HasKey(poet => poet.Id);
+            builder.Property(poet => poet.Name).HasMaxLength(50);
+            builder.Property(poet => poet.Surname).HasMaxLength(50);
+
+            //TODO Add reference to poems
+
+
         }
     }
 }
