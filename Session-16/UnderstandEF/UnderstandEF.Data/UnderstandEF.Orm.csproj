@@ -15,8 +15,4 @@
     <ProjectReference Include="..\UnderstandEF.Domain\UnderstandEF.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-  </ItemGroup>
-
 </Project>
