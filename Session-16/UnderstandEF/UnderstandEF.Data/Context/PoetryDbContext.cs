@@ -18,7 +18,7 @@ namespace UnderstandEF.Orm.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
         {
-            optionsBuilder.UseSqlServer("Data Source = COREDEV\\SQLEXPRESS; Initial Catalog=PoetryDB; Encrypt=False;");
+            optionsBuilder.UseSqlServer("Data Source = COREDEV\\SQLEXPRESS; Initial Catalog=PoetryDB; Encrypt=False; Integrated Security=true");
             base.OnConfiguring(optionsBuilder);
         }
 
