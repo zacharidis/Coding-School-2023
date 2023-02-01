@@ -16,6 +16,7 @@ namespace UnderstandEF.Orm.Configurations
 
             builder.ToTable("POET");
             builder.HasKey(poet => poet.Id);
+            builder.Property(poet => poet.Id).ValueGeneratedOnAdd();
             builder.Property(poet => poet.Name).HasMaxLength(50);
             builder.Property(poet => poet.Surname).HasMaxLength(50);
 

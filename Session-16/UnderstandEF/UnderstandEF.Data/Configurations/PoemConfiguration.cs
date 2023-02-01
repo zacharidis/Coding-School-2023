@@ -15,8 +15,9 @@ namespace UnderstandEF.Orm.Configurations
         {
             builder.ToTable("Poem");
             builder.HasKey(poem => poem.Id);
-            builder.Property(poem=>poem.PoemName).IsRequired().HasMaxLength(256);
-            builder.Property(poem=>poem.PoemBody).IsRequired().HasMaxLength(1024);
+            builder.Property(poem => poem.Id).ValueGeneratedOnAdd();
+            builder.Property(poem=>poem.PoemName).IsRequired(true).HasMaxLength(256);
+            builder.Property(poem=>poem.PoemBody).IsRequired(true).HasMaxLength(1024);
             
             //references here during the next step of EF
         }
