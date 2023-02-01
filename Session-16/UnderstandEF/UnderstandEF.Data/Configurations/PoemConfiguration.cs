@@ -18,8 +18,12 @@ namespace UnderstandEF.Orm.Configurations
             builder.Property(poem => poem.Id).ValueGeneratedOnAdd();
             builder.Property(poem=>poem.PoemName).IsRequired(true).HasMaxLength(256);
             builder.Property(poem=>poem.PoemBody).IsRequired(true).HasMaxLength(1024);
-            
+
             //references here during the next step of EF
+
+            builder.HasOne(poem => poem.Poet).WithMany(Poet => Poet.Poems).HasForeignKey(poem => poem.PoetID);
+
+
         }
     }
 }
