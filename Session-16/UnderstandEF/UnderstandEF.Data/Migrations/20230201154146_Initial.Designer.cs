@@ -11,7 +11,7 @@ using UnderstandEF.Orm.Context;
 namespace UnderstandEF.Orm.Migrations
 {
     [DbContext(typeof(PoetryDbContext))]
-    [Migration("20230201143108_Initial")]
+    [Migration("20230201154146_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
