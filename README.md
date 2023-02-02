@@ -13,3 +13,6 @@
 ## Session-16 added on 30/01/2023 and it contains the Collab project from session-11 but now with EF functionality. 
 ## Session-16 now contains another small project that utilizes the power of EF Framework
 ## Session-17 added with 10 questions and answers concerning HTTP requests (Greek)
+## Session-19 added with a simple controller as a part of a web api service. 
+## Screenshot of swagger attached : 
+![SwaggerScreenshot](https://user-images.githubusercontent.com/43867022/216338053-775fe4b0-6e98-4344-ac07-db75dcf44a39.jpg)
