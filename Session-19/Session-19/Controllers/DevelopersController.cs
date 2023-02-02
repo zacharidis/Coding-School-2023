@@ -22,6 +22,16 @@ namespace Session_19.Controllers
                     Surname = "Zachs",
                     YearsOfExperience = 1,
                     projects = new List<Project>()
+                    {
+                        new Project
+                        {
+                            Id = Guid.NewGuid() ,
+                            ProjectName = "AMAZING PROJECT",
+                    ProjectDescription = "SOMETHING AMAZING",
+                    StartDate = DateTime.Now,
+                    ProjectVersion = "1.0.0"
+                        }
+                    }
 
                 },
 
