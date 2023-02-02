@@ -11,3 +11,5 @@
 ![DESIRL](https://user-images.githubusercontent.com/43867022/213741486-79e8f493-3ff1-47df-9774-d2c1c563dcc3.jpg)
 ## Session-14 added on 27/01/2023
 ## Session-16 added on 30/01/2023 and it contains the Collab project from session-11 but now with EF functionality. 
+## Session-16 now contains another small project that utilizes the power of EF Framework
+## Session-17 added with 10 questions and answers concerning HTTP requests (Greek)
