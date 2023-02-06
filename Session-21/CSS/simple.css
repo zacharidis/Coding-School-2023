@@ -1,0 +1,17 @@
+body{
+    background-color:lightblue
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    
+}
+.content {
+    background-color: white;
+}
