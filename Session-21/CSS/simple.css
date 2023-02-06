@@ -1,20 +1,37 @@
 body{
-    background-color:#cbebeb65;
+    
     padding:0%; margin: 0; font-family: "Open Sans", sans-serif;
     
 }
 
 .header {
+    background-color: rgb(220, 233, 223);
     display:flex;
     flex-direction:row;
     justify-content: space-between;
     padding-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 0;
 }
 
+
+
 .content {
-    background-color: aliceblue;
+   background-color:white;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1rem;
+
+    
+}
+
+.content h1  {
+    align-self:flex-start;
+}
+
+a {
+    margin-top: 1rem;
 }
 
 
@@ -30,7 +47,7 @@ body{
   }
   
  .nav li {
-    
+    margin-top: 2rem;
     float:left;
     padding-right: 2em;
     color: aquamarine;
@@ -42,3 +59,5 @@ body{
     text-decoration: none;
     color: rgb(9, 97, 68);
   }
+
+  
