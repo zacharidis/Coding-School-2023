@@ -1,5 +1,44 @@
 body{
-    background-color:rgba(213, 245, 245, 0.014);
-    padding:2rem; margin: 0; font-family: "Open Sans", sans-serif;
+    background-color:#cbebeb65;
+    padding:0%; margin: 0; font-family: "Open Sans", sans-serif;
     
 }
+
+.header {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.content {
+    background-color: aliceblue;
+    width: 100%;
+}
+
+
+
+.nav {
+
+    list-style-type: none;
+    list-style: none; 
+    position: relative;
+    padding: 0em;
+    display: flex;
+    
+  }
+  
+ .nav li {
+    
+    float:left;
+    padding-right: 2em;
+    color: aquamarine;
+    
+    
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: rgb(9, 97, 68);
+  }
