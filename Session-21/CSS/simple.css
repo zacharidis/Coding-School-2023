@@ -16,18 +16,24 @@ body{
 
 
 .content {
-   background-color:white;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap:1rem;
+ 
 
     
 }
 
+.article {
+    display: flex;
+    flex-direction: row;
+}
+
 .content h1  {
-    align-self:flex-start;
+    
+    text-align: center;
+    
+}
+
+.content img {
+    width: 300px;
 }
 
 a {
