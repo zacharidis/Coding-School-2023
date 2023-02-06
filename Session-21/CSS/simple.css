@@ -22,6 +22,7 @@ body{
 }
 
 .article {
+    
     display: flex;
     flex-direction: row;
     width: auto;
@@ -90,6 +91,7 @@ a {
     float:left;
     padding-right: 2em;
     color: aquamarine;
+    border-bottom: 1px solid;
   }
 
   button{
@@ -101,7 +103,22 @@ a {
   }
 
   form {
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: auto;
+  }
+  
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
     
   }
+  
+  label {
+    margin-bottom: 5px;
+  }
+
+ 
