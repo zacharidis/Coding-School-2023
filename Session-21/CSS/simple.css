@@ -1,33 +1,5 @@
 body{
-    background-color:rgb(213, 245, 245);
+    background-color:rgba(213, 245, 245, 0.014);
     padding:2rem; margin: 0; font-family: "Open Sans", sans-serif;
-    
-}
-
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    flex-direction:row;
-    
-    
-    
-    padding: 0;
-    gap: 1rem;
-    
-}
-
-.content {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-}
-
-li {
-    list-style: none;
-    display: inline;
-}
-
-.logo {
     
 }
