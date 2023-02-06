@@ -1,5 +1,7 @@
 body{
-    background-color:lightblue
+    background-color:rgb(213, 245, 245);
+    padding:2rem; margin: 0; font-family: "Open Sans", sans-serif;
+    
 }
 
 .header {
@@ -7,11 +9,19 @@ body{
     flex-wrap: wrap;
     justify-content: flex-start;
     
-    list-style: none;
+    
     padding: 0;
     gap: 1rem;
     
 }
+
 .content {
     background-color: white;
+    display: flex;
+    justify-content: center;
 }
+
+li {
+    list-style: none;
+}
+
