@@ -24,6 +24,9 @@ body{
 .article {
     display: flex;
     flex-direction: row;
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .content h1  {
@@ -66,4 +69,39 @@ a {
     color: rgb(9, 97, 68);
   }
 
+
+  .side {
+    width: 50%;
+    align-content:flex-start;
+  }
+  .side a {
+
+    text-decoration: none;
+    color: rgb(9, 97, 68);
+
+  }
   
+  .side li {
+
+    word-wrap: break-word;
+    width: 300px;
+    list-style-type: none;
+    margin-top: 2rem;
+    float:left;
+    padding-right: 2em;
+    color: aquamarine;
+  }
+
+  button{
+    background-color: aquamarine; color: white;
+    font-size: large;
+    border-radius: 10%;
+    width: 10rem;
+    border-style: none;
+  }
+
+  form {
+    
+    
+    
+  }
