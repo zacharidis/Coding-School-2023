@@ -34,12 +34,44 @@ function isPalindrome(){
 
 }
 
-//excercise 3 
+
+//excercise 4
 
 function multiply(a,b){
 
     alert(a*b);
     alert("The function works properly !")
     //return 
+
+}
+
+
+//excercise 5 
+
+function whatIsTheLastDigit(inputValue){
+
+    let last = inputValue.split('');
+    alert (last)
+    let isNumber = parseInt(last[last.length-1]);
+    alert (isNumber);
+     
+   
+   let result =  typeof isNumber ;
+   alert (result);
+
+    if (result === "number") {
+        isNumber = isNumber + 1 ;
+        last[last.length-1] = isNumber; 
+
+    } else {
+        
+        last.push("1");
+    }
+
+
+    
+    
+    
+
 
 }
