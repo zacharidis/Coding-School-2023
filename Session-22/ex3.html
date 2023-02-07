@@ -26,12 +26,13 @@
         <option value="female">Female</option>
         <option value="else">Something else</option>
     </select>
-    <button onclick="addCustomer()"> Add Customer </button>
+    <button onclick="checkFields()"> Add Customer </button>
     <hr><hr>
     <p>Customers DB : </p>
 
     <table>
         <tr>
+          <th>No: </th>
           <th>FirstName</th>
           <th>LastName</th>
           <th>Age</th>
@@ -45,6 +46,22 @@
 
     
     <script>
+
+        function checkFields(){
+            let firstname = document.getElementById("firstName").value;
+            let surname = document.getElementById("lastName").value;
+            let age = document.getElementById("age").value;
+            let gender = document.getElementById("gender").value;
+
+            if (firstname === '' || surname === '' || age === '' || gender ===''){
+                alert("παρακαλω συμπληρωστε τα πεδια σωστα!");
+            } else
+               {
+                addCustomer();
+               }
+
+        }
+
         function addCustomer() {
 
         }
