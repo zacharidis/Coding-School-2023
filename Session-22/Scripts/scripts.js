@@ -2,5 +2,10 @@ function reverseMe() {
     //window.alert("Hi there it works");
     
     var lbl = document.getElementById("inputOne").value;
-    document.getElementById("resultOne").innerHTML = lbl ;  
+
+    const   reversedInput = lbl.split('').reverse().join(''); // crazy stuff !!!!
+
+
+
+    document.getElementById("resultOne").innerHTML = reversedInput ;  
 }
