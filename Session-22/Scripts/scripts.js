@@ -7,5 +7,5 @@ function reverseMe() {
 
 
 
-    document.getElementById("resultOne").innerHTML = reversedInput ;  
+    document.getElementById("resultOne").innerHTML = "=>" +  reversedInput ;  
 }
