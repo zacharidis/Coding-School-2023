@@ -56,19 +56,18 @@ function whatIsTheLastDigit(inputValue){
     alert (isNumber);
      
    
-   let result =  typeof isNumber ;
-   alert (result);
+   
 
-    if (result === "number") {
+    if (typeof isNumber ===  "number") {
         isNumber = isNumber + 1 ;
         last[last.length-1] = isNumber; 
 
     } else {
-        
-        last.push("1");
+        let finalCharacter = '1';
+        last.push(finalCharacter);
     }
 
-
+      alert(last);
     
     
     
