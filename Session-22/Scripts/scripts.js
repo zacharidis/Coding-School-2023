@@ -33,3 +33,12 @@ function isPalindrome(){
     document.getElementById("resultTwo").innerHTML = result 
 
 }
+
+//excercise 3 
+
+function multiply(a,b){
+
+    alert(a*b);
+    //return 
+    
+}
