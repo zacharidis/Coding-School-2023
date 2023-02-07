@@ -13,3 +13,9 @@ header {
 hr {
     border: 1px solid greenyellow;
 }
+
+table,th,td {
+    font-size: large;
+    color: blue;
+    border: 2px solid saddlebrown;
+}
