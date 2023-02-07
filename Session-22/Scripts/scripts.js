@@ -39,6 +39,7 @@ function isPalindrome(){
 function multiply(a,b){
 
     alert(a*b);
+    alert("The function works properly !")
     //return 
-    
+
 }
