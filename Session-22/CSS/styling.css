@@ -9,3 +9,7 @@ header {
     background-color: black;
     font-size:x-large;
 }
+
+hr {
+    border: 1px solid greenyellow;
+}
