@@ -34,7 +34,9 @@ namespace CoffeeShop.EF.Repository
 
         public IEnumerable<Customer> GetAll()
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.Customers.ToList();
+
         }
 
         public Customer? GetById(int id)
