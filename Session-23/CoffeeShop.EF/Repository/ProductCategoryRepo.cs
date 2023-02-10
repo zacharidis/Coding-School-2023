@@ -1,4 +1,5 @@
-﻿using CoffeeShop.Model;
+﻿using CoffeeShop.EF.Context;
+using CoffeeShop.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,12 @@ namespace CoffeeShop.EF.Repository
     {
         public void Add(ProductCategory entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            context.ProductCategories.Add(entity);
+            context.SaveChanges();
+            // maybe i shall add the 3 product category limitation here. 
+            // to be reevaluated :/ 
+
         }
 
         public void Delete(int id, ProductCategory entity)
