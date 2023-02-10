@@ -15,6 +15,7 @@ namespace CoffeeShop.EF.Repository
             using var context = new CoffeeShopDbContext();
             context.Add(entity);
             context.SaveChanges();
+
         }
 
         public void Delete(int id, Customer entity)
