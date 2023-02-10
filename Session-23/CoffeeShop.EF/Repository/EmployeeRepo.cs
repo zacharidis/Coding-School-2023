@@ -52,6 +52,7 @@ namespace CoffeeShop.EF.Repository
                 .Include(Employee => Employee.Surname)
                 .Include(Employee => Employee.EmployeeType)
                 .Include(Employee => Employee.SalaryPerMonth).ToList();
+
         }
 
         public Employee? GetById(int id)
