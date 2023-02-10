@@ -13,7 +13,18 @@ namespace CoffeeShop.EF.Repository
     {
         public void Add(Employee entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            int numberOfEmployees = context.Employees.Count();
+            if (numberOfEmployees > 0 || numberOfEmployees < 5)
+            {
+                // restriction for less than 5 employees
+               context.Employees.Add(entity);
+                context.SaveChanges();
+
+            }
+            else
+                return;
+
         }
 
         public void Delete(int id, Employee entity)
