@@ -39,7 +39,9 @@ namespace CoffeeShop.EF.Repository
 
         public IEnumerable<ProductCategory> GetAll()
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.ProductCategories.ToList();
+
         }
 
         public ProductCategory? GetById(int id)
