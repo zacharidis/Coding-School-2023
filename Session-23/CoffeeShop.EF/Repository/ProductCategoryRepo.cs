@@ -24,7 +24,17 @@ namespace CoffeeShop.EF.Repository
 
         public void Delete(int id, ProductCategory entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var selectedProductCategory = context.ProductCategories.FirstOrDefault(pc => pc.Id == id);
+            if (selectedProductCategory != null)
+            {
+                context.ProductCategories.Remove(selectedProductCategory);
+                context.SaveChanges();
+
+            } else
+            {
+                throw new Exception("Product cateogry not found");
+            }
         }
 
         public IEnumerable<ProductCategory> GetAll()
