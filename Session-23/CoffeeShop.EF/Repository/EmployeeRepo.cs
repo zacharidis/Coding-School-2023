@@ -29,7 +29,19 @@ namespace CoffeeShop.EF.Repository
 
         public void Delete(int id, Employee entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var exployeeExists = context.Employees.SingleOrDefault(x => x.Id == id);
+            if (exployeeExists == null)
+            {
+                return;
+            } else
+            {
+                context.Employees.Remove(exployeeExists);
+                context.SaveChanges();
+            }
+
+
+
         }
 
         public IEnumerable<Employee> GetAll()
