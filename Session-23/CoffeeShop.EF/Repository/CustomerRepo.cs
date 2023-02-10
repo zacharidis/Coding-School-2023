@@ -41,12 +41,25 @@ namespace CoffeeShop.EF.Repository
 
         public Customer? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.Customers.SingleOrDefault(Customer=>Customer.Id == id);
+
         }
 
         public void Update(int id, Customer entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var customerExists = context.Customers.SingleOrDefault(Customer => Customer.Id == id);  
+            if (customerExists != null)
+            {
+                customerExists.Code= entity.Code;
+                customerExists.Description= entity.Description;
+                context.SaveChanges();
+            } else
+            {
+                throw new Exception("Customer is missing , cannot be updated");
+            }
+
         }
     }
 }
