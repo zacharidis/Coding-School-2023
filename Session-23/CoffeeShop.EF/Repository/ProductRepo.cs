@@ -61,7 +61,21 @@ namespace CoffeeShop.EF.Repository
 
         public void Update(int id, Product entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var selectedProduct = context.Products.SingleOrDefault(p=>p.Id == id);
+            if (selectedProduct != null)
+            {
+                selectedProduct.Price = entity.Price;
+                selectedProduct.Description = entity.Description;
+                selectedProduct.Cost = entity.Cost;
+                selectedProduct.Code = entity.Code;
+                selectedProduct.ProductCategory = entity.ProductCategory;
+                selectedProduct.ProductCategoryId= entity.ProductCategoryId;
+                context.SaveChanges();
+            } else
+            {
+                throw new Exception("Product failed to be updated");
+            }
         }
     }
 }
