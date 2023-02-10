@@ -20,7 +20,18 @@ namespace CoffeeShop.EF.Repository
 
         public void Delete(int id, Product entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var foundProduct = context.Products.SingleOrDefault(p => p.Id == id);   
+            if (foundProduct != null)
+            {
+                context.Products.Remove(foundProduct);
+                context.SaveChanges();
+            } else
+            {
+                throw new Exception("Product not found !");
+            }
+
+            
         }
 
         public IEnumerable<Product> GetAll()
