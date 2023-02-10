@@ -18,12 +18,12 @@ namespace CoffeeShop.EF.Repository
             if (numberOfEmployees > 0 || numberOfEmployees < 5)
             {
                 // restriction for less than 5 employees
-               context.Employees.Add(entity);
+                context.Employees.Add(entity);
                 context.SaveChanges();
 
             }
             else
-                return;
+                throw new Exception("You cannot add more than 5 employees");
 
         }
 
@@ -33,7 +33,7 @@ namespace CoffeeShop.EF.Repository
             var exployeeExists = context.Employees.SingleOrDefault(x => x.Id == id);
             if (exployeeExists == null)
             {
-                return;
+                throw new Exception("Employee not found!");
             } else
             {
                 context.Employees.Remove(exployeeExists);
@@ -63,7 +63,18 @@ namespace CoffeeShop.EF.Repository
 
         public void Update(int id, Employee entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var employeeExists = context.Employees.SingleOrDefault(Employee => Employee.Id == id);
+            if (employeeExists == null)
+            {
+                throw new Exception("Update failed, employee not found");
+            }
+            employeeExists.Name = entity.Name;
+            employeeExists.Surname = entity.Surname;
+            employeeExists.SalaryPerMonth = entity.SalaryPerMonth;
+            employeeExists.EmployeeType = entity.EmployeeType;
+            context.SaveChanges();
+
         }
     }
 }
