@@ -1,5 +1,6 @@
 ﻿using CoffeeShop.EF.Context;
 using CoffeeShop.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,19 @@ namespace CoffeeShop.EF.Repository
 
         public Product? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+
+            var selectedProduct = context.Products.Include(p => p.ProductCategory)
+                .Where(p => p.Id == id)
+                .SingleOrDefault();
+            if (selectedProduct != null)
+            {
+                return selectedProduct;
+            }
+            else
+
+            { return null; } 
+
         }
 
         public void Update(int id, Product entity)
