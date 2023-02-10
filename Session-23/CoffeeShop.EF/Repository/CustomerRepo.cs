@@ -20,7 +20,16 @@ namespace CoffeeShop.EF.Repository
 
         public void Delete(int id, Customer entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var customerExists= context.Customers.SingleOrDefault(x => x.Id == id); 
+            if (customerExists != null)
+            {
+                context.Customers.Remove(customerExists);
+                context.SaveChanges();
+            } else
+            {
+                throw new Exception("There's no customer to delete");
+            }
         }
 
         public IEnumerable<Customer> GetAll()
