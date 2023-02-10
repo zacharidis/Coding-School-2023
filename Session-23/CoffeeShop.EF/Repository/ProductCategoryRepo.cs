@@ -46,12 +46,26 @@ namespace CoffeeShop.EF.Repository
 
         public ProductCategory? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.ProductCategories.Where(pc=>pc.Id == id).SingleOrDefault();
         }
 
         public void Update(int id, ProductCategory entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var selectedProductCategory = context.ProductCategories.SingleOrDefault(pc => pc.Id == id); 
+            if (selectedProductCategory != null)
+            {
+                selectedProductCategory.ProductType = entity.ProductType;
+                selectedProductCategory.Description = entity.Description;
+                selectedProductCategory.Code = entity.Code;
+                context.SaveChanges();
+
+            } else
+            {
+                throw new Exception("Product category not found ");
+            }
+
         }
     }
 }
