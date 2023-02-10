@@ -57,7 +57,8 @@ namespace CoffeeShop.EF.Repository
 
         public Employee? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.Employees.Where(Employee=> Employee.Id == id).SingleOrDefault();
         }
 
         public void Update(int id, Employee entity)
