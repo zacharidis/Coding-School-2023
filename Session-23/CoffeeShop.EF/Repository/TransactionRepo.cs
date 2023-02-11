@@ -20,7 +20,20 @@ namespace CoffeeShop.EF.Repository
 
         public void Delete(int id, Transaction entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var selectedTransaction = context.Transactions.SingleOrDefault(t => t.Id == id);
+            if (selectedTransaction != null)
+            {
+                context.Transactions.Remove(selectedTransaction);
+                context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Transaction not found!");
+            }
+            
+
+            
         }
 
         public IEnumerable<Transaction> GetAll()
