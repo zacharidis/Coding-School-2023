@@ -47,7 +47,15 @@ namespace CoffeeShop.EF.Repository
 
         public Transaction? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var selectedTransaction = context.Transactions.SingleOrDefault(t=>t.Id == id);
+            if (selectedTransaction != null)
+            {
+                return selectedTransaction;
+            } else
+            {
+                throw new Exception("Transaction not found ");
+            }
         }
 
         public void Update(int id, Transaction entity)
