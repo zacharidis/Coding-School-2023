@@ -38,7 +38,11 @@ namespace CoffeeShop.EF.Repository
 
         public IEnumerable<Transaction> GetAll()
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+           return context.Transactions.ToList();
+
+
+            
         }
 
         public Transaction? GetById(int id)
