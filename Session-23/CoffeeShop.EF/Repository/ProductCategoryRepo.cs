@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.EF.Repository
 {
-    internal class ProductCategoryRepo : IEntityRepo<ProductCategory>
+    public class ProductCategoryRepo : IEntityRepo<ProductCategory>
 
 
     {

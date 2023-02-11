@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.EF.Repository
 {
-    internal interface IEntityRepo<TEntity>
+    public  interface IEntityRepo<TEntity>
     {
         IEnumerable<TEntity> GetAll();
         TEntity? GetById(int id);

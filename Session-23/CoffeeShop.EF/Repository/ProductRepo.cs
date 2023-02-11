@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.EF.Repository
 {
-    internal class ProductRepo : IEntityRepo<Product>
+    public class ProductRepo : IEntityRepo<Product>
 
     {
         public void Add(Product entity)

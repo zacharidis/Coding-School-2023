@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeShop.EF.Repository
 {
-    internal class TransactionLineRepo : IEntityRepo<TransactionLine>
+    public class TransactionLineRepo : IEntityRepo<TransactionLine>
     {
         public void Add(TransactionLine entity)
         {
