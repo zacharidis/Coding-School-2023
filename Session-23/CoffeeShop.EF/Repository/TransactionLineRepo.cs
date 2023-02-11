@@ -33,8 +33,10 @@ namespace CoffeeShop.EF.Repository
 
         public IEnumerable<TransactionLine> GetAll()
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.TransactionLines.ToList();
         }
+
 
         public TransactionLine? GetById(int id)
         {
