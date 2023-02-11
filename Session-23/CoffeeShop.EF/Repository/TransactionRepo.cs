@@ -60,7 +60,22 @@ namespace CoffeeShop.EF.Repository
 
         public void Update(int id, Transaction entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var selectedTransaction = context.Transactions.SingleOrDefault(t=>t.Id == id);
+            if (selectedTransaction != null)
+            {
+                selectedTransaction.TotalPrice= entity.TotalPrice;
+                selectedTransaction.TransactionLines= entity.TransactionLines;
+                selectedTransaction.Employee.Id= entity.Employee.Id;
+                selectedTransaction.CustomerId= entity.Customer.Id;
+                selectedTransaction.PaymentMethod= entity.PaymentMethod;
+                selectedTransaction.Date = entity.Date;
+                context.SaveChanges();
+
+            } else
+            {
+                throw new Exception("Transaction Not found !");
+            }
         }
     }
 }
