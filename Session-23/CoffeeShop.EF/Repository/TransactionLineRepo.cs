@@ -40,12 +40,25 @@ namespace CoffeeShop.EF.Repository
 
         public TransactionLine? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            return context.TransactionLines.SingleOrDefault(tl=>tl.Id == id);
+
         }
 
         public void Update(int id, TransactionLine entity)
         {
-            throw new NotImplementedException();
+            using var context = new CoffeeShopDbContext();
+            var selectedTransactionLine = (context.TransactionLines.SingleOrDefault(tl=>tl.Id ==id));  
+            if (selectedTransactionLine != null)
+            {
+                selectedTransactionLine.TotalPrice = entity.TotalPrice;
+                selectedTransactionLine.Price = entity.Price;
+                selectedTransactionLine.Product = entity.Product; // not sure about that ?!!??
+                selectedTransactionLine.Discount = entity.Discount;
+                selectedTransactionLine.ProductId   = entity.ProductId;
+                selectedTransactionLine.Quantity= entity.Quantity;
+                selectedTransactionLine.Transaction = entity.Transaction;
+            }
         }
     }
 }
