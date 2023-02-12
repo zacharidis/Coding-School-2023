@@ -1,14 +1,27 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CoffeeShop.EF.Repository;
+using CoffeeShop.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeeShop.Web.Controllers
 {
+
     public class EmployeeController : Controller
     {
+
+        private readonly IEntityRepo<Employee> _employeeRepo;
+
+        public EmployeeController(IEntityRepo<Employee> employeeRepo)
+        {
+            _employeeRepo = employeeRepo;
+        }
+
+
         // GET: EmployeeController
         public ActionResult Index()
         {
-            return View();
+            var employees = _employeeRepo.GetAll();
+            return View(model: employees);
         }
 
         // GET: EmployeeController/Details/5
