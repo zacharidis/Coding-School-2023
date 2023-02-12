@@ -1,14 +1,26 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CoffeeShop.EF.Repository;
+using CoffeeShop.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeeShop.Web.Controllers
 {
     public class TransactionLineController : Controller
     {
+
+
+        private readonly IEntityRepo<TransactionLine> _tlRepo;
+        public TransactionLineController(IEntityRepo<TransactionLine> tlRepo) {
+        
+            _tlRepo= tlRepo;
+        }
+
         // GET: TransactionLineController
         public ActionResult Index()
         {
-            return View();
+            var tls = _tlRepo.GetAll();
+
+            return View(model:tls);
         }
 
         // GET: TransactionLineController/Details/5
