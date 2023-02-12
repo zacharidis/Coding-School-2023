@@ -11,7 +11,7 @@ namespace CoffeeShop.Web.Models.ProductDTO
         public decimal Cost { get; set; }
 
         public int ProductCategoryId { get; set; }
-        public List<SelectListItem> ProductCategories { get; set; } 
+        public List<SelectListItem> ProductCategories { get; set; } = new List<SelectListItem>();
     }
 }
 
