@@ -1,5 +1,6 @@
 ﻿using CoffeeShop.EF.Repository;
 using CoffeeShop.Model;
+using CoffeeShop.Web.Models.CustomerDTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -94,7 +95,12 @@ namespace CoffeeShop.Web.Controllers
         // GET: CustomerController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var dbCustomer = _customerRepo.GetById(id); 
+
+            if (dbCustomer == null) { return NotFound(); }
+
+         
+            return View(model : dbCustomer);
         }
 
         // POST: CustomerController/Delete/5
