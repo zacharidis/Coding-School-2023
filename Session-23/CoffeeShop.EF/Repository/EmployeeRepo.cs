@@ -47,12 +47,7 @@ namespace CoffeeShop.EF.Repository
         public IEnumerable<Employee> GetAll()
         {
             using var context = new CoffeeShopDbContext();
-            return context.Employees.Include(Employee =>Employee.Id)
-                .Include(Employee => Employee.Name)
-                .Include(Employee => Employee.Surname)
-                .Include(Employee => Employee.EmployeeType)
-                .Include(Employee => Employee.SalaryPerMonth).ToList();
-
+            return context.Employees.ToList();
         }
 
         public Employee? GetById(int id)
