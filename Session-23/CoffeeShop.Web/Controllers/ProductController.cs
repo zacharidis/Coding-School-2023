@@ -1,14 +1,27 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CoffeeShop.EF.Repository;
+using CoffeeShop.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeeShop.Web.Controllers
 {
     public class ProductController : Controller
     {
+
+        private readonly IEntityRepo<Product> _productRepo;
+
+        public ProductController(IEntityRepo<Product> productRepo)
+        {
+            _productRepo = productRepo;
+        }
+
+    
+
         // GET: ProductController
         public ActionResult Index()
         {
-            return View();
+            var products = _productRepo.GetAll();
+            return View(model :products);
         }
 
         // GET: ProductController/Details/5
