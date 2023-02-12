@@ -24,7 +24,20 @@ namespace CoffeeShop.Web.Controllers
         // GET: CustomerController/Details/5
         public ActionResult Details(int id)
         {
+            if (id == null)
+            {
+                return NotFound();
+
+            }
+
+
+
             var selectedCustomer = _customerRepo.GetById(id);
+            if (selectedCustomer == null)
+            {
+                return NotFound();  
+            }
+
             return View(model:selectedCustomer);
         }
 
@@ -60,7 +73,7 @@ namespace CoffeeShop.Web.Controllers
    
 
 
-            return View();
+            return View(model:editCustomer);
         }
 
         // POST: CustomerController/Edit/5
