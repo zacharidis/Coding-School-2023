@@ -24,12 +24,14 @@ namespace CoffeeShop.Web.Controllers
         // GET: CustomerController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var selectedCustomer = _customerRepo.GetById(id);
+            return View(model:selectedCustomer);
         }
 
         // GET: CustomerController/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
