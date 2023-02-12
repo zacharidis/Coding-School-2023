@@ -53,6 +53,13 @@ namespace CoffeeShop.Web.Controllers
         // GET: CustomerController/Edit/5
         public ActionResult Edit(int id)
         {
+
+            var editCustomer = _customerRepo.GetById(id);
+            if (editCustomer == null) { return NotFound(); }
+
+   
+
+
             return View();
         }
 
