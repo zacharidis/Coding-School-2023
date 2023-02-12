@@ -1,14 +1,24 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CoffeeShop.EF.Repository;
+using CoffeeShop.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeeShop.Web.Controllers
 {
     public class TransactionController : Controller
     {
+
+        private readonly IEntityRepo<Transaction> _transactionRepo;
+
+        public TransactionController(IEntityRepo<Transaction> transactionRepo) { 
+        
+            _transactionRepo= transactionRepo;
+        }
         // GET: TransactionController
         public ActionResult Index()
         {
-            return View();
+            var transactions = _transactionRepo.GetAll();
+            return View(model :transactions);
         }
 
         // GET: TransactionController/Details/5
