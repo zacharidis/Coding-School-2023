@@ -3,6 +3,7 @@ using CoffeeShop.Model;
 using CoffeeShop.Web.Models.CustomerDTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CoffeeShop.Web.Controllers
 {
@@ -52,16 +53,20 @@ namespace CoffeeShop.Web.Controllers
         // POST: CustomerController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Customer customer)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
+
+            if (!ModelState.IsValid)
             {
                 return View();
             }
+
+            var toBeAdded = new Customer(customer.Code, customer.Description);       
+
+           
+            _customerRepo.Add(toBeAdded);
+            return RedirectToAction("Index");
+
         }
 
         // GET: CustomerController/Edit/5
@@ -110,6 +115,7 @@ namespace CoffeeShop.Web.Controllers
         {
             try
             {
+                
                 return RedirectToAction(nameof(Index));
             }
             catch
