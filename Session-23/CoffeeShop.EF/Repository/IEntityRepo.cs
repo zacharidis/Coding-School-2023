@@ -13,6 +13,6 @@ namespace CoffeeShop.EF.Repository
         void Add(TEntity entity);
         void Update(int id, TEntity entity);
         void Delete(int id ,TEntity entity);
-
+        
     }
 }
