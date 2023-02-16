@@ -1,0 +1,8 @@
+Complete Revision for Epsilon Coding School 2023. 
+Written by georgios zacharidis
+
+-Model
+-EF
+-MVC Razor 
+-Blazor 
+-WinForms

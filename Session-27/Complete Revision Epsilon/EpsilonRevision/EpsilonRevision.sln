@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpsilonRevision.Model", "EpsilonRevision.Model\EpsilonRevision.Model.csproj", "{3FFEC9E6-CC24-4D28-ADE5-711FE5341EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpsilonRevision.EF", "EpsilonRevision.EF\EpsilonRevision.EF.csproj", "{566FF7AC-C866-4359-89D7-0136E569B475}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FFEC9E6-CC24-4D28-ADE5-711FE5341EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFEC9E6-CC24-4D28-ADE5-711FE5341EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFEC9E6-CC24-4D28-ADE5-711FE5341EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFEC9E6-CC24-4D28-ADE5-711FE5341EAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566FF7AC-C866-4359-89D7-0136E569B475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566FF7AC-C866-4359-89D7-0136E569B475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566FF7AC-C866-4359-89D7-0136E569B475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566FF7AC-C866-4359-89D7-0136E569B475}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F8A7E75-E6DA-4EFE-9818-569BF2EEBA80}
+	EndGlobalSection
+EndGlobal
