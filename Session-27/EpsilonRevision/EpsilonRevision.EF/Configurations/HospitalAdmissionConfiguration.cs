@@ -32,7 +32,9 @@ namespace EpsilonRevision.EF.Configurations
 
 
             //relationships
-            
+
+            builder.HasOne(ha => ha.Patient);
+            // missing the SuperVising Doctor
 
 
 
