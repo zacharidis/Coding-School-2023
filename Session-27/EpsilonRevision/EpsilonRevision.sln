@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpsilonRevision.Model", "EpsilonRevision.Model\EpsilonRevision.Model.csproj", "{3FFEC9E6-CC24-4D28-ADE5-711FE5341EAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpsilonRevision.Model", "EpsilonRevision.Model\EpsilonRevision.Model.csproj", "{3FFEC9E6-CC24-4D28-ADE5-711FE5341EAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpsilonRevision.EF", "EpsilonRevision.EF\EpsilonRevision.EF.csproj", "{566FF7AC-C866-4359-89D7-0136E569B475}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpsilonRevision.EF", "EpsilonRevision.EF\EpsilonRevision.EF.csproj", "{566FF7AC-C866-4359-89D7-0136E569B475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpsilonRevision.MVC", "EpsilonRevision.MVC\EpsilonRevision.MVC.csproj", "{723B9F8E-29C1-4A8B-AA69-277A4C903638}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{566FF7AC-C866-4359-89D7-0136E569B475}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{566FF7AC-C866-4359-89D7-0136E569B475}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{566FF7AC-C866-4359-89D7-0136E569B475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723B9F8E-29C1-4A8B-AA69-277A4C903638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723B9F8E-29C1-4A8B-AA69-277A4C903638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723B9F8E-29C1-4A8B-AA69-277A4C903638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723B9F8E-29C1-4A8B-AA69-277A4C903638}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
