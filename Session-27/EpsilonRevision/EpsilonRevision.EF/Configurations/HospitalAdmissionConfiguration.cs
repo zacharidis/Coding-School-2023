@@ -24,7 +24,19 @@ namespace EpsilonRevision.EF.Configurations
             builder.Property(ha=>ha.Id).ValueGeneratedOnAdd();
 
             //properties 
+            builder.Property(ha=> ha.Treatment).HasMaxLength(500);
+            builder.Property(ha => ha.IsDischarged);
+            builder.Property(ha=> ha.Diagnosis).HasMaxLength(500);
+            builder.Property(ha=> ha.Clinic).IsRequired();
+            builder.HasKey(ha => ha.AdmissionDate);
+
+
+            //relationships
             
+
+
+
+
 
 
         }
