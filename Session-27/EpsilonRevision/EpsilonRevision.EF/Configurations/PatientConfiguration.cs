@@ -15,7 +15,7 @@ namespace EpsilonRevision.EF.Configurations
 
         public void Configure(EntityTypeBuilder<Patient> builder)
         {
-            throw new NotImplementedException();
+           
         }
     }
 }
