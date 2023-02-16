@@ -33,8 +33,13 @@ namespace EpsilonRevision.EF.Configurations
 
             //relationships
 
-            builder.HasOne(ha => ha.Patient);
-            // missing the SuperVising Doctor
+
+            builder.Property(ha => ha.SuperVisingDoctor).IsRequired();
+            builder.Property(ha => ha.Patient).IsRequired();
+
+            builder.HasOne(ha => ha.SuperVisingDoctor).WithMany(d => d.HospitalAdmissions).HasForeignKey(ha => ha.SuperVisingDoctor.DoctorId).OnDelete(DeleteBehavior.Restrict);
+
+
 
 
 

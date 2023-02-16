@@ -38,7 +38,7 @@ namespace EpsilonRevision.Model.Entities
 
         //relationships
 
-        public Doctor SuperVisingDoctor { get; set; }
+        
         public Patient Patient { get; set; }
 
 
