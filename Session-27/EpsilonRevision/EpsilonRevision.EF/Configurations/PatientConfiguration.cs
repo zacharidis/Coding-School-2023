@@ -32,7 +32,11 @@ namespace EpsilonRevision.EF.Configurations
             builder.Property(p => p.Age).IsRequired();
             builder.Property(p => p.AMKA).HasMaxLength(50);
 
-      
+
+            //relationships
+            builder.HasMany(p => p.Consultations).WithOne(c => c.Patient).HasForeignKey(c => c.Patient.Id).OnDelete(DeleteBehavior.Restrict);
+            builder.HasMany(p => p.HospitalAdmissions).WithOne(ha => ha.Patient).HasForeignKey(ha => ha.Patient.Id).OnDelete(DeleteBehavior.Restrict);
+
 
 
 
