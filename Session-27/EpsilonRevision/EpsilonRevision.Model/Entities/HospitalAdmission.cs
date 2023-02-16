@@ -21,7 +21,7 @@ namespace EpsilonRevision.Model.Entities
         //enum type
         public Clinic Clinic { get; set; }
 
-        public Doctor SuperVisingDoctor { get; set; }
+        
 
 
         public HospitalAdmission( Clinic clinic , string diagnosis) {
@@ -38,7 +38,7 @@ namespace EpsilonRevision.Model.Entities
 
         //relationships
 
-        
+        public Doctor SuperVisingDoctor { get; set; }
         public Patient Patient { get; set; }
 
 
