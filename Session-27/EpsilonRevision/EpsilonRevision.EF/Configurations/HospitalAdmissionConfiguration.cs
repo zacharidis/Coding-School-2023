@@ -29,15 +29,22 @@ namespace EpsilonRevision.EF.Configurations
             builder.Property(ha=> ha.Diagnosis).HasMaxLength(500);
             builder.Property(ha=> ha.Clinic).IsRequired();
             builder.HasKey(ha => ha.AdmissionDate);
+            builder.Property(ha => ha.DischargeDate).IsRequired(false); // we don't know when the patient will be discharged 
+            builder.Property(ha => ha.Patient).IsRequired(); // we need a patient in order to admit him to the hospital
 
 
             //relationships
+            builder.HasOne(ha => ha.Patient).WithMany(p => p.HospitalAdmissions).HasForeignKey(ha => ha.Patient.Id).OnDelete(DeleteBehavior.Restrict);
+            // a patient can have multiple hospital admissions during his lifetime (i hope he doesn't) :( 
 
 
-            builder.Property(ha => ha.SuperVisingDoctor).IsRequired();
-            builder.Property(ha => ha.Patient).IsRequired();
 
-            builder.HasOne(ha => ha.SuperVisingDoctor).WithMany(d => d.HospitalAdmissions).HasForeignKey(ha => ha.SuperVisingDoctor.DoctorId).OnDelete(DeleteBehavior.Restrict);
+
+
+
+
+
+
 
 
 
