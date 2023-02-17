@@ -8,5 +8,7 @@ namespace GZFuel.Model.Enums
 {
     public enum PaymentMethod
     {
+        Cash,
+        Card,
     }
 }
