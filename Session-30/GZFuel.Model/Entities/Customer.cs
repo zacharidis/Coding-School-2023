@@ -17,7 +17,7 @@ namespace GZFuel.Model.Entities
         //Customer Constructor 
         public Customer(int id, string name, string surname, string cardNumber)
         {
-            ID = id;
+             //   ID = id; not here , the ID is auto generated bty the database
             Name = name;
             Surname = surname;
             CardNumber = cardNumber;
