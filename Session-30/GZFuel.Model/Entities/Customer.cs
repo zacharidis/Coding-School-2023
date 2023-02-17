@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Model.Entities
 {
-    internal class Customer
+    public class Customer
     {
+        //ID, Name, Surname, CardNumber
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string CardNumber { get; set; }
+
+        //Customer Constructor 
+        public Customer(int id, string name, string surname, string cardNumber)
+        {
+            ID = id;
+            Name = name;
+            Surname = surname;
+            CardNumber = cardNumber;
+        }
+
     }
 }
