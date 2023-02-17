@@ -21,7 +21,13 @@ namespace GZFuel.Model.Entities
             Name = name;
             Surname = surname;
             CardNumber = cardNumber;
+            Transactions= new List<Transaction>();
         }
+
+        // Transactions is a relationship between Customer and Transaction ( one to many)
+
+        public List<Transaction> Transactions { get; set; } 
+
 
     }
 }
