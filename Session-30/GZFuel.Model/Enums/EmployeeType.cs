@@ -8,5 +8,10 @@ namespace GZFuel.Model.Enums
 {
     public enum EmployeeType
     {
+        Manager,
+        Cashier,
+        Staff
+       
+
     }
 }
