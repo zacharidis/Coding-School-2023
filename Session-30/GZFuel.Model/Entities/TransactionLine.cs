@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Model.Entities
 {
-    internal class TransactionLine
+    public  class TransactionLine
     {
-    }
+        //properties 
+        public int ID { get; set; }
+        public int Quantity { get; set; }
+        public decimal ItemPrice { get; set; }
+        public decimal TotalValue { get; set; }
+        public decimal DiscountPercent { get; set; }
+
+        public decimal NetValue { get; set; }
+        public decimal DiscountValue { get; set; }
+
+
+     
+
+
+
 }
