@@ -33,7 +33,7 @@ namespace GZFuel.EF.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer("Server=DESKTOP-RE4IDR6\\SQLEXPRESS;Database=fuelDb;Trusted_Connection=True;"); // connection string goes here
+            optionsBuilder.UseSqlServer("Server=DESKTOP-RE4IDR6\\SQLEXPRESS;Database=fuelDb; Encrypt=false;"); // connection string goes here
 
             base.OnConfiguring(optionsBuilder);
         }
