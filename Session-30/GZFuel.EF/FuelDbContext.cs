@@ -28,7 +28,13 @@ namespace GZFuel.EF
 
         }
 
-       
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+
+            optionsBuilder.UseSqlServer(""); // connection string goes here
+
+            base.OnConfiguring(optionsBuilder);
+        }
 
 
 
