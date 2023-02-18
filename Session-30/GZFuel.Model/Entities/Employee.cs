@@ -13,7 +13,8 @@ namespace GZFuel.Model.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
         public DateTime HireDateStart { get; set; }
-        public DateTime HireDateEnd { get;set; }
+        public DateTime? HireDateEnd { get; set; }
+
 
         public int SalaryPerMonth { get; set; }
         public EmployeeType EmployeeType { get; set; }
@@ -25,8 +26,11 @@ namespace GZFuel.Model.Entities
 
             Name = name;
             Surname = surname;
+            
             SalaryPerMonth = salaryPerMonth;
             EmployeeType = employeeType;
+
+            HireDateStart= DateTime.Now;
             Transactions = new List<Transaction>();
         }
 
