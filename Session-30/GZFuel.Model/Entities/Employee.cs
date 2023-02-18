@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Model.Entities
 {
-    internal class Employee
+    public class Employee
     {
     }
 }
