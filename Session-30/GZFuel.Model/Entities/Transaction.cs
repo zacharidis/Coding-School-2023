@@ -46,5 +46,20 @@ namespace GZFuel.Model.Entities
 
 
 
+
+        //helper method to calculate the total value of the transaction
+
+        public decimal CalculateTotalValue()
+        {
+            decimal total = 0;
+            foreach (var transactionLine in TransactionLines)
+            {
+                total += transactionLine.TotalValue;
+            }
+            return total;
+            //TODO the controller should call this method to calculate the total value of the transaction
+            // and if it's > 50 then should only accept cash payment
+        }
+
     }
 }
