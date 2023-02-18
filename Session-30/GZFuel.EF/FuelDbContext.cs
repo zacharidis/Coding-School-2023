@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GZFuel.Model.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,17 @@ namespace GZFuel.EF
     // add the dbcontext here :)
     public class FuelDbContext : DbContext 
     {
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+
+        public DbSet<TransactionLine> TransactionsLines { get; set; }
+
+        public FuelDbContext(DbContextOptions<FuelDbContext> options) : base(options)
+        {
+
+        }
 
     }
 }
