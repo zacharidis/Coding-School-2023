@@ -23,6 +23,8 @@ namespace GZFuel.Model.Entities
             Id = id;
             Name = name;
             Surname = surname;
+            Username = "admin";
+            Password = "admin";
         }
 
         public Admin() { }
