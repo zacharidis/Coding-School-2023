@@ -20,7 +20,11 @@ namespace GZFuel.Model.Entities
              //   ID = id; not here , the ID is auto generated bty the database
             Name = name;
             Surname = surname;
-            CardNumber = cardNumber;
+
+            // get the ID and then add the letter A in front of it . 
+            CardNumber = "A" + ID.ToString();
+            
+            
             Transactions= new List<Transaction>();
         }
 
