@@ -33,11 +33,23 @@ namespace GZFuel.Win
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(this.Width == 1024) 
+                    { 
+                this.Width = 640;
+                        this.Height = 480;
 
-       
+            }else
+            {
+                this.Width = 1024;
+                this.Height = 768;
+            }
+            
 
 
-
-
+            
+            
+        }
     }
 }
