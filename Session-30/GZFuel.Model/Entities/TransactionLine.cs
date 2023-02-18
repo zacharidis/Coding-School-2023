@@ -29,7 +29,11 @@ namespace GZFuel.Model.Entities
             //-- calculations 
             NetValue = quantity * itemPrice;
             DiscountValue = (NetValue * discountPercent);
-            TotalValue = totalValue - DiscountValue;
+            TotalValue = NetValue - DiscountValue;
+
+            TotalValue = TotalValue - (TotalValue * FuelDiscount()); // PX 100 - (100 * 0.1) = 90
+
+
             DiscountPercent = discountPercent;
             DiscountValue = discountValue;
         }
@@ -41,7 +45,28 @@ namespace GZFuel.Model.Entities
         public int ItemID { get; set; }
         public Item Item { get; set; }
 
+
+
+  
+
+        // methods
+
+        public decimal FuelDiscount()
+        {
+            decimal discount = 0;
+            if (Item.ItemType == "Fuel" && NetValue > 20)
+            {
+                discount = 0.1m;
+            }
+            return discount;
+        }
+
+
+
+
     }
+
+
 
 
 
