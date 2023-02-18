@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GZFuel.EF
+namespace GZFuel.EF.Context
 {
     // add the dbcontext here :)
-    public class FuelDbContext : DbContext 
+    public class FuelDbContext : DbContext
     {
 
-        public DbSet<Admin> Admins { get; set; }    
+        public DbSet<Admin> Admins { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Item> Items { get; set; }
@@ -20,8 +20,8 @@ namespace GZFuel.EF
 
         public DbSet<TransactionLine> TransactionsLines { get; set; }
 
-       // OnModelCreating 
-       // OnModelConfiguring 
+        // OnModelCreating 
+        // OnModelConfiguring 
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
