@@ -15,8 +15,4 @@
     <ProjectReference Include="..\GZFuel.Model\GZFuel.Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-  </ItemGroup>
-
 </Project>
