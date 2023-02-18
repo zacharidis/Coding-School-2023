@@ -18,10 +18,19 @@ namespace GZFuel.EF
 
         public DbSet<TransactionLine> TransactionsLines { get; set; }
 
-        public FuelDbContext(DbContextOptions<FuelDbContext> options) : base(options)
+       // OnModelCreating 
+       // OnModelConfiguring 
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
 
         }
+
+       
+
+
 
     }
 }
