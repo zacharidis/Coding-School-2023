@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GZFuel.EF\GZFuel.EF.csproj" />
+    <ProjectReference Include="..\GZFuel.Model\GZFuel.Model.csproj" />
+  </ItemGroup>
+
 </Project>
