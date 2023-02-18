@@ -19,10 +19,10 @@ namespace GZFuel.EF.Configurations
             builder.HasKey(c => c.ID);
             
             //properties
-            builder.Property(c => c.Name).HasMaxLength(50).IsRequired();
-            builder.Property(c => c.Surname).HasMaxLength(50).IsRequired();
-            builder.Property(c => c.CardNumber).HasMaxLength(50).IsRequired();
-           
+            builder.Property(c => c.Name).HasMaxLength(50).IsRequired(true);
+            builder.Property(c => c.Surname).HasMaxLength(50).IsRequired(true);
+            builder.Property(c => c.CardNumber).HasMaxLength(50).IsRequired(true);
+            builder.Property(c => c.ID).ValueGeneratedOnAdd().IsRequired(true);
             //relationships
             
 
