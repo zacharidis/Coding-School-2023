@@ -6,5 +6,35 @@ namespace GZFuel.Win
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        
+
+
+
+    }
+
+
+
+
+        //-----------move the form without a border 
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Capture = false;
+                Message msg = Message.Create(this.Handle, 0XA1, new IntPtr(2), IntPtr.Zero);
+                this.WndProc(ref msg);
+            }
+        }
+
+
+       
+
+
+
+
     }
 }
