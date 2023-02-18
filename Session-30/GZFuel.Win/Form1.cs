@@ -9,11 +9,14 @@ namespace GZFuel.Win
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Width = 640;
+            this.Height = 480;
+            this.StartPosition = FormStartPosition.CenterScreen;
 
 
-
-    }
+        }
 
 
 
