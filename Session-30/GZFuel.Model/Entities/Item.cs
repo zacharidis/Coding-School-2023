@@ -28,6 +28,11 @@ namespace GZFuel.Model.Entities
         }
 
 
+        // relationships
+
+        public List<TransactionLine> TransactionLines { get; set; }
+        
+
         
 
 
