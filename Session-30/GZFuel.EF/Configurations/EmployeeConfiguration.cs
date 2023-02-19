@@ -1,4 +1,5 @@
 ﻿using GZFuel.Model.Entities;
+using GZFuel.Model.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -33,7 +34,16 @@ namespace GZFuel.EF.Configurations
                 .IsRequired(false); // employee can be fired so it's nullable 
 
             builder.Property(e => e.SalaryPerMonth).HasColumnType("integer").IsRequired(true);
-            builder.Property(e => e.EmployeeType).IsRequired(true);
+          
+            
+            //---------------------------------------------- get the string value out of enum and store it in the database
+
+            builder.Property(e => e.EmployeeType)
+                .HasConversion(
+
+
+                v => v.ToString(),
+                                   v => (EmployeeType)Enum.Parse(typeof(EmployeeType), v));
 
 
 
