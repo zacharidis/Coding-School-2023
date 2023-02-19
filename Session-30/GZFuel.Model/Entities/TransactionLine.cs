@@ -53,16 +53,16 @@ namespace GZFuel.Model.Entities
 
         // Discount for fuel will be moved to the controllers of Web Api project
 
-        //public decimal FuelDiscount()
-        //{
-        //    // i dont know if it will work :/ 
-        //    decimal discount = 0;
-        //    if (Enum.GetName(Item.ItemType) == "fuel" &&  NetValue > 20)
-        //    {
-        //        discount = 0.1m;
-        //    }
-        //    return discount;
-        //}
+        public decimal FuelDiscount()
+        {
+            // i dont know if it will work :/ 
+            decimal discount = 0;
+            if (Enum.GetName(Item.ItemType) == "fuel" && NetValue > 20)
+            {
+                discount = 0.1m;
+            }
+            return discount;
+        }
 
 
 
