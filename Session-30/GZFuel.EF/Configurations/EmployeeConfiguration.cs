@@ -37,6 +37,11 @@ namespace GZFuel.EF.Configurations
 
 
 
+            // relationships with transactions
+
+            builder.HasMany(e => e.Transactions).WithOne(t => t.Employee)
+                .HasForeignKey(t => t.EmployeeID)
+                .OnDelete(DeleteBehavior.Restrict);
 
 
 
