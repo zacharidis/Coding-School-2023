@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GZFuel.EF.Configurations
 {
-    internal class ItemConfiguration
+    public class ItemConfiguration
     {
     }
 }
