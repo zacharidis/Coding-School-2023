@@ -1,4 +1,5 @@
 ﻿using GZFuel.Model.Entities;
+using GZFuel.Model.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -28,12 +29,24 @@ namespace GZFuel.EF.Configurations
             builder.Property(i=> i.Cost).HasPrecision(3,2).IsRequired(true);
             builder.Property(i=> i.Price).HasPrecision(3,2).IsRequired(true);   
             builder.Property(i => i.Description).HasMaxLength(250).IsRequired(true);
-            builder.Property(i => i.ItemType).HasMaxLength(50).IsRequired(true);
-                
+           
+            
+            //--- get the string out of the enum and store it in the database
+            builder.Property(i => i.ItemType).HasMaxLength(50).IsRequired(true)
+                .HasConversion(
+
+
+                v => v.ToString(),
+                                   v => (ItemType)Enum.Parse(typeof(ItemType), v));
 
 
 
 
+
+
+            // relationships
+
+            builder.HasOne()
 
 
 
