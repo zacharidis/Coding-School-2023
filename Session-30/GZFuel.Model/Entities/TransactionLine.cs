@@ -47,11 +47,11 @@ namespace GZFuel.Model.Entities
 
 
 
-  
+
 
         // methods
 
-         // Discount for fuel will be moved to the controllers of Web Api project
+        // Discount for fuel will be moved to the controllers of Web Api project
 
         //public decimal FuelDiscount()
         //{
