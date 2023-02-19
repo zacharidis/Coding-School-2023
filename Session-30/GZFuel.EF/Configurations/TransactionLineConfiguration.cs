@@ -29,7 +29,7 @@ namespace GZFuel.EF.Configurations
             
 
             
-            //TODO : Finishe the properties and fill the relationships 
+           
 
             // relationships
             builder.HasOne(tl => tl.Transaction).WithMany(t => t.TransactionLines).HasForeignKey(tl => tl.TransactionID);
