@@ -12,6 +12,7 @@ namespace GZFuel.EF.Configurations
             //table 
             builder.ToTable("Customer");
             builder.HasKey(c => c.ID);
+            builder.Property(c => c.ID).ValueGeneratedOnAdd().IsRequired(true);
 
             //properties
             builder.Property(c => c.Name)
