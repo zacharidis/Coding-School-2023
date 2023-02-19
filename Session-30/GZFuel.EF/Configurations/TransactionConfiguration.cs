@@ -19,6 +19,20 @@ namespace GZFuel.EF.Configurations
 
             //properties 
 
+            builder.Property(t => t.Date).IsRequired();
+            builder.Property(t => t.PaymentMethod).IsRequired();
+            builder.Property(t => t.TotalValue).IsRequired();
+        
+
+
+            // relationships
+           builder.HasOne(t => t.Customer).WithMany(c => c.Transactions).HasForeignKey(t => t.CustomerID);
+            builder.HasOne(t=> t.Employee).WithMany(e=>e.Transactions).HasForeignKey(t=>t.EmployeeID);
+            builder.HasMany(t=> t.TransactionLines).WithOne(tl => tl.Transaction).HasForeignKey(tl => tl.TransactionID);    
+
+        
+
+           
         }
     }
 }
