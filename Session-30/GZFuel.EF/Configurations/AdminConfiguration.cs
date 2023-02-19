@@ -29,6 +29,5 @@ namespace GZFuel.EF.Configurations
             //relationships
         }
     }
-    {
-    }
+   
 }
