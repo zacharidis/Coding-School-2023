@@ -1,4 +1,5 @@
-﻿using GZFuel.Model.Entities;
+﻿using GZFuel.EF.Configurations;
+using GZFuel.Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,13 @@ namespace GZFuel.EF.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+           // Configurations 
+           modelBuilder.ApplyConfiguration(new AdminConfiguration());
+           modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            
+
+            
+
             base.OnModelCreating(modelBuilder);
 
         }
