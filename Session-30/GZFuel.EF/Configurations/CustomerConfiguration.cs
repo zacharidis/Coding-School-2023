@@ -26,7 +26,10 @@ namespace GZFuel.EF.Configurations
                 .IsRequired(true);
 
             //relationships
-
+            builder.HasMany(c=>c.Transactions)
+                .WithOne(t=>t.Customer)
+                .HasForeignKey(t=>t.CustomerID)
+                .OnDelete(DeleteBehavior.Restrict); 
 
 
 
