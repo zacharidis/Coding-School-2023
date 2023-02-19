@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Model.Entities
 {
-    public  class TransactionLine
+    public  class TransactionLine : BaseEntity
     {
         //properties 
         public int ID { get; set; }

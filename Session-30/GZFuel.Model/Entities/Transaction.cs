@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Model.Entities
 {
-    public class Transaction
+    public class Transaction : BaseEntity
     {
         /**
          *  Transaction: ID, Date, EmployeeID, CustomerID, 

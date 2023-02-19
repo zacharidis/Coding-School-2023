@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Model.Entities
 {
-    public class Item
+    public class Item : BaseEntity
     {
          //    : ID, Code, Description, ItemType(enum), Price, Cos
          public int ID { get; set; }

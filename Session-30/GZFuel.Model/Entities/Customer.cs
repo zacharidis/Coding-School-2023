@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Model.Entities
 {
-    public class Customer
+    public class Customer : BaseEntity
     {
         //ID, Name, Surname, CardNumber
         public int ID { get; set; }

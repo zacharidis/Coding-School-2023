@@ -8,7 +8,7 @@ namespace GZFuel.Model.Entities
 {
 
     // this entity is just for experimental reasons , maybe a way to implement the admin login on the windows forms app. 
-    public class Admin
+    public class Admin : BaseEntity
     {
         public int Id { get; set; }
         public int Name { get; set; }  
