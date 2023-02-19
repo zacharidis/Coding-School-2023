@@ -42,7 +42,7 @@ namespace GZFuel.Model.Entities
         public int CustomerID { get; set; }
         public Customer Customer { get; set; }
 
-        List<TransactionLine> TransactionLines { get; set; }
+         public   List<TransactionLine> TransactionLines { get; set; }
 
 
 
