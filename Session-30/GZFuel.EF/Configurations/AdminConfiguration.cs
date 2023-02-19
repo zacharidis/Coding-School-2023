@@ -16,6 +16,7 @@ namespace GZFuel.EF.Configurations
             //table 
             builder.ToTable("Admin");
             builder.HasKey(a => a.Id);
+            builder.Property(a => a.Id).ValueGeneratedOnAdd(); // not required because only 1 admin ?
 
             //properties
             builder.Property(a => a.Name)
