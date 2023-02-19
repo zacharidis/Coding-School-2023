@@ -34,7 +34,7 @@ namespace GZFuel.EF.Context
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
             
-            //TODO : finish the configuration first
+           
             modelBuilder.ApplyConfiguration(new TransactionLineConfiguration());
 
 
