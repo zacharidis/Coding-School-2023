@@ -46,7 +46,7 @@ namespace GZFuel.EF.Configurations
 
             // relationships
 
-           
+            builder.HasMany(i => i.TransactionLines).WithOne(tl => tl.Item).HasForeignKey(tl => tl.ItemID);
 
 
 
