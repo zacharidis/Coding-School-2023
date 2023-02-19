@@ -31,6 +31,12 @@ namespace GZFuel.EF.Context
            modelBuilder.ApplyConfiguration(new AdminConfiguration());
            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+            modelBuilder.ApplyConfiguration(new ItemConfiguration());
+            modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            
+            //TODO : finish the configuration first
+            modelBuilder.ApplyConfiguration(new TransactionLineConfiguration());
+
 
             
 
