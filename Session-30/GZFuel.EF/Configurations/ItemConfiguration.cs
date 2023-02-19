@@ -46,7 +46,7 @@ namespace GZFuel.EF.Configurations
 
             // relationships
 
-            builder.HasOne()
+           
 
 
 
