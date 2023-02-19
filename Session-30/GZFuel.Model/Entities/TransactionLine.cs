@@ -53,8 +53,9 @@ namespace GZFuel.Model.Entities
 
         public decimal FuelDiscount()
         {
+            // i dont know if it will work :/ 
             decimal discount = 0;
-            if (Item.ItemType == "Fuel" && NetValue > 20)
+            if (Enum.GetName(Item.ItemType) == "fuel" &&  NetValue > 20)
             {
                 discount = 0.1m;
             }
