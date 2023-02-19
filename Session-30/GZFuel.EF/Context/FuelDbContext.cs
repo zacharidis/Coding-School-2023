@@ -30,6 +30,8 @@ namespace GZFuel.EF.Context
            // Configurations 
            modelBuilder.ApplyConfiguration(new AdminConfiguration());
            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+
             
 
             
