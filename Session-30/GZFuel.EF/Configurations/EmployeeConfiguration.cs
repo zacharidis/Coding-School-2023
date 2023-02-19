@@ -39,6 +39,8 @@ namespace GZFuel.EF.Configurations
             //---------------------------------------------- get the string value out of enum and store it in the database
 
             builder.Property(e => e.EmployeeType)
+                .HasMaxLength(50)
+                .IsRequired(true)
                 .HasConversion(
 
 
