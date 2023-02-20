@@ -26,8 +26,23 @@ namespace GZFuel.EF.Repositories
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
-        }
+            using var ctx = new FuelDbContext();
+            //go get the specific Employee
+            var dbEmployee = ctx.Employees
+                .Where(e => e.Id == id)
+                .SingleOrDefault();
+            if (dbEmployee != null)
+            {
+                ctx.Employees.Remove(dbEmployee);
+                ctx.SaveChanges();
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Employee with id '{id}' not found");
+            }
+        } 
+
+
 
         public IEnumerable<Employee> GetAll()
         {
