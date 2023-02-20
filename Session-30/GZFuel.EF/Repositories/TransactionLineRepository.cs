@@ -1,0 +1,59 @@
+﻿using GZFuel.EF.Context;
+using GZFuel.Model.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GZFuel.EF.Repositories
+{
+    public class TransactionLineRepository : IEntityRepo<TransactionLine>
+    {
+        public void Add(TransactionLine entity)
+        {
+            using var ctx = new FuelDbContext();
+            if (entity.ID != 0)
+            {
+                ctx.Add(entity);
+            }
+            else
+            {
+                throw new ArgumentException(" A TransactionLine cannot have a predefined ID", nameof(entity));
+
+            }
+        }
+
+        public void Delete(int id)
+        {
+            using var ctx = new FuelDbContext();
+            var dbTransactionLine = ctx.TransactionsLines.SingleOrDefault(tl => tl.ID == id);
+            if (dbTransactionLine != null)
+            {
+                ctx.TransactionsLines.Remove(dbTransactionLine);
+                ctx.SaveChanges();
+            }
+            else
+            {
+                throw new KeyNotFoundException($"A Transaction with id '{id}' was not found");
+            }
+
+        }
+
+        public IEnumerable<TransactionLine> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public TransactionLine? GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(int id, TransactionLine entity)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
