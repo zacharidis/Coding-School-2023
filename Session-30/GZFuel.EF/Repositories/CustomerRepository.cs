@@ -53,12 +53,37 @@ namespace GZFuel.EF.Repositories
                 .Where (c => c.ID == id)
                 .Include(c=> c.Transactions)
                 .SingleOrDefault();
-            return dbCustomer;
+           
+            if (dbCustomer == null)
+            {
+                throw new Exception("Customer Not Found"); 
+            } else
+            {
+                return dbCustomer;
+
+            }
+            
+           
         }
 
         public void Update(int id, Customer entity)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var dbCustomer = ctx.Customers
+                .Include (c=> c.Transactions)
+                .Where(c => c.ID == id)
+                .SingleOrDefault();
+            if (dbCustomer!= null)
+            {
+                throw new KeyNotFoundException("The specific ID coudnot be found");
+            }else
+            {
+                dbCustomer.Name = entity.Name;
+                dbCustomer.Surname = entity.Surname;
+                dbCustomer.CardNumber = entity.CardNumber; // maybe we shouldn't change this prop
+                
+
+            }
         }
     }
 
