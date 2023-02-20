@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 namespace GZFuel.EF.Repositories
 {
     public interface IEntityRepo<TEntity>
-    
 
-
-        where TEntity : BaseEntity {
+    {
         // CRUD operations
-        // Create
-        void Add(TEntity entity);
-        // Read
-        TEntity Get(int id);
-        // Update
-        void Update(TEntity entity);
-        // Delete
-        void Delete(TEntity entity);
-        // Get all
-        List<TEntity> GetAll();
+        IList<TEntity> GetAll();
+        
+        TEntity? GetById(int id);
+
+        void Add (TEntity entity);
+
+        void Update(int id, TEntity entity);
+
+        void Delete(int id);
+
     }
+
+        
+    
     }
 
