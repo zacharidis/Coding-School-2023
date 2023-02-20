@@ -66,7 +66,21 @@ namespace GZFuel.EF.Repositories
 
         public void Update(int id, Item entity)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var selectedItem = ctx.Items.SingleOrDefault(i => i.ID == id); 
+            if (selectedItem != null)
+            {
+
+                    selectedItem.Cost = entity.Cost;
+                    selectedItem.Price = entity.Price;
+                    selectedItem.Description = entity.Description;
+                    selectedItem.ItemType = entity.ItemType;
+                    selectedItem.Code   = entity.Code;
+
+                    ctx.SaveChanges();
+
+
+            } else { throw new KeyNotFoundException($"{id} not found !"); }
         }
     }
 }
