@@ -46,7 +46,6 @@ namespace GZFuel.EF.Repositories
         {
             using var ctx = new FuelDbContext();
             var allItems = ctx.Items
-                .Include(i=> i.TransactionLines)
                 .ToList();
             return allItems;
         }
