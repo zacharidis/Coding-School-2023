@@ -14,12 +14,12 @@ namespace GZFuel.EF.Repositories
         public void Add(Customer entity)
         {
             using var ctx = new FuelDbContext();
-            if (entity == null)
+            if (entity.ID != 0 )
             {
-                throw new Exception("Entity is not complete");
+                throw new ArgumentException("Customer cannot have a predefined ID");
             } else
             {
-                ctx.Add(entity);
+                ctx.Customers.Add(entity);
                 ctx.SaveChanges();
             }
 
@@ -32,8 +32,15 @@ namespace GZFuel.EF.Repositories
             var dbCustomer = ctx.Customers
                 .Where(c => c.ID == id)
                 .SingleOrDefault();
-            ctx.Remove(dbCustomer);
-            ctx.SaveChanges();
+            if (dbCustomer != null)
+            {
+                ctx.Customers.Remove(dbCustomer);
+                ctx.SaveChanges();
+            } else
+            {
+                throw new KeyNotFoundException($"Customer with id '{id}' not found");
+            }
+            
             // maybe i could use the GetById to find the c ustomer for less code. 
 
         }
@@ -49,19 +56,8 @@ namespace GZFuel.EF.Repositories
         public Customer? GetById(int id)
         {
             using var ctx = new FuelDbContext();
-            var dbCustomer = ctx.Customers
-                .Where (c => c.ID == id)
-                .Include(c=> c.Transactions)
-                .SingleOrDefault();
-           
-            if (dbCustomer == null)
-            {
-                throw new Exception("Customer Not Found"); 
-            } else
-            {
-                return dbCustomer;
 
-            }
+            return ctx.Customers.Include(c => c.Transactions).SingleOrDefault(c => c.ID == id);
             
            
         }
@@ -75,7 +71,7 @@ namespace GZFuel.EF.Repositories
                 .SingleOrDefault();
             if (dbCustomer!= null)
             {
-                throw new KeyNotFoundException("The specific ID coudnot be found");
+                throw new KeyNotFoundException($"The specific id '{id}' coudnot be found");
             }else
             {
                 dbCustomer.Name = entity.Name;
