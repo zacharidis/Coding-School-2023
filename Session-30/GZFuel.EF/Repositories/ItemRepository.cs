@@ -52,7 +52,16 @@ namespace GZFuel.EF.Repositories
 
         public Item? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var selectedItem = ctx.Items.Include(i => i.ItemType).Where(i => i.ID == id).SingleOrDefault();
+            if (selectedItem != null)
+            {
+                return selectedItem;
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Item with id '{id}' not found");
+            }
         }
 
         public void Update(int id, Item entity)
