@@ -11,7 +11,7 @@ namespace GZFuel.EF.Repositories
 
     {
         // CRUD operations
-        IList<TEntity> GetAll();
+        IEnumerable<TEntity> GetAll();
         
         TEntity? GetById(int id);
 
