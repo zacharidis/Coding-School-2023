@@ -50,7 +50,18 @@ namespace GZFuel.EF.Repositories
 
         public Transaction? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var dbTransaction = ctx.Transactions
+                .Where(t => t.ID == id)
+                .SingleOrDefault();
+            if (dbTransaction != null)
+            {
+                              return dbTransaction;
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Transaction with id '{id}' not found");
+            }
         }
 
         public void Update(int id, Transaction entity)
