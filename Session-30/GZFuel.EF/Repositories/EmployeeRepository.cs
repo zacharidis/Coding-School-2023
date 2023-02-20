@@ -16,7 +16,7 @@ namespace GZFuel.EF.Repositories
             using var ctx = new FuelDbContext();
             if (entity.Id != 0)
             {
-                throw new ArgumentException("Employee cannot have a predefined ID");
+                throw new ArgumentException("Employee cannot have a predefined ID" ,nameof(entity));
             }
             else
             {
