@@ -45,7 +45,7 @@ namespace GZFuel.EF.Repositories
 
         }
 
-        public IList<Customer> GetAll()
+        public IEnumerable<Customer> GetAll()
         {
             using var ctx = new FuelDbContext();
             var dbCustomer  = ctx.Customers
