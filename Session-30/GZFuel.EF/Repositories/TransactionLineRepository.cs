@@ -42,18 +42,31 @@ namespace GZFuel.EF.Repositories
 
         public IEnumerable<TransactionLine> GetAll()
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            return ctx.TransactionsLines.ToList();
         }
 
         public TransactionLine? GetById(int id)
         {
-            throw new NotImplementedException();
-        }
+            using var ctx = new FuelDbContext();
+            var selectedTl = ctx.TransactionsLines.Where(tl => tl.ID == id).SingleOrDefault();
+            if (selectedTl != null)
+            {
+                return selectedTl;
+            }
+            else
+            {
+                throw new KeyNotFoundException($"a transaction line with id : {id} was not found");
+            }
+        } 
 
-        public void Update(int id, TransactionLine entity)
-        {
-            throw new NotImplementedException();
+            public void Update(int id, TransactionLine entity)
+            {
+                using var ctx = new FuelDbContext();
+                var selectedTl = ctx.TransactionsLines.Where(tl=> tl.ID == id).SingleOrDefault();
+            }
+
+
         }
-    }
-}
+    } 
 
