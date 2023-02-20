@@ -28,7 +28,18 @@ namespace GZFuel.EF.Repositories
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var selectedItem = ctx.Items
+                .Where(i => i.ID == id)
+                .SingleOrDefault();
+            if (selectedItem != null)
+            {
+                ctx.Items.Remove(selectedItem);
+                ctx.SaveChanges();
+            } else
+            {
+                throw new KeyNotFoundException($"Item with id '{id}' not found");
+            }
         }
 
         public IEnumerable<Item> GetAll()
