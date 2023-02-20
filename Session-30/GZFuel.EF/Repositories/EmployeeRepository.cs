@@ -1,5 +1,6 @@
 ﻿using GZFuel.EF.Context;
 using GZFuel.Model.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +47,12 @@ namespace GZFuel.EF.Repositories
 
         public IEnumerable<Employee> GetAll()
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+
+            var dbEmployee = ctx.Employees
+                .Include(e => e.Transactions).ToList();
+            return dbEmployee;
+            
         }
 
         public Employee? GetById(int id)
