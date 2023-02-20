@@ -21,7 +21,7 @@ namespace GZFuel.EF.Configurations
 
             builder.Property(t => t.Date).IsRequired();
             builder.Property(t => t.PaymentMethod).IsRequired();
-            builder.Property(t => t.TotalValue).IsRequired();
+            builder.Property(t => t.TotalValue).HasPrecision(5,2).IsRequired();
         
 
 
