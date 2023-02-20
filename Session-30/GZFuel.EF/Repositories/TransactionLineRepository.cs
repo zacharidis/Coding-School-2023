@@ -64,8 +64,15 @@ namespace GZFuel.EF.Repositories
             public void Update(int id, TransactionLine entity)
             {
                 using var ctx = new FuelDbContext();
-              // will add later , maybe a tl should not be edited or updated. 
-              //TODO : finish it
+                var dbTransactionLine = ctx.TransactionsLines.Where(tl=> tl.ID == id).SingleOrDefault();    
+               if (dbTransactionLine != null)
+            {
+                dbTransactionLine.NetValue = entity.NetValue;
+                dbTransactionLine.TotalValue = entity.TotalValue;
+                dbTransactionLine.Quantity = entity.Quantity;
+                ctx.SaveChanges();
+                //todo : NOT FINISHED 
+            }
             }
 
 
