@@ -1,5 +1,6 @@
 ﻿using GZFuel.EF.Context;
 using GZFuel.Model.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,7 +64,8 @@ namespace GZFuel.EF.Repositories
             public void Update(int id, TransactionLine entity)
             {
                 using var ctx = new FuelDbContext();
-                var selectedTl = ctx.TransactionsLines.Where(tl=> tl.ID == id).SingleOrDefault();
+              // will add later , maybe a tl should not be edited or updated. 
+              //TODO : finish it
             }
 
 
