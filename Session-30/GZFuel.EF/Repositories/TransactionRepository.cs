@@ -66,7 +66,24 @@ namespace GZFuel.EF.Repositories
 
         public void Update(int id, Transaction entity)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var dbTransaction = ctx.Transactions
+                .Where(t => t.ID == id)
+                .SingleOrDefault();
+            if (dbTransaction != null)
+            {
+                dbTransaction.ID = entity.ID;
+                dbTransaction.EmployeeID = entity.EmployeeID;
+                dbTransaction.Date = entity.Date;
+                dbTransaction.CustomerID = entity.CustomerID;
+                dbTransaction.PaymentMethod= entity.PaymentMethod;
+                dbTransaction.TotalValue = entity.TotalValue;
+                ctx.SaveChanges();
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Transaction with id '{id}' not found");
+            }
         }
     }
 }
