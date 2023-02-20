@@ -48,7 +48,12 @@ namespace GZFuel.EF.Repositories
 
         public Customer? GetById(int id)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var dbCustomer = ctx.Customers
+                .Where (c => c.ID == id)
+                .Include(c=> c.Transactions)
+                .SingleOrDefault();
+            return dbCustomer;
         }
 
         public void Update(int id, Customer entity)
