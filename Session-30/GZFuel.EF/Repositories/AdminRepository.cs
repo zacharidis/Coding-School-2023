@@ -15,15 +15,31 @@ namespace GZFuel.EF.Repositories
 
         public void Update(int id, Admin entity)
         {
-            
+
+            using var ctx = new FuelDbContext();
+            var dbAdmin = ctx.Admins
+                .Include(a => a.Password)
+                .Where(a => a.Id == id)
+                .SingleOrDefault();
+            if (dbAdmin != null)
+            {
+                dbAdmin.Password = entity.Password;
+                ctx.SaveChanges();
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Admin with id '{id}' not found");
+
+
+            }
         }
 
-        public IEnumerable<Admin> GetAll()
-        {
+            public IEnumerable<Admin> GetAll()
+                 {
             using var ctx = new FuelDbContext();
             return ctx.Admins.Include(a => a.Password).ToList();
             
-        }
+                       }
 
 
 
