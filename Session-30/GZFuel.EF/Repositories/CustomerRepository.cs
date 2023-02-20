@@ -1,5 +1,6 @@
 ﻿using GZFuel.EF.Context;
 using GZFuel.Model.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace GZFuel.EF.Repositories
             using var ctx = new FuelDbContext();
             //go get the specific Customer
             var dbCustomer = ctx.Customers
-                .Where(e => e.ID== id)
+                .Where(c => c.ID == id)
                 .SingleOrDefault();
             ctx.Remove(dbCustomer);
             ctx.SaveChanges();
@@ -39,7 +40,10 @@ namespace GZFuel.EF.Repositories
 
         public IList<Customer> GetAll()
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var dbCustomer  = ctx.Customers
+                .Include( c=> c.Transactions).ToList();
+            return dbCustomer;
         }
 
         public Customer? GetById(int id)
