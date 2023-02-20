@@ -44,7 +44,11 @@ namespace GZFuel.EF.Repositories
 
         public IEnumerable<Item> GetAll()
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            var allItems = ctx.Items
+                .Include(i=> i.TransactionLines)
+                .ToList();
+            return allItems;
         }
 
         public Item? GetById(int id)
