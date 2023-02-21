@@ -3,6 +3,42 @@
 @using GZFuel.Blazor.Shared.DTO.Admin;
 <h3>AdminList</h3>
 
+<h3> List of admins </h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Password
+            </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var admin in admins)
+        {
+            <tr>
+                <td>
+                    @admin.Name
+                </td>
+                <td>
+                    @admin.Username
+                </td>
+                <td>
+                    @admin.Password
+                </td>
+              
+            </tr>
+        }
+    </tbody>
+    </table>
+
 @code {
 
     private List<AdminDTO> admins = new ();
@@ -17,6 +53,14 @@
 
     protected override async Task OnInitializedAsync()
     {
-        admins = await Http.GetFromJsonAsync<List<AdminDTO>>("api/admin");
+        LoadItemsFromServer();        
     }
+
+    private async Task LoadItemsFromServer()
+    {
+        admins = await Http.GetFromJsonAsync<List<AdminDTO>>("/admin");
+
+    }
+
+
 }
