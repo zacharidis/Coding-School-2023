@@ -1,0 +1,22 @@
+﻿@page "/adminlist"
+@inject HttpClient Http
+@using GZFuel.Blazor.Shared.DTO.Admin;
+<h3>AdminList</h3>
+
+@code {
+
+    private List<AdminDTO> admins = new ();
+
+
+
+
+
+
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        admins = await Http.GetFromJsonAsync<List<AdminDTO>>("api/admin");
+    }
+}
