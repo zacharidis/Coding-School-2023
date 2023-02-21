@@ -26,6 +26,7 @@ namespace GZFuel.Blazor.Server.Controllers
             var result = _adminRepo.GetAll();
             return result.Select(x => new AdminDTO
             {
+                Id =  x.Id,
                 Name = x.Name,
                 Surname = x.Surname,
                 Username = x.Username,
