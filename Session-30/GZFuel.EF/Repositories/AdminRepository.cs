@@ -60,8 +60,20 @@ namespace GZFuel.EF.Repositories
 
         public Admin? GetById(int id)
         {
-            throw new NotImplementedException();
-        }
+			using var ctx = new FuelDbContext();
+
+            var selectedItem = ctx.Admins.SingleOrDefault(c => c.Id == id);
+			
+
+			if (selectedItem != null)
+			{
+				return selectedItem;
+			}
+			else
+			{
+				throw new KeyNotFoundException($"Item with id '{id}' not found");
+			}
+		}
 
       
     }
