@@ -1,8 +1,15 @@
 ﻿@page "/adminlist"
-@inject HttpClient Http
-@using GZFuel.Blazor.Shared;
 @using GZFuel.Blazor.Shared.DTO.Admin;
-<h3>AdminList</h3>
+@inject HttpClient httpClient; 
+
+
+@if(isLoading)
+{
+    <p>Loading </p>
+} else
+{
+    
+
 
 <h3> List of admins </h3>
 
@@ -12,15 +19,23 @@
     <thead>
         <tr>
             <th>
+                ID
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
                 Name
             </th>
+
             <th>
                 Username
             </th>
+
             <th>
-                Password
-            </th>
-          
+				Password    
+                </th>
+
         </tr>
     </thead>
     <tbody>
@@ -28,6 +43,15 @@
         {
             <tr>
                 <td>
+                    @admin.Id
+                </td>
+
+                    <td>
+                        @admin.Surname
+                    </td>
+
+
+                    <td>
                     @admin.Name
                 </td>
                 <td>
@@ -40,11 +64,14 @@
             </tr>
         }
     </tbody>
-    </table>
+    </table> 
+    }
+
+
 
 @code {
     private Boolean isLoading = true;
-    private List<AdminDTO> admins = new ();
+    private IEnumerable<AdminDTO> admins;
 
 
 
@@ -56,12 +83,12 @@
 
     protected override async Task OnInitializedAsync()
     {
-        LoadItemsFromServer();        
+       await LoadItemsFromServer();        
     }
 
     private async Task LoadItemsFromServer()
     {
-        admins = await Http.GetFromJsonAsync<List<AdminDTO>>("Admin");
+        admins = await httpClient.GetFromJsonAsync<List<AdminDTO>>("Admin");
         isLoading = false;
     }
 
