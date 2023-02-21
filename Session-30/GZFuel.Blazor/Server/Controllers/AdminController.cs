@@ -4,9 +4,11 @@ using GZFuel.Blazor.Shared.DTO.Admin;
 using GZFuel.EF.Repositories;
 using GZFuel.Model.Entities;
 
+using System.Collections.Generic;
+
 namespace GZFuel.Blazor.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AdminController : ControllerBase
     {
