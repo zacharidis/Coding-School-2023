@@ -1,6 +1,50 @@
-﻿@page "/adminlist/adminedit"
-<h3>AdminEdit</h3>
+﻿@page "/adminlist/adminedit/{Id:int?}"
+@using GZFuel.Blazor.Shared.DTO.Admin;
+@inject HttpClient httpClient;
+
+<h3>Update Admin PWD</h3>
+
+@if (admin==null)
+{
+	<p> loading </p>
+} else
+{
+	
+
+
+<div class="row ">
+	<div class="col-md-6">
+		<label class="form-label">Name</label>
+		<input type="text" class="form-control"/>
+	</div>
+</div>
+}
 
 @code {
 
+	[Parameter] public int? Id { get; set; }
+	AdminEditDTO admin { get; set; }
+
+	protected override async Task OnInitializedAsync()
+	{
+
+
+		if (Id == null )
+		{
+			admin = new();
+		} else
+		{
+			admin = await httpClient.GetFromJsonAsync<AdminEditDTO>($"admin/{Id}");
+		}
+
+		
+		
+		
+		
+		
+		
+	}
+
+
+	
 }
