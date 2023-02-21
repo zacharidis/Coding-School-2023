@@ -1,9 +1,12 @@
 ﻿@page "/adminlist"
 @inject HttpClient Http
+@using GZFuel.Blazor.Shared;
 @using GZFuel.Blazor.Shared.DTO.Admin;
 <h3>AdminList</h3>
 
 <h3> List of admins </h3>
+
+
 
 <table class="table table-striped">
     <thead>
@@ -40,7 +43,7 @@
     </table>
 
 @code {
-
+    private Boolean isLoading = true;
     private List<AdminDTO> admins = new ();
 
 
@@ -58,8 +61,8 @@
 
     private async Task LoadItemsFromServer()
     {
-        admins = await Http.GetFromJsonAsync<List<AdminDTO>>("/admin");
-
+        admins = await Http.GetFromJsonAsync<List<AdminDTO>>("Admin");
+        isLoading = false;
     }
 
 
