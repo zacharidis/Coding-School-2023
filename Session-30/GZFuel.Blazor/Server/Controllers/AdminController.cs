@@ -36,5 +36,26 @@ namespace GZFuel.Blazor.Server.Controllers
             });
             
         }
+
+
+
+        [HttpGet("{id}")]
+        public async Task<AdminEditDTO> GetById(int id)
+        {
+			var result = _adminRepo.GetById(id);
+			return new AdminEditDTO
+            {
+				Id= result.Id,
+				Name = result.Name,
+				Surname = result.Surname,
+				Username = result.Username,
+				Password = result.Password
+			};
+		}
+
+
+
+
+
     }
 }
