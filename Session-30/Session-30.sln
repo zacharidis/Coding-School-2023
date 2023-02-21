@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GZFuel.EF", "GZFuel.EF\GZFu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GZFuel.Win", "GZFuel.Win\GZFuel.Win.csproj", "{2AEDED56-3E13-49CF-BD50-B936A98330D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFuel.Blazor.Server", "GZFuel.Blazor\Server\GZFuel.Blazor.Server.csproj", "{A5BB020C-A0FD-48BF-AFC2-0F864EE5C288}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GZFuel.Blazor.Server", "GZFuel.Blazor\Server\GZFuel.Blazor.Server.csproj", "{A5BB020C-A0FD-48BF-AFC2-0F864EE5C288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFuel.Blazor.Client", "GZFuel.Blazor\Client\GZFuel.Blazor.Client.csproj", "{48559A53-09A2-41A5-B9C5-613F0999AFB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GZFuel.Blazor.Client", "GZFuel.Blazor\Client\GZFuel.Blazor.Client.csproj", "{48559A53-09A2-41A5-B9C5-613F0999AFB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZFuel.Blazor.Shared", "GZFuel.Blazor\Shared\GZFuel.Blazor.Shared.csproj", "{D16D26AB-7C61-4DAD-ABCA-E78086FD5D7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GZFuel.Blazor.Shared", "GZFuel.Blazor\Shared\GZFuel.Blazor.Shared.csproj", "{D16D26AB-7C61-4DAD-ABCA-E78086FD5D7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
