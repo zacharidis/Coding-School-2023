@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\GZFuel.EF\GZFuel.EF.csproj" />
+    <ProjectReference Include="..\..\GZFuel.Model\GZFuel.Model.csproj" />
     <ProjectReference Include="..\Client\GZFuel.Blazor.Client.csproj" />
     <ProjectReference Include="..\Shared\GZFuel.Blazor.Shared.csproj" />
   </ItemGroup>
