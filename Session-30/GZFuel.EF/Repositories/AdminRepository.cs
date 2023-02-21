@@ -37,7 +37,9 @@ namespace GZFuel.EF.Repositories
             public IEnumerable<Admin> GetAll()
                  {
             using var ctx = new FuelDbContext();
-            return ctx.Admins.Include(a => a.Password).ToList();
+            return ctx.Admins.ToList();
+                 
+                
             
                        }
 
