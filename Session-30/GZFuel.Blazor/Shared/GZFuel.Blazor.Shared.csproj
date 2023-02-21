@@ -9,4 +9,12 @@
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\Customer\" />
+    <Folder Include="DTO\Employee\" />
+    <Folder Include="DTO\Item\" />
+    <Folder Include="DTO\TransactionLine\" />
+    <Folder Include="DTO\Transaction\" />
+  </ItemGroup>
 </Project>
