@@ -11,14 +11,14 @@ namespace GZFuel.Model.Entities
     public class Admin : BaseEntity
     {
         public int Id { get; set; }
-        public int Name { get; set; }  
-        public int Surname { get; set; }
+        public string Name { get; set; }  
+        public string Surname { get; set; }
 
         public string Username { get; set; }
         public string Password { get; set; }
 
 
-        public Admin(int id, int name, int surname)
+        public Admin(int id, string name, string surname)
         {
             Id = id;
             Name = name;
