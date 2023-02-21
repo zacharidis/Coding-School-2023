@@ -8,6 +8,7 @@ namespace GZFuel.Blazor.Shared.DTO.Admin
 {
     public class AdminDTO
     {
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public string Surname { get; set; }
