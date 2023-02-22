@@ -1,4 +1,10 @@
-﻿<h3>CustomerEdit</h3>
+﻿@page "/customerlist/customeredit/{Id:int?}"
+@using GZFuel.Blazor.Shared.DTO.Customer;
+@inject HttpClient httpClient;
+@inject NavigationManager NavigationManager;
+
+
+<h3>CustomerEdit</h3>
 
 @code {
 
