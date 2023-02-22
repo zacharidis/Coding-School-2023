@@ -15,16 +15,11 @@ namespace GZFuel.Model.Entities
             public string CardNumber { get; set; }
 
         //Customer Constructor 
-        public Customer(string name, string surname, string cardNumber)
+        public Customer(string name, string surname)
         {
              //   ID = id; not here , the ID is auto generated bty the database
             Name = name;
             Surname = surname;
-
-			
-
-
-           CardNumber = cardNumber;
 
            
 			
@@ -34,6 +29,8 @@ namespace GZFuel.Model.Entities
             Transactions= new List<Transaction>();
         }
 
+
+        public Customer() { }
         // Transactions is a relationship between Customer and Transaction ( one to many)
 
         public List<Transaction> Transactions { get; set; } 

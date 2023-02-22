@@ -73,13 +73,15 @@ namespace GZFuel.Blazor.Server.Controllers
 		[HttpPost]
 		public async Task Post(CustomerEditDTO customer)
 		{
-			var newCustomer  = new Customer(customer.Name,customer.Surname,customer.CardNumber)
+			var newCustomer  = new Customer
 			{
-				ID = customer.Id,
+				
 				Name = customer.Name,
 				Surname = customer.Surname,
-				CardNumber = customer.CardNumber
+				
 			};
+
+			newCustomer.Transactions = new();
 
 			_customerRepo.Add(newCustomer);
 			
