@@ -40,6 +40,28 @@ namespace GZFuel.Blazor.Server.Controllers
 		}
 
 
+		// Get customer by id
+
+		[HttpGet("{id}")]
+		public async Task<CustomerEditDTO> GetById(int id)
+		{
+
+		 var result = _customerRepo.GetById(id);
+		
+		
+
+				return new CustomerEditDTO
+				{
+					Id = result.ID,
+					Name = result.Name,
+					Surname = result.Surname,
+					CardNumber = result.CardNumber
+				};
+			}
+		
+
+		}
+
 	
 
 
@@ -49,4 +71,4 @@ namespace GZFuel.Blazor.Server.Controllers
 
 
 	}
-}
+
