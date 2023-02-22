@@ -4,8 +4,34 @@
 @inject NavigationManager NavigationManager;
 
 
-<h3>CustomerEdit</h3>
+<h3>Customer Editt</h3>
 
 @code {
+	[Parameter] public int? Id { get; set; }
+	CustomerDTO customer = new CustomerDTO();
+
+
+
+
+	protected override async Task OnInitializedAsync()
+	{
+		if (Id.HasValue)
+		{
+			customer = await httpClient.GetFromJsonAsync<CustomerDTO>($"api/customer/{Id}");
+		} else
+		{
+			customer = new(); 
+
+		}
+	}
+
+
+
+
+
+
+
+
+
 
 }
