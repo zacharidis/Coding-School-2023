@@ -1,6 +1,7 @@
 ﻿@page "/adminlist/adminedit/{Id:int?}"
 @using GZFuel.Blazor.Shared.DTO.Admin;
 @inject HttpClient httpClient;
+@inject NavigationManager NavigationManager;
 
 <h3>Update Admin PWD</h3>
 
@@ -18,7 +19,41 @@
 
 		<input class="form-control" @bind="@admin.Name"/>
 	</div>
+		<div class="col-md-6">
+			<label class="form-label"> Surname </label>
+
+			<input class="form-control" @bind="@admin.Surname" />
+		</div>
+		<div class="col-md-6">
+			<label class="form-label"> Username </label>
+
+			<input class="form-control" @bind="@admin.Username" />
+		</div>
+		<div class="col-md-6">
+			<label class="form-label"> Password </label>
+
+			<input class="form-control" type="password" @bind="@admin.Password" />
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-label"> Repeat Password </label>
+
+			<input class="form-control" type="password" @bind="@admin.Password" />
+		</div>
+
 </div>
+
+<div class="row"> 
+
+	<div class="col-md-12">
+		<button class="btn btn-primary" @onclick="SaveItem">Save</button>
+	</div>
+	<div class="col-md-12">
+<button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+	</div>
+
+</div>
+
 }
 
 @code {
@@ -38,14 +73,23 @@
 			admin = await httpClient.GetFromJsonAsync<AdminEditDTO>($"admin/{Id}");
 		}
 
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+	}
+
+	private void OnCancel()
+	{
+		NavigationManager.NavigateTo("/adminlist");
 	}
 
 
+	private async Task  SaveItem()
+	{
+		
 	
+	}
 }

@@ -1,6 +1,7 @@
 ﻿@page "/adminlist"
 @using GZFuel.Blazor.Shared.DTO.Admin;
 @inject HttpClient httpClient; 
+@inject NavigationManager NavigationManager;
 
 
 @if(isLoading)
@@ -13,7 +14,7 @@
 
 <h3> List of admins </h3>
 
-
+<button class="btn btn-primary" @onclick="CreateItem">Create New</button>
 
 <table class="table table-striped">
     <thead>
@@ -92,5 +93,9 @@
         isLoading = false;
     }
 
+private void CreateItem()
+	{
+		NavigationManager.NavigateTo("/adminlist/adminedit");
+	}
 
 }
