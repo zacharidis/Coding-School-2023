@@ -90,6 +90,20 @@ namespace GZFuel.Blazor.Server.Controllers
 
 
 
+		// update a specific customer 
+
+		[HttpPut]
+		public async Task Put(CustomerEditDTO customer)
+		{
+            var result = _customerRepo.GetById(customer.Id);
+			result.Name = customer.Name;
+			result.Surname = customer.Surname;
+			result.CardNumber = customer.CardNumber;
+			_customerRepo.Update(customer.Id , result);
+
+            
+        }
+
 
 		
 
