@@ -89,7 +89,16 @@
 
 	private async Task  SaveItem()
 	{
-		
-	
+		if(Id==null)
+		{
+			var response = await httpClient.PostAsJsonAsync("Admin", admin);
+			response.EnsureSuccessStatusCode();
+			NavigationManager.NavigateTo("/adminlist");
+
+		} else
+		{
+			var response = await httpClient.PutAsJsonAsync($"Admin/{Id}", admin);
+		}
+
 	}
 }
