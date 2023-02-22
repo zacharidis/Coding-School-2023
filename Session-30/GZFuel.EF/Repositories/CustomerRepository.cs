@@ -86,7 +86,9 @@ namespace GZFuel.EF.Repositories
                 dbCustomer.Name = entity.Name;
                 dbCustomer.Surname = entity.Surname;
                 dbCustomer.CardNumber = entity.CardNumber; // maybe we shouldn't change this prop
-                
+                ctx.Update( dbCustomer );
+                ctx.SaveChanges();
+
 
             }
         }
