@@ -75,7 +75,6 @@ namespace GZFuel.EF.Repositories
         {
             using var ctx = new FuelDbContext();
             var dbCustomer = ctx.Customers
-                .Include (c=> c.Transactions)
                 .Where(c => c.ID == id)
                 .SingleOrDefault();
             if (dbCustomer!= null)
