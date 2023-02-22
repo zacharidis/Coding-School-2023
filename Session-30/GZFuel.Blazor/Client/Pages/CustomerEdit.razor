@@ -6,55 +6,61 @@
 
 <h3>Customer Edit</h3>
 
-@if (customer == null)
+@if (isLoading)
 {
 	<p>Loading ... </p>
+} else
+{
+
+	<div class="row">
+
+		<div class="col-md-6">
+
+			<label class="form-label"> Name </label>
+			<input class="form-control" @bind="@customer.Name" />
+
+
+		</div>
+
+		<div class="col-md-6">
+
+			<label class="form-label"> Surname </label>
+			<input class="form-control" @bind="@customer.Surname" />
+
+
+		</div>
+
+		<div class="col-md-6">
+
+			<label class="form-label"> Card Number </label>
+			<input class="form-control" @bind="@customer.CardNumber" disabled />
+		</div>
+
+
+
+
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<button class="btn btn-primary" @onclick="SaveItem">Save</button>
+
+		</div>
+
+		<div class="col-md-12">
+
+			<button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
+
+		</div>
+	</div>
+
+
+
+
 }
 
-
-<div class="row" >
-
-	  <div class="col-md-6">
-         
-		  <label class="form-label"> Name </label>
-		  <input class="form-control" @bind="@customer.Name"/>
-
-	  
-	  </div>
-
-	<div class="col-md-6">
-
-		<label class="form-label"> Surname </label>
-		<input class="form-control" @bind="@customer.Surname" />
-
-
-	</div>
-
-	<div class="col-md-6">
-
-		<label class="form-label"> Card Number </label>
-		<input class="form-control" @bind="@customer.CardNumber" disabled="disabled"/>
-	</div>
-
-	
-
-	
-</div>
-
-<div class="row">
-
-<div class="col-md-12">
-
-		<button class="btn btn-primary" @onclick="SaveItem">Save</button>
-
-	</div>
-
-	<div class="col-md-12">
-
-		<button class="btn btn-danger" @onclick="OnCancel">Cancel</button>
-
-	</div>
-</div>
 
 
 
@@ -67,21 +73,33 @@
 @code {
 	[Parameter] public int? Id { get; set; }
 	CustomerEditDTO customer{ get; set; }
+	private Boolean isLoading = true;
 
-
-
-
-	protected override async Task OnInitializedAsync()
+	private async Task LoadItemsFromServer()
 	{
-		if (Id==null)
+
+		if (Id == null)
 		{
 			customer = new();
-		} else
+		}
+		else
 		{
 
 			customer = await httpClient.GetFromJsonAsync<CustomerEditDTO>($"customer/{Id}");
 
 		}
+
+
+	}
+
+
+	protected override async Task OnInitializedAsync()
+	{
+
+		await LoadItemsFromServer();
+        isLoading = false;
+
+		
 	}
 
 
@@ -91,6 +109,8 @@
 	}
 
 	private async Task SaveItem()
+
+	     
 	{
 		if (Id==null)
 		{
@@ -106,7 +126,7 @@
 		}
 		else
 		{
-			var response = 	await httpClient.PutAsJsonAsync($"Customer/{Id}", customer);
+			var response = 	await httpClient.PutAsJsonAsync($"Customer", customer);
 			response.EnsureSuccessStatusCode();
 			NavigationManager.NavigateTo("/customerlist");
 		}
