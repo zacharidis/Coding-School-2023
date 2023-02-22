@@ -2,6 +2,8 @@
 @using GZFuel.Blazor.Shared.DTO.Customer;
 @inject HttpClient httpClient;
 @inject NavigationManager NavigationManager;
+@inject IJSRuntime JsRuntime;
+
 
 
 
@@ -54,7 +56,7 @@
 					</td>
 
 					<button class="btn btn-primary" @onclick="()=>EditItem(customer)">Details</button>
-					<button class="btn btn-danger"> Delete</button>
+					<button class="btn btn-danger" @onclick="()=>DeleteItem(customer)">Delete</button>
 
 				</tr>
 			}
@@ -100,10 +102,22 @@
 
 	private void EditItem(CustomerDTO customer)
 	{
-			NavigationManager.NavigateTo($"/customerlist/customeredit/{customer.Id}");
+		NavigationManager.NavigateTo($"/customerlist/customeredit/{customer.Id}");
 	}
 
+	private async Task DeleteItem(CustomerDTO customer)
+	{
+	
 
+
+
+
+
+		var response = await httpClient.DeleteAsync($"customer/{customer.Id}");
+		response.EnsureSuccessStatusCode();
+		await LoadCustomers();
+
+	}
 
 
 }
