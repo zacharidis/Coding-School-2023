@@ -29,8 +29,8 @@ namespace GZFuel.Blazor.Server.Controllers
 		// Get all the customers from repo 
 
 		[HttpGet]
-		
-		public async Task <IEnumerable<CustomerDTO>> Get()
+
+		public async Task<IEnumerable<CustomerDTO>> Get()
 		{
 
 			var result = _customerRepo.GetAll();
@@ -41,8 +41,8 @@ namespace GZFuel.Blazor.Server.Controllers
 				Surname = x.Surname,
 				CardNumber = x.CardNumber
 			});
-				
-			
+
+
 		}
 
 
@@ -52,18 +52,18 @@ namespace GZFuel.Blazor.Server.Controllers
 		public async Task<CustomerEditDTO> GetById(int id)
 		{
 
-		 var result = _customerRepo.GetById(id);
-		
-		
+			var result = _customerRepo.GetById(id);
 
-				return new CustomerEditDTO
-				{
-					Id = result.ID,
-					Name = result.Name,
-					Surname = result.Surname,
-					CardNumber = result.CardNumber
-				};
-			}
+
+
+			return new CustomerEditDTO
+			{
+				Id = result.ID,
+				Name = result.Name,
+				Surname = result.Surname,
+				CardNumber = result.CardNumber
+			};
+		}
 
 
 
@@ -73,19 +73,19 @@ namespace GZFuel.Blazor.Server.Controllers
 		[HttpPost]
 		public async Task Post(CustomerEditDTO customer)
 		{
-			var newCustomer  = new Customer
+			var newCustomer = new Customer
 			{
-				
+
 				Name = customer.Name,
 				Surname = customer.Surname,
 				CardNumber = customer.CardNumber
-				
+
 			};
 
 			newCustomer.Transactions = new();
 
 			_customerRepo.Add(newCustomer);
-			
+
 		}
 
 
@@ -95,28 +95,34 @@ namespace GZFuel.Blazor.Server.Controllers
 		[HttpPut]
 		public async Task Put(CustomerEditDTO customer)
 		{
-            var result = _customerRepo.GetById(customer.Id);
+			var result = _customerRepo.GetById(customer.Id);
 			result.Name = customer.Name;
 			result.Surname = customer.Surname;
 			result.CardNumber = customer.CardNumber;
-			_customerRepo.Update(customer.Id , result);
+			_customerRepo.Update(customer.Id, result);
 
-            
-        }
-
-
-		
 
 		}
 
-	  
-	  
+
+		// delete a customer 
+		[HttpDelete("{id}")]
+
+		public async Task Delete(int id)
+		{
+			_customerRepo.Delete(id);
+		}
 
 
 
 
 
 
+
+
+
+
+	}
 
 	}
 
