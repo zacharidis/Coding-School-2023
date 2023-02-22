@@ -48,7 +48,12 @@ namespace GZFuel.EF.Repositories
         // - unused methods
         public void Add(Admin entity)
         {
-            throw new NotImplementedException();
+            using var ctx = new FuelDbContext();
+            if (entity != null)
+            {
+                ctx.Admins.Add(entity);
+                ctx.SaveChanges();
+            }
         }
 
         public void Delete(int id)
