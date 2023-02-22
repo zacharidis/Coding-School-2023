@@ -67,7 +67,8 @@ namespace GZFuel.Blazor.Server.Controllers
 				Password = admin.Password
 			};
 			_adminRepo.Add(result);
-		}
+            
+        }
 
 
     }
