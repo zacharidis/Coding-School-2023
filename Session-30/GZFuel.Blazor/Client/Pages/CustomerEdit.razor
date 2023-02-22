@@ -101,12 +101,14 @@
 			var response = await httpClient.PostAsJsonAsync("Customer", customer);
 			response.EnsureSuccessStatusCode();
 			NavigationManager.NavigateTo("/customerlist");
-			
-			
+
+
 		}
 		else
 		{
-		 var response = 	await httpClient.PostAsJsonAsync($"Customer/{Id}", customer);
+			var response = 	await httpClient.PutAsJsonAsync($"Customer/{Id}", customer);
+			response.EnsureSuccessStatusCode();
+			NavigationManager.NavigateTo("/customerlist");
 		}
 		
 	}
