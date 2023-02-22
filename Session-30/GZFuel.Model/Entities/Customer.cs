@@ -24,9 +24,7 @@ namespace GZFuel.Model.Entities
 			
 
 
-            // card number will append a random 9 digit number to the letter A
-			Random random = new Random();
-            CardNumber = "A" + random.Next(100000000,999999999).ToString();
+           CardNumber = cardNumber;
 
            
 			
