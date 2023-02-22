@@ -78,6 +78,7 @@ namespace GZFuel.Blazor.Server.Controllers
 				
 				Name = customer.Name,
 				Surname = customer.Surname,
+				CardNumber = customer.CardNumber
 				
 			};
 
