@@ -94,7 +94,9 @@
 	{
 		if (Id==null)
 		{
-			String cardNumber = CardGenerator(); 
+			String cardNumber = CardGenerator();
+
+			customer.CardNumber = cardNumber;
 
 			var response = await httpClient.PostAsJsonAsync("Customer", customer);
 			response.EnsureSuccessStatusCode();
