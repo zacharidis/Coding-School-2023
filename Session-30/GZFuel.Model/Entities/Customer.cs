@@ -9,10 +9,10 @@ namespace GZFuel.Model.Entities
     public class Customer : BaseEntity
     {
         //ID, Name, Surname, CardNumber
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string CardNumber { get; set; }
+            public int ID { get; set; }
+            public string Name { get; set; }
+            public string Surname { get; set; }
+            public string CardNumber { get; set; }
 
         //Customer Constructor 
         public Customer(string name, string surname, string cardNumber)
