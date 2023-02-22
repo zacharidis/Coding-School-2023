@@ -2,6 +2,7 @@
 using GZFuel.Model.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using GZFuel.Blazor.Shared.DTO.Customer;
 
 namespace GZFuel.Blazor.Server.Controllers
 {
@@ -29,15 +30,17 @@ namespace GZFuel.Blazor.Server.Controllers
 			var result = _customerRepo.GetAll();
 			return result.Select(x => new CustomerDTO
 			{
-				Id = x.Id,
+				Id = x.ID,
 				Name = x.Name,
 				Surname = x.Surname,
-				Username = x.Username,
-				Password = x.Password
+				CardNumber = x.CardNumber
 			});
+				
+			
 		}
 
 
+	
 
 
 
