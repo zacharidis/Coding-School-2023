@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GZFuel.Blazor.Shared.DTO.Customer
 {
-	internal class CustomerDTO
+	public class CustomerDTO
 	{
 	}
 }
