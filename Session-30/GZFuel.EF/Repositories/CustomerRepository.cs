@@ -76,9 +76,9 @@ namespace GZFuel.EF.Repositories
         {
             using var ctx = new FuelDbContext();
             var dbCustomer = ctx.Customers
-                .Where(c => c.ID == id)
-                .SingleOrDefault();
-            if (dbCustomer!= null)
+				.Where(c => c.ID == id)
+				.SingleOrDefault();
+            if (dbCustomer == null)
             {
                 throw new KeyNotFoundException($"The specific id '{id}' coudnot be found");
             }else
@@ -86,7 +86,6 @@ namespace GZFuel.EF.Repositories
                 dbCustomer.Name = entity.Name;
                 dbCustomer.Surname = entity.Surname;
                 dbCustomer.CardNumber = entity.CardNumber; // maybe we shouldn't change this prop
-                ctx.Update( dbCustomer );
                 ctx.SaveChanges();
 
 
