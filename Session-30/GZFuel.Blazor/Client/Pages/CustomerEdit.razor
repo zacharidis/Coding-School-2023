@@ -30,6 +30,12 @@
 
 	</div>
 
+	<div class="col-md-6">
+
+		<label class="form-label"> Card Number </label>
+		<input class="form-control" @bind="@customer.CardNumber" disabled="disabled"/>
+	</div>
+
 	
 
 	
@@ -72,7 +78,7 @@
 			customer = new();
 		} else
 		{
-			
+
 			customer = await httpClient.GetFromJsonAsync<CustomerEditDTO>($"customer/{Id}");
 
 		}
@@ -88,6 +94,8 @@
 	{
 		if (Id==null)
 		{
+			String cardNumber = CardGenerator(); 
+
 			var response = await httpClient.PostAsJsonAsync("Customer", customer);
 			response.EnsureSuccessStatusCode();
 			NavigationManager.NavigateTo("/customerlist");
@@ -102,7 +110,12 @@
 	}
 
 
-
+	public string CardGenerator()
+	{
+		Random random = new Random();
+		string cardNumber = 'A' + random.Next(100000000, 999999999).ToString();
+		return cardNumber;
+	}
 
 
 
