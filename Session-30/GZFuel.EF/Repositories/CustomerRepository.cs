@@ -19,6 +19,7 @@ namespace GZFuel.EF.Repositories
                 throw new ArgumentException("Customer cannot have a predefined ID");
             } else
             {
+                entity.CardNumber = "A" + new Random().Next(100000000, 999999999).ToString();
                 ctx.Customers.Add(entity);
                 ctx.SaveChanges();
             }
