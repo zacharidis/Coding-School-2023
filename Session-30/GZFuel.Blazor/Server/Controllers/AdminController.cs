@@ -53,8 +53,21 @@ namespace GZFuel.Blazor.Server.Controllers
 			};
 		}
 
+        //create new
 
-
+        [HttpPost]
+        public async Task Post(AdminEditDTO admin)
+        {
+			var result = new Admin
+            {
+				
+				Name = admin.Name,
+				Surname = admin.Surname,
+				Username = admin.Username,
+				Password = admin.Password
+			};
+			_adminRepo.Add(result);
+		}
 
 
     }
