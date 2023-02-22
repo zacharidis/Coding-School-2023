@@ -57,7 +57,16 @@ namespace GZFuel.EF.Repositories
         {
             using var ctx = new FuelDbContext();
 
-            return ctx.Customers.Include(c => c.Transactions).SingleOrDefault(c => c.ID == id);
+            var selectedCustomer = ctx.Customers.SingleOrDefault(c => c.ID == id);
+
+            if (selectedCustomer != null)
+            {
+				return selectedCustomer;
+			}
+			else
+            {
+				throw new KeyNotFoundException($"Customer with id '{id}' not found");
+			}
             
            
         }
