@@ -55,7 +55,22 @@ namespace GZFuel.Blazor.Server.Controllers
             };
         }
 
+        //create new emp
 
+        [HttpPost]
+        public async Task Post(EmployeeEditDTO employee)
+        {
+			var newEmployee = new Employee (employee.Name , employee.Surname , employee.SalaryPerMonth,employee.EmployeeType)
+            {
+				Name = employee.Name,
+				Surname = employee.Surname,
+				HireDateStart = employee.HireDateStart,
+				HireDateEnd = employee.HireDateEnd,
+				SalaryPerMonth = employee.SalaryPerMonth,
+				EmployeeType = employee.EmployeeType,
+			};
+			_employeeRepo.Add(newEmployee);
+		}
 
 
         [HttpPut]
