@@ -1,0 +1,62 @@
+﻿@page "/employeelist/employeeedit/{id:int?}"
+@using GZFuel.Blazor.Shared.DTO.Employee;
+@inject HttpClient httpClient;
+@inject NavigationManager NavigationManager;
+
+<h3>Employee Edit</h3>
+
+
+
+
+
+@code {
+	[Parameter] public int? Id { get; set; }
+	EmployeeEditDTO employee { get; set; }
+	private Boolean isLoading = true;
+
+
+	private async Task LoadEmployeesFromServer()
+	{
+		if (Id == null)
+		{
+			employee = new();
+		} else
+		{
+			employee = await httpClient.GetFromJsonAsync<EmployeeEditDTO>($"employee/{Id}");
+
+		}
+	}
+
+
+	protected override async Task OnInitializedAsync()
+	{
+
+		await LoadEmployeesFromServer();
+		isLoading = false; 
+
+	}
+
+	private void onCancle()
+	{
+		NavigationManager.NavigateTo("/employeelist");
+	}
+
+	private async Task SaveItem()
+	{
+		//TODO prevent HireEndDate from being  added when creating new emp
+		if (Id==null)
+		{
+			var response = await httpClient.PostAsJsonAsync("Employee", employee);
+			response.EnsureSuccessStatusCode();
+			NavigationManager.NavigateTo("/employeelist");
+
+		} else  // Emp exists - update his details 
+		{
+			var response = await httpClient.PutAsJsonAsync($"Employee", employee);
+			response.EnsureSuccessStatusCode();
+			NavigationManager.NavigateTo("/employeelist");
+
+		}
+
+	}
+}
