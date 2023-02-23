@@ -44,10 +44,35 @@
 
 		</div>
 
+		<div class="col-md-6"> 
+
+			<label class="form-label"> Hire Date </label>
+			<input class="form-control" @bind="@employee.HireDateStart" />
+
+		</div>
+
 
 
 
 	</div>
+
+
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<button class="btn btn-primary" @onclick="SaveItem">Save</button>
+
+		</div>
+
+		<div class="col-md-12">
+
+			<button class="btn btn-danger" @onclick="onCancle">Cancel</button>
+
+		</div>
+	</div>
+
 
 }
 
