@@ -54,5 +54,45 @@ namespace GZFuel.Blazor.Server.Controllers
 			};
 		}
 
+
+		//update a transaction 
+
+		[HttpPut]
+		public async Task Put(TransactionEditDTO transaction)
+		{
+			var result = _transactionRepo.GetById(transaction.ID);
+			result.PaymentMethod = transaction.PaymentMethod;
+			result.TotalValue = transaction.TotalValue;
+			result.EmployeeID = transaction.EmployeeID;
+			result.Date = transaction.Date;
+			result.CustomerID = transaction.CustomerID;
+			_transactionRepo.Update(transaction.ID, result);
+		}
+
+
+		// create new transaction
+		[HttpPost]
+
+		public async Task Post(TransactionEditDTO transaction)
+		{
+
+			var newTransaction = new Transaction
+			{
+				ID = transaction.ID,
+				PaymentMethod = transaction.PaymentMethod,
+
+				TotalValue = transaction.TotalValue,
+				CustomerID = transaction.CustomerID,
+				EmployeeID = transaction.EmployeeID,
+				Date = transaction.Date,
+				PaymentMethod = transaction.PaymentMethod
+			};
+
+
+		}
+
+
+
+
 	}
 }
