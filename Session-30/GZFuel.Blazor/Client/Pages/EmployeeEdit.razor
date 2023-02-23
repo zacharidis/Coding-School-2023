@@ -40,22 +40,28 @@
 		<div class="col-md-6">
 
 			<label class="form-label"> Type : </label>
-			<input class="form-control" @bind="employee.EmployeeType" />
+			<input class="form-control" @bind= "@employee.EmployeeType" />
 
 		</div>
 
 		<div class="col-md-6"> 
 
 			<label class="form-label"> Hire Date </label>
-			<input class="form-control" @bind="@employee.HireDateStart" />
+			<input class="form-control" type="date" @bind="@employee.HireDateStart" />
 
 		</div>
 
-
-
-
 	</div>
 
+	@if (isNew)
+	{
+		<div class="col-md-6">
+
+			<label class="form-label"> Hire Date </label>
+			<input class="form-control" type="date" @bind="@employee.HireDateEnd" />
+
+		</div>
+	}
 
 
 	<div class="row">
@@ -86,6 +92,7 @@
 	[Parameter] public int? Id { get; set; }
 	EmployeeEditDTO employee { get; set; }
 	private Boolean isLoading = true;
+	private Boolean isNew = true;
 
 
 	private async Task LoadEmployeesFromServer()
@@ -93,6 +100,7 @@
 		if (Id == null)
 		{
 			employee = new();
+			isNew = false;
 		} else
 		{
 			employee = await httpClient.GetFromJsonAsync<EmployeeEditDTO>($"employee/{Id}");
