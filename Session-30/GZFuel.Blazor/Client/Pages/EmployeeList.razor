@@ -1,0 +1,123 @@
+﻿@page "/employeelist"
+@using GZFuel.Blazor.Shared.DTO.Employee;
+@using System.Net.Http.Json;
+@inject HttpClient httpClient;
+@inject NavigationManager NavigationManager;
+
+
+<h3>Employee List</h3>
+
+@if (isLoading)
+{
+	<p> Loading ...</p>
+} else
+{
+
+	<button class="btn btn-primary" @onclick="CreateItem">Create New Employee</button>
+
+	<table class="table table-dark">
+
+		<thead>
+			<tr>
+				<th>
+					ID
+				</th>
+				<th>
+					Name
+				</th>
+				<th>
+					Surname
+				</th>
+				<th>
+					Card Number
+				</th>
+
+			</tr>
+		</thead>
+
+		<tbody>
+			@foreach (var employee in employees)
+			{
+				<tr>
+					<td>
+						@employee.Id
+					</td>
+					<td>
+						@employee.Name
+					</td>
+					<td>
+						@employee.Surname
+					</td>
+					<td>
+						@employee.EmployeeType
+					</td>
+
+					<td>
+						@employee.SalaryPerMonth
+					</td>
+
+					<td>
+						@employee.HireDateStart
+					</td>
+
+					<td>
+						@employee.HireDateEnd
+					</td>
+
+
+					<button class="btn btn-primary" @onclick="()=>EditItem(employee)">Details</button>
+					<button class="btn btn-danger" @onclick="()=>DeleteItem(employee)">Delete</button>
+
+				</tr>
+			}
+
+		</tbody>
+
+	</table>
+
+
+
+}
+
+
+
+@code {
+
+	private Boolean isLoading = true;
+	private IEnumerable<EmployeeDTO> employees;
+
+
+	protected override async Task OnInitializedAsync()
+	{
+
+		await LoadEmployees();
+
+	}
+
+
+	private async Task LoadEmployees()
+	{
+		employees = await httpClient.GetFromJsonAsync <List<EmployeeDTO>>("employee");
+		isLoading = false;
+	}
+
+	public void CreateItem()
+	{
+		NavigationManager.NavigateTo("/employeelist/employeeedit");
+	}
+
+	private void EditItem(EmployeeDTO employee)
+	{
+		NavigationManager.NavigateTo($"/employeelist/employeeedit/{employee.Id}");
+	}
+
+	private async Task DeleteItem(EmployeeDTO employee)
+	{
+		var response = await httpClient.DeleteAsync($"employee/{employee.Id}");
+		response.EnsureSuccessStatusCode();
+		await LoadEmployees();
+
+
+
+}
+}
