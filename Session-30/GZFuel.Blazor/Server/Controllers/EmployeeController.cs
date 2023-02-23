@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GZFuel.Blazor.Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase
     {
