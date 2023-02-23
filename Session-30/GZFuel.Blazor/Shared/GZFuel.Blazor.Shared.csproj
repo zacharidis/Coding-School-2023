@@ -14,6 +14,9 @@
     <Folder Include="DTO\Employee\" />
     <Folder Include="DTO\Item\" />
     <Folder Include="DTO\TransactionLine\" />
-    <Folder Include="DTO\Transaction\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\GZFuel.Model\GZFuel.Model.csproj" />
   </ItemGroup>
 </Project>
