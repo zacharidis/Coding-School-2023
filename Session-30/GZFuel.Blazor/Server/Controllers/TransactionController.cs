@@ -36,6 +36,31 @@ namespace GZFuel.Blazor.Server.Controllers
 		}
 
 
+		[HttpGet("{customerId}")]
+		public async Task <IEnumerable<TransactionDTO>>GetByCustomerId(int id)
+		{
+			var result = _transactionRepo.GetAll().Where(x=> x.CustomerID == id);
+			
+			return result.Select(x => new TransactionDTO
+			{
+
+				Date = x.Date,
+				ID = x.ID,
+				PaymentMethod = x.PaymentMethod,
+				TotalValue = x.TotalValue,
+
+
+			});
+		}
+
+
+
+
+
+
+
+
+
 		//get specific transaction
 		[HttpGet("{id}")]
 
