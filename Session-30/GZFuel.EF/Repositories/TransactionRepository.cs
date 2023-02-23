@@ -48,6 +48,19 @@ namespace GZFuel.EF.Repositories
             return dbTransactions;  
         }
 
+
+        public IEnumerable<Transaction> GetByCustomerId(int customerId)
+        {
+            using var ctx = new FuelDbContext();
+            var dbTransactions = ctx.Transactions.Where(t=> t.CustomerID == customerId).ToList();
+            return dbTransactions;
+        }
+
+
+
+
+
+
         public Transaction? GetById(int id)
         {
             using var ctx = new FuelDbContext();
