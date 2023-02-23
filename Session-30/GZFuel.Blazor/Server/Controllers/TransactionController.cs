@@ -38,7 +38,21 @@ namespace GZFuel.Blazor.Server.Controllers
 		//get specific transaction
 		[HttpGet("{id}")]
 
-		public async Task <>
+		public async Task <TransactionEditDTO> GetById(int id)
+		{
+			var result = _transactionRepo.GetById(id);
+
+			return new TransactionEditDTO
+			{
+				ID = result.ID,
+				PaymentMethod = result.PaymentMethod,
+				TotalValue = result.TotalValue,
+				CustomerID = result.CustomerID,
+				EmployeeID = result.EmployeeID,
+				Date = result.Date,
+
+			};
+		}
 
 	}
 }
