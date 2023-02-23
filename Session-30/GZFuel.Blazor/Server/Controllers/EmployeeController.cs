@@ -58,7 +58,22 @@ namespace GZFuel.Blazor.Server.Controllers
 
 
 
+        [HttpPut]
+        public async Task Put(EmployeeEditDTO employee)
+        {
 
+            var dbEmployee = _employeeRepo.GetById(employee.Id);
+                dbEmployee.Name = employee.Name;
+                dbEmployee.Surname = employee.Surname;
+                dbEmployee.SalaryPerMonth = employee.SalaryPerMonth;
+                dbEmployee.HireDateStart = employee.HireDateStart;
+                dbEmployee.HireDateEnd = employee.HireDateEnd;
+                _employeeRepo.Update(employee.Id, dbEmployee);
+
+
+
+
+        }
 
 
     }
