@@ -5,6 +5,99 @@
 
 <h3>TransactionList</h3>
 
-@code {
+@if (isLoading)
+{
+	<p> Loading Transactions </p>
+} else
+{
 
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Transaction Id
+                </th>
+                <th>
+                    Date
+                </th>
+
+                <th>
+                    Total Value
+                </th>
+
+                <th>
+                    Payment Method
+                </th>
+                <th>
+                    Customer ID
+                </th>
+
+                <th>
+                    Employee ID
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaction in transactions)
+            {
+                <tr>
+                    <td>
+                        @transaction.ID
+                    </td>
+
+                    <td>
+                        @transaction.Date
+                    </td>
+
+
+                    <td>
+                        @transaction.TotalValue
+                    </td>
+                    <td>
+                        @transaction.PaymentMethod
+                    </td>
+
+                     <td>
+                        @transaction.TotalValue
+                    </td>
+                    <td>
+                        @transaction.CustomerID
+                    </td>
+
+                    <td>
+                        @transaction.EmployeeID
+                    </td>
+                 
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+	private Boolean isLoading{ get; set; }
+
+	private IEnumerable<TransactionDTO> transactions{ get; set; }
+
+
+
+	protected override async Task OnInitializedAsync()
+	{
+		isLoading = true;
+		await LoadTransactionsFromServer();
+	}
+
+	private async Task LoadTransactionsFromServer()
+	{
+		
+		transactions = await httpClient.GetFromJsonAsync<List<TransactionDTO>>("transaction");
+		isLoading = false;
+	}
 }
