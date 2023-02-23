@@ -37,6 +37,25 @@ namespace GZFuel.Blazor.Server.Controllers
             });
         }
 
+        //Get a single Employee for his details page 
+        [HttpGet("{id}")]
+        public async Task <EmployeeEditDTO> GetById(int id)
+        {
+            var result = _employeeRepo.GetById(id);
+
+            return new EmployeeEditDTO
+            {
+                Id = result.Id,
+                Name = result.Name,
+                Surname = result.Surname,
+                HireDateEnd = result.HireDateEnd,
+                EmployeeType = result.EmployeeType,
+                SalaryPerMonth = result.SalaryPerMonth,
+                HireDateStart = result.HireDateStart,
+            };
+        }
+
+
 
 
 
