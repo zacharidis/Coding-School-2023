@@ -35,6 +35,8 @@ namespace GZFuel.Model.Entities
             TransactionLines = new List<TransactionLine>();
         }
 
+        public Transaction() { }
+
         // relationships 
 
         public int EmployeeID { get; set; }
