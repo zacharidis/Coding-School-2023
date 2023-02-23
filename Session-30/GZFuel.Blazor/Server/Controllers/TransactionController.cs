@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GZFuel.Blazor.Server.Controllers
 {
-	[Route("api/[controller]")]
+	[Route("[controller]")]
 	[ApiController]
 	public class TransactionController : ControllerBase
 	{
@@ -36,22 +36,6 @@ namespace GZFuel.Blazor.Server.Controllers
 		}
 
 
-		[HttpGet("{customerId}")]
-		public async Task <IEnumerable<TransactionDTO>>GetByCustomerId(int id)
-		{
-			var result = _transactionRepo.GetAll().Where(x=> x.CustomerID == id);
-			
-			return result.Select(x => new TransactionDTO
-			{
-
-				Date = x.Date,
-				ID = x.ID,
-				PaymentMethod = x.PaymentMethod,
-				TotalValue = x.TotalValue,
-
-
-			});
-		}
 
 
 
@@ -64,20 +48,20 @@ namespace GZFuel.Blazor.Server.Controllers
 		//get specific transaction
 		[HttpGet("{id}")]
 
-		public async Task <TransactionEditDTO> GetById(int id)
+		public async Task <IEnumerable<TransactionDTO>> GetById(int id)
 		{
-			var result = _transactionRepo.GetById(id);
+			var result = _transactionRepo.GetAll().Where(x => x.CustomerID == id);
 
-			return new TransactionEditDTO
+			return result.Select(x => new TransactionDTO
 			{
-				ID = result.ID,
-				PaymentMethod = result.PaymentMethod,
-				TotalValue = result.TotalValue,
-				CustomerID = result.CustomerID,
-				EmployeeID = result.EmployeeID,
-				Date = result.Date,
+				Date = x.Date,
+				ID = x.ID,
+				PaymentMethod = x.PaymentMethod,
+				TotalValue = x.TotalValue,
+		
+			});
 
-			};
+			
 		}
 
 

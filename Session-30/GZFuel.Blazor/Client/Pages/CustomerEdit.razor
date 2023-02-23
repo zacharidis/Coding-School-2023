@@ -59,39 +59,10 @@
 
 
 
-	<div class="row">
-
-		table with transactions
-
-		<table>
-				
-<thead>
-				<tr>
-					<th>Transaction ID</th>
-					<th>Transaction Date</th>
-					<th>Transaction Payment Type</th>
-					<th>Transaction Amount</th>
-					<th>Transaction Seller</th>
-				</tr>
-			</thead>
-			<tbody>
-				@foreach (var transaction in transactions)
-				{
-					<tr>
-						<td>@transaction.ID</td>
-						<td>@transaction.Date</td>
-						<td>@transaction.PaymentMethod</td>
-						<td>@transaction.TotalValue</td>
-						<td>@transaction.Employee</td>
-					</tr>
-				}
-			</tbody>
-
-		</table>
 
 
 
-	</div>
+	
 
 }
 
@@ -123,8 +94,9 @@
 		{
 
 			customer = await httpClient.GetFromJsonAsync<CustomerEditDTO>($"customer/{Id}");
+            int cusId = customer.Id;
 
-			transactions = await httpClient.GetFromJsonAsync<IEnumerable<Transaction>>($"transaction/{customer.Id}");
+			//transactions = await httpClient.GetFromJsonAsync<IEnumerable<Transaction>>($"transaction/{Id}");
 
 		}
 
