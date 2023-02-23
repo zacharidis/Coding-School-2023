@@ -92,7 +92,13 @@ namespace GZFuel.Blazor.Server.Controllers
 			_transactionRepo.Add(newTransaction);
 		}
 
+		// delete a transaction
+		[HttpDelete("{id}")]
 
+		public async Task Delete(int id)
+		{
+			_transactionRepo.Delete(id);
+		}
 
 
 	}
