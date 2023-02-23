@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GZFuel.Blazor.Shared.DTO.Transaction;
+using GZFuel.EF.Repositories;
+using GZFuel.Model.Entities;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GZFuel.Blazor.Server.Controllers
@@ -7,5 +10,35 @@ namespace GZFuel.Blazor.Server.Controllers
 	[ApiController]
 	public class TransactionController : ControllerBase
 	{
+
+		private readonly IEntityRepo<Transaction> _transactionRepo;
+
+		public TransactionController(IEntityRepo<Transaction> transactionRepo)
+		{
+            _transactionRepo = transactionRepo;
+        }
+
+
+		[HttpGet]
+		public async Task <IEnumerable<TransactionDTO>> Get()
+		{
+
+			var result = _transactionRepo.GetAll();
+
+			return result.Select(x => new TransactionDTO
+			{
+				Date = x.Date,
+				ID = x.ID,
+				PaymentMethod = x.PaymentMethod,
+				TotalValue = x.TotalValue,
+			});
+		}
+
+
+		//get specific transaction
+		[HttpGet("{id}")]
+
+		public async Task <>
+
 	}
 }
