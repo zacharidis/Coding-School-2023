@@ -1,6 +1,5 @@
 ﻿@page "/employeelist"
 @using GZFuel.Blazor.Shared.DTO.Employee;
-@using System.Net.Http.Json;
 @inject HttpClient httpClient;
 @inject NavigationManager NavigationManager;
 
@@ -9,9 +8,10 @@
 
 @if (isLoading)
 {
-	<p> Loading ...</p>
+	<p> Loading ... </p>
 } else
 {
+
 
 	<button class="btn btn-primary" @onclick="CreateItem">Create New Employee</button>
 
@@ -49,20 +49,19 @@
 						@employee.Surname
 					</td>
 					<td>
-						@employee.EmployeeType
-					</td>
-
-					<td>
 						@employee.SalaryPerMonth
 					</td>
-
 					<td>
 						@employee.HireDateStart
 					</td>
-
 					<td>
 						@employee.HireDateEnd
 					</td>
+					<td>
+						@employee.EmployeeType
+					</td>
+					
+
 
 
 					<button class="btn btn-primary" @onclick="()=>EditItem(employee)">Details</button>
@@ -77,12 +76,15 @@
 
 
 
+
+
+
+
 }
 
 
 
 @code {
-
 	private Boolean isLoading = true;
 	private IEnumerable<EmployeeDTO> employees;
 
@@ -92,12 +94,13 @@
 
 		await LoadEmployees();
 
+
 	}
 
 
 	private async Task LoadEmployees()
 	{
-		employees = await httpClient.GetFromJsonAsync <List<EmployeeDTO>>("employee");
+		employees = await httpClient.GetFromJsonAsync<List<EmployeeDTO>>("employee");
 		isLoading = false;
 	}
 
@@ -116,8 +119,6 @@
 		var response = await httpClient.DeleteAsync($"employee/{employee.Id}");
 		response.EnsureSuccessStatusCode();
 		await LoadEmployees();
-
-
 
 }
 }
