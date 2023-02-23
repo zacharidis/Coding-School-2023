@@ -1,6 +1,7 @@
 ﻿using GZFuel.Blazor.Shared.DTO.Transaction;
 using GZFuel.EF.Repositories;
 using GZFuel.Model.Entities;
+using GZFuel.Model.Enums;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -78,17 +79,17 @@ namespace GZFuel.Blazor.Server.Controllers
 
 			var newTransaction = new Transaction
 			{
-				ID = transaction.ID,
+				
 				PaymentMethod = transaction.PaymentMethod,
 
-				TotalValue = transaction.TotalValue,
+				
 				CustomerID = transaction.CustomerID,
 				EmployeeID = transaction.EmployeeID,
 				Date = transaction.Date,
-				PaymentMethod = transaction.PaymentMethod
+				TotalValue= transaction.TotalValue,
 			};
 
-
+			_transactionRepo.Add(newTransaction);
 		}
 
 
