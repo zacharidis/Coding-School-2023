@@ -8,40 +8,41 @@
 @if(isLoading)
 {
 	<p> .... Loading .... </p>
-} {
+} else
+{
 
 	<div class="row">
 
 
 
 
-       <div class="col-md-6">
+		<div class="col-md-6">
 
 			<label class="form-label"> Name </label>
 			<input class="form-control" @bind="@employee.Name" />
 
 		</div>
 
-		<div class="col-md-6"> 
+		<div class="col-md-6">
 
 			<label class="form-label"> Surname </label>
 			<input class="form-control" @bind="employee.Surname" />
 
 		</div>
 
-	<div class="col-md-6">
+		<div class="col-md-6">
 
-		<label class="form-label"> Salary Per Month </label>
-		<input class="form-control" @bind="@employee.SalaryPerMonth" />
+			<label class="form-label"> Salary Per Month </label>
+			<input class="form-control" @bind="@employee.SalaryPerMonth" />
 
-	</div>
+		</div>
 
-	<div class="col-md-6">
+		<div class="col-md-6">
 
-		<label class="form-label"> Type : </label>
-		<input class="form-control" @bind="employee.EmployeeType" />
+			<label class="form-label"> Type : </label>
+			<input class="form-control" @bind="employee.EmployeeType" />
 
-	</div>
+		</div>
 
 
 
@@ -49,6 +50,10 @@
 	</div>
 
 }
+
+	
+
+
 
 
 
