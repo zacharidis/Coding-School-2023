@@ -49,6 +49,23 @@ namespace GZFuelWinClient
 			txtCustomerName.Text = Convert.ToString(dgvCustomers[1, row].Value);
 			txtCustomerSurname.Text = Convert.ToString(dgvCustomers[2, row].Value);
 			txtCusCard.Text = Convert.ToString(dgvCustomers[3, row].Value);
+
+			try
+			{
+				HttpClient client = new HttpClient();
+				client.BaseAddress = new Uri("https://localhost:7068/");
+				var response = client.GetAsync($"transaction/{txtCustomerId.Text}").Result;
+				var transactionlist = response.Content.ReadFromJsonAsync<IEnumerable<Customer>>().Result;
+				dgvTransactions.DataSource = transactionlist;
+
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message.ToString());
+			}
+
+
 		}
 
 		private void button1_Click(object sender, EventArgs e)
