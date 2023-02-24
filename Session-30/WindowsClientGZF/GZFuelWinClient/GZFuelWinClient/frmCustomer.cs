@@ -223,7 +223,7 @@ namespace GZFuelWinClient
 				client.BaseAddress = new Uri("https://localhost:7068/");
 
 				
-
+				//TODO Put not working
 				var response = client.PutAsJsonAsync($"Customer",customer).Result;
 
 
