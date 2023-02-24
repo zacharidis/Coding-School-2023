@@ -204,6 +204,28 @@ namespace GZFuelWinClient
 		}
 
 
+		private void UpdateCustomer(int id)
+		{
+			Customer customer = new();
+
+			customer.Name= txtNewCusName.Text;
+			customer.Surname = txtNewCusSurname.Text;
+			customer.CardNumber = txtCusCard.Text;
+			customer.Id = id;
+
+			try
+			{
+				
+			}
+
+
+
+
+
+
+		}
+
+
 
 	}
 }
