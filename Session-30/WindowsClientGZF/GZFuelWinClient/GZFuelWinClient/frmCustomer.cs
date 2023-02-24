@@ -59,5 +59,15 @@ namespace GZFuelWinClient
 				MessageBox.Show("Customer Deleted!");
 			}
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			var responce = MessageBox.Show("Are you sure you want to update this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (responce == DialogResult.Yes)
+			{
+				// prohibit simple users from deleting customers without a password 
+				MessageBox.Show("Customer Deleted!");
+			}
+		}
 	}
 }

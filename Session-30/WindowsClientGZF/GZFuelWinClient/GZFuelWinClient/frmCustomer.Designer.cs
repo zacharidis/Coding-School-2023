@@ -30,14 +30,14 @@
 		{
 			dgvCustomers = new DataGridView();
 			grbUserDetails = new GroupBox();
+			btnUpCustomer = new Button();
+			btnDelCustomer = new Button();
 			lblCustomerSurname = new Label();
 			lblCustomerName = new Label();
 			txtCustomerSurname = new TextBox();
 			txtCustomerName = new TextBox();
 			txtCustomerId = new TextBox();
 			lblCustomerId = new Label();
-			button1 = new Button();
-			button2 = new Button();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			grbUserDetails.SuspendLayout();
 			SuspendLayout();
@@ -57,8 +57,8 @@
 			// 
 			// grbUserDetails
 			// 
-			grbUserDetails.Controls.Add(button2);
-			grbUserDetails.Controls.Add(button1);
+			grbUserDetails.Controls.Add(btnUpCustomer);
+			grbUserDetails.Controls.Add(btnDelCustomer);
 			grbUserDetails.Controls.Add(lblCustomerSurname);
 			grbUserDetails.Controls.Add(lblCustomerName);
 			grbUserDetails.Controls.Add(txtCustomerSurname);
@@ -71,6 +71,26 @@
 			grbUserDetails.TabIndex = 1;
 			grbUserDetails.TabStop = false;
 			grbUserDetails.Text = "Customer Details";
+			// 
+			// btnUpCustomer
+			// 
+			btnUpCustomer.Location = new Point(193, 152);
+			btnUpCustomer.Name = "btnUpCustomer";
+			btnUpCustomer.Size = new Size(127, 25);
+			btnUpCustomer.TabIndex = 7;
+			btnUpCustomer.Text = "Update Customer";
+			btnUpCustomer.UseVisualStyleBackColor = true;
+			btnUpCustomer.Click += button2_Click;
+			// 
+			// btnDelCustomer
+			// 
+			btnDelCustomer.Location = new Point(16, 152);
+			btnDelCustomer.Name = "btnDelCustomer";
+			btnDelCustomer.Size = new Size(120, 27);
+			btnDelCustomer.TabIndex = 6;
+			btnDelCustomer.Text = "Delete Customer";
+			btnDelCustomer.UseVisualStyleBackColor = true;
+			btnDelCustomer.Click += button1_Click;
 			// 
 			// lblCustomerSurname
 			// 
@@ -121,25 +141,6 @@
 			lblCustomerId.TabIndex = 0;
 			lblCustomerId.Text = "Customer ID : ";
 			// 
-			// button1
-			// 
-			button1.Location = new Point(16, 152);
-			button1.Name = "button1";
-			button1.Size = new Size(120, 27);
-			button1.TabIndex = 6;
-			button1.Text = "Delete Customer";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += button1_Click;
-			// 
-			// button2
-			// 
-			button2.Location = new Point(193, 152);
-			button2.Name = "button2";
-			button2.Size = new Size(127, 25);
-			button2.TabIndex = 7;
-			button2.Text = "Update Customer";
-			button2.UseVisualStyleBackColor = true;
-			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -167,7 +168,7 @@
 		private TextBox txtCustomerName;
 		private TextBox txtCustomerId;
 		private Label lblCustomerId;
-		private Button button2;
-		private Button button1;
+		private Button btnUpCustomer;
+		private Button btnDelCustomer;
 	}
 }
