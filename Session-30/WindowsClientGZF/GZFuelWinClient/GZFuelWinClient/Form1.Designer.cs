@@ -101,6 +101,7 @@
 			lblUnlock.Size = new Size(46, 17);
 			lblUnlock.TabIndex = 2;
 			lblUnlock.Text = "Unlock";
+			lblUnlock.Click += lblUnlock_Click;
 			// 
 			// pictureBox1
 			// 
