@@ -73,8 +73,29 @@ namespace GZFuelWinClient
 			var responce = MessageBox.Show("Are you sure you want to delete this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 			if (responce == DialogResult.Yes)
 			{
-				// prohibit simple users from deleting customers without a password 
-				MessageBox.Show("Customer Deleted!");
+				string input = string.Empty;
+				if (ShowInputDialog(ref input) == DialogResult.OK)
+				{
+					if (input == "manager" || input =="cashier")
+					{
+
+
+						    int selectedId = Convert.ToInt32(txtCustomerId.Text);
+							DeleteCustomer(selectedId);
+
+					
+						
+
+					}
+					else
+					{
+						MessageBox.Show("Invalid Password");
+					}
+				}
+
+
+
+				
 			}
 		}
 
@@ -84,7 +105,7 @@ namespace GZFuelWinClient
 			if (responce == DialogResult.Yes)
 			{
 				// prohibit simple users from deleting customers without a password 
-				MessageBox.Show("Customer Deleted!");
+				MessageBox.Show("Customer updated!");
 			}
 		}
 
@@ -162,7 +183,7 @@ namespace GZFuelWinClient
 
 
 
-
+		
 
 
 }
