@@ -38,7 +38,28 @@ namespace GZFuelWinClient
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			btnCustomers.Enabled = false;
+			btnInventory.Enabled = false;
+			btnTransactions.Enabled = false;
+		}
 
+		private void Form1_MouseDown(object sender, MouseEventArgs e)
+		{
+			if (e.Button == MouseButtons.Left)
+			{
+				this.Capture = false;
+				Message msg = Message.Create(this.Handle, 0XA1, new IntPtr(2), IntPtr.Zero);
+				this.WndProc(ref msg);
+			}
+		}
+
+		private void lblExit_Click(object sender, EventArgs e)
+		{
+			var responce = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (responce == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
 		}
 	}
 }
