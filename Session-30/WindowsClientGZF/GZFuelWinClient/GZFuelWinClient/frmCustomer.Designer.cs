@@ -30,12 +30,14 @@
 		{
 			dgvCustomers = new DataGridView();
 			grbUserDetails = new GroupBox();
-			lblCustomerId = new Label();
-			txtCustomerId = new TextBox();
-			txtCustomerName = new TextBox();
-			txtCustomerSurname = new TextBox();
-			lblCustomerName = new Label();
 			lblCustomerSurname = new Label();
+			lblCustomerName = new Label();
+			txtCustomerSurname = new TextBox();
+			txtCustomerName = new TextBox();
+			txtCustomerId = new TextBox();
+			lblCustomerId = new Label();
+			button1 = new Button();
+			button2 = new Button();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			grbUserDetails.SuspendLayout();
 			SuspendLayout();
@@ -55,6 +57,8 @@
 			// 
 			// grbUserDetails
 			// 
+			grbUserDetails.Controls.Add(button2);
+			grbUserDetails.Controls.Add(button1);
 			grbUserDetails.Controls.Add(lblCustomerSurname);
 			grbUserDetails.Controls.Add(lblCustomerName);
 			grbUserDetails.Controls.Add(txtCustomerSurname);
@@ -68,35 +72,14 @@
 			grbUserDetails.TabStop = false;
 			grbUserDetails.Text = "Customer Details";
 			// 
-			// lblCustomerId
+			// lblCustomerSurname
 			// 
-			lblCustomerId.AutoSize = true;
-			lblCustomerId.Location = new Point(15, 29);
-			lblCustomerId.Name = "lblCustomerId";
-			lblCustomerId.Size = new Size(82, 15);
-			lblCustomerId.TabIndex = 0;
-			lblCustomerId.Text = "Customer ID : ";
-			// 
-			// txtCustomerId
-			// 
-			txtCustomerId.Location = new Point(130, 26);
-			txtCustomerId.Name = "txtCustomerId";
-			txtCustomerId.Size = new Size(190, 23);
-			txtCustomerId.TabIndex = 1;
-			// 
-			// txtCustomerName
-			// 
-			txtCustomerName.Location = new Point(130, 68);
-			txtCustomerName.Name = "txtCustomerName";
-			txtCustomerName.Size = new Size(190, 23);
-			txtCustomerName.TabIndex = 2;
-			// 
-			// txtCustomerSurname
-			// 
-			txtCustomerSurname.Location = new Point(130, 114);
-			txtCustomerSurname.Name = "txtCustomerSurname";
-			txtCustomerSurname.Size = new Size(190, 23);
-			txtCustomerSurname.TabIndex = 3;
+			lblCustomerSurname.AutoSize = true;
+			lblCustomerSurname.Location = new Point(9, 117);
+			lblCustomerSurname.Name = "lblCustomerSurname";
+			lblCustomerSurname.Size = new Size(115, 15);
+			lblCustomerSurname.TabIndex = 5;
+			lblCustomerSurname.Text = "Customer Surname :";
 			// 
 			// lblCustomerName
 			// 
@@ -107,20 +90,60 @@
 			lblCustomerName.TabIndex = 4;
 			lblCustomerName.Text = "Customer Name :";
 			// 
-			// lblCustomerSurname
+			// txtCustomerSurname
 			// 
-			lblCustomerSurname.AutoSize = true;
-			lblCustomerSurname.Location = new Point(9, 117);
-			lblCustomerSurname.Name = "lblCustomerSurname";
-			lblCustomerSurname.Size = new Size(115, 15);
-			lblCustomerSurname.TabIndex = 5;
-			lblCustomerSurname.Text = "Customer Surname :";
+			txtCustomerSurname.Location = new Point(130, 114);
+			txtCustomerSurname.Name = "txtCustomerSurname";
+			txtCustomerSurname.Size = new Size(190, 23);
+			txtCustomerSurname.TabIndex = 3;
+			// 
+			// txtCustomerName
+			// 
+			txtCustomerName.Location = new Point(130, 68);
+			txtCustomerName.Name = "txtCustomerName";
+			txtCustomerName.Size = new Size(190, 23);
+			txtCustomerName.TabIndex = 2;
+			// 
+			// txtCustomerId
+			// 
+			txtCustomerId.Enabled = false;
+			txtCustomerId.Location = new Point(130, 26);
+			txtCustomerId.Name = "txtCustomerId";
+			txtCustomerId.Size = new Size(190, 23);
+			txtCustomerId.TabIndex = 1;
+			// 
+			// lblCustomerId
+			// 
+			lblCustomerId.AutoSize = true;
+			lblCustomerId.Location = new Point(15, 29);
+			lblCustomerId.Name = "lblCustomerId";
+			lblCustomerId.Size = new Size(82, 15);
+			lblCustomerId.TabIndex = 0;
+			lblCustomerId.Text = "Customer ID : ";
+			// 
+			// button1
+			// 
+			button1.Location = new Point(16, 152);
+			button1.Name = "button1";
+			button1.Size = new Size(120, 27);
+			button1.TabIndex = 6;
+			button1.Text = "Delete Customer";
+			button1.UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			button2.Location = new Point(193, 152);
+			button2.Name = "button2";
+			button2.Size = new Size(127, 25);
+			button2.TabIndex = 7;
+			button2.Text = "Update Customer";
+			button2.UseVisualStyleBackColor = true;
 			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(980, 639);
+			ClientSize = new Size(842, 639);
 			Controls.Add(grbUserDetails);
 			Controls.Add(dgvCustomers);
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -143,5 +166,7 @@
 		private TextBox txtCustomerName;
 		private TextBox txtCustomerId;
 		private Label lblCustomerId;
+		private Button button2;
+		private Button button1;
 	}
 }
