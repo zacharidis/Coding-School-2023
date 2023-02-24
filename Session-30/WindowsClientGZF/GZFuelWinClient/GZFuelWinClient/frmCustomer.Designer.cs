@@ -41,12 +41,12 @@
 			txtCustomerId = new TextBox();
 			lblCustomerId = new Label();
 			grbNewCustomer = new GroupBox();
-			lblNewCustomerName = new Label();
-			txtNewCusName = new TextBox();
-			lblNewCustSurname = new Label();
-			txtNewCusSurname = new TextBox();
-			button1 = new Button();
 			lblhint = new Label();
+			txtNewCusSurname = new TextBox();
+			lblNewCustSurname = new Label();
+			txtNewCusName = new TextBox();
+			lblNewCustomerName = new Label();
+			btnAddNewCustomer = new Button();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			grbUserDetails.SuspendLayout();
 			grbNewCustomer.SuspendLayout();
@@ -172,8 +172,8 @@
 			// 
 			// grbNewCustomer
 			// 
+			grbNewCustomer.Controls.Add(btnAddNewCustomer);
 			grbNewCustomer.Controls.Add(lblhint);
-			grbNewCustomer.Controls.Add(button1);
 			grbNewCustomer.Controls.Add(txtNewCusSurname);
 			grbNewCustomer.Controls.Add(lblNewCustSurname);
 			grbNewCustomer.Controls.Add(txtNewCusName);
@@ -185,21 +185,21 @@
 			grbNewCustomer.TabStop = false;
 			grbNewCustomer.Text = "Add New Customer";
 			// 
-			// lblNewCustomerName
+			// lblhint
 			// 
-			lblNewCustomerName.AutoSize = true;
-			lblNewCustomerName.Location = new Point(90, 29);
-			lblNewCustomerName.Name = "lblNewCustomerName";
-			lblNewCustomerName.Size = new Size(100, 15);
-			lblNewCustomerName.TabIndex = 0;
-			lblNewCustomerName.Text = "Customer Name :";
+			lblhint.AutoSize = true;
+			lblhint.Location = new Point(38, 186);
+			lblhint.Name = "lblhint";
+			lblhint.Size = new Size(215, 15);
+			lblhint.TabIndex = 5;
+			lblhint.Text = "Customer's Card will be auto generated";
 			// 
-			// txtNewCusName
+			// txtNewCusSurname
 			// 
-			txtNewCusName.Location = new Point(26, 50);
-			txtNewCusName.Name = "txtNewCusName";
-			txtNewCusName.Size = new Size(243, 23);
-			txtNewCusName.TabIndex = 1;
+			txtNewCusSurname.Location = new Point(28, 109);
+			txtNewCusSurname.Name = "txtNewCusSurname";
+			txtNewCusSurname.Size = new Size(241, 23);
+			txtNewCusSurname.TabIndex = 3;
 			// 
 			// lblNewCustSurname
 			// 
@@ -209,31 +209,31 @@
 			lblNewCustSurname.TabIndex = 2;
 			lblNewCustSurname.Text = "Custumer Surname :";
 			// 
-			// txtNewCusSurname
+			// txtNewCusName
 			// 
-			txtNewCusSurname.Location = new Point(28, 109);
-			txtNewCusSurname.Name = "txtNewCusSurname";
-			txtNewCusSurname.Size = new Size(241, 23);
-			txtNewCusSurname.TabIndex = 3;
+			txtNewCusName.Location = new Point(26, 50);
+			txtNewCusName.Name = "txtNewCusName";
+			txtNewCusName.Size = new Size(243, 23);
+			txtNewCusName.TabIndex = 1;
 			// 
-			// button1
+			// lblNewCustomerName
 			// 
-			button1.Location = new Point(79, 150);
-			button1.Name = "button1";
-			button1.Size = new Size(127, 22);
-			button1.TabIndex = 4;
-			button1.Text = "Add New Customer";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += button1_Click_1;
+			lblNewCustomerName.AutoSize = true;
+			lblNewCustomerName.Location = new Point(90, 29);
+			lblNewCustomerName.Name = "lblNewCustomerName";
+			lblNewCustomerName.Size = new Size(100, 15);
+			lblNewCustomerName.TabIndex = 0;
+			lblNewCustomerName.Text = "Customer Name :";
 			// 
-			// lblhint
+			// btnAddNewCustomer
 			// 
-			lblhint.AutoSize = true;
-			lblhint.Location = new Point(38, 186);
-			lblhint.Name = "lblhint";
-			lblhint.Size = new Size(215, 15);
-			lblhint.TabIndex = 5;
-			lblhint.Text = "Customer's Card will be auto generated";
+			btnAddNewCustomer.Location = new Point(69, 146);
+			btnAddNewCustomer.Name = "btnAddNewCustomer";
+			btnAddNewCustomer.Size = new Size(140, 37);
+			btnAddNewCustomer.TabIndex = 6;
+			btnAddNewCustomer.Text = "Add";
+			btnAddNewCustomer.UseVisualStyleBackColor = true;
+			btnAddNewCustomer.Click += btnAddNewCustomer_Click;
 			// 
 			// frmCustomer
 			// 
@@ -271,10 +271,10 @@
 		private Label lblCusCard;
 		private GroupBox grbNewCustomer;
 		private Label lblNewCustomerName;
-		private Button button1;
 		private TextBox txtNewCusSurname;
 		private Label lblNewCustSurname;
 		private TextBox txtNewCusName;
 		private Label lblhint;
+		private Button btnAddNewCustomer;
 	}
 }

@@ -75,5 +75,10 @@ namespace GZFuelWinClient
 		{
 
 		}
+
+		private void btnAddNewCustomer_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
