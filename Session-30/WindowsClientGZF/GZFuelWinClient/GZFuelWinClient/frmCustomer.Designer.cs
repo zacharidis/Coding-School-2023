@@ -30,6 +30,8 @@
 		{
 			dgvCustomers = new DataGridView();
 			grbUserDetails = new GroupBox();
+			txtCusCard = new TextBox();
+			lblCusCard = new Label();
 			btnUpCustomer = new Button();
 			btnDelCustomer = new Button();
 			lblCustomerSurname = new Label();
@@ -39,9 +41,12 @@
 			txtCustomerId = new TextBox();
 			lblCustomerId = new Label();
 			grbNewCustomer = new GroupBox();
-			label1 = new Label();
-			lblCusCard = new Label();
-			txtCusCard = new TextBox();
+			lblNewCustomerName = new Label();
+			txtNewCusName = new TextBox();
+			lblNewCustSurname = new Label();
+			txtNewCusSurname = new TextBox();
+			button1 = new Button();
+			lblhint = new Label();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			grbUserDetails.SuspendLayout();
 			grbNewCustomer.SuspendLayout();
@@ -78,6 +83,23 @@
 			grbUserDetails.TabIndex = 1;
 			grbUserDetails.TabStop = false;
 			grbUserDetails.Text = "Customer Details";
+			// 
+			// txtCusCard
+			// 
+			txtCusCard.Enabled = false;
+			txtCusCard.Location = new Point(132, 151);
+			txtCusCard.Name = "txtCusCard";
+			txtCusCard.Size = new Size(188, 23);
+			txtCusCard.TabIndex = 9;
+			// 
+			// lblCusCard
+			// 
+			lblCusCard.AutoSize = true;
+			lblCusCard.Location = new Point(14, 158);
+			lblCusCard.Name = "lblCusCard";
+			lblCusCard.Size = new Size(93, 15);
+			lblCusCard.TabIndex = 8;
+			lblCusCard.Text = "Customer Card :";
 			// 
 			// btnUpCustomer
 			// 
@@ -150,45 +172,74 @@
 			// 
 			// grbNewCustomer
 			// 
-			grbNewCustomer.Controls.Add(label1);
+			grbNewCustomer.Controls.Add(lblhint);
+			grbNewCustomer.Controls.Add(button1);
+			grbNewCustomer.Controls.Add(txtNewCusSurname);
+			grbNewCustomer.Controls.Add(lblNewCustSurname);
+			grbNewCustomer.Controls.Add(txtNewCusName);
+			grbNewCustomer.Controls.Add(lblNewCustomerName);
 			grbNewCustomer.Location = new Point(357, 230);
 			grbNewCustomer.Name = "grbNewCustomer";
-			grbNewCustomer.Size = new Size(294, 191);
+			grbNewCustomer.Size = new Size(294, 236);
 			grbNewCustomer.TabIndex = 2;
 			grbNewCustomer.TabStop = false;
 			grbNewCustomer.Text = "Add New Customer";
 			// 
-			// label1
+			// lblNewCustomerName
 			// 
-			label1.AutoSize = true;
-			label1.Location = new Point(90, 29);
-			label1.Name = "label1";
-			label1.Size = new Size(94, 15);
-			label1.TabIndex = 0;
-			label1.Text = "Customer Name";
+			lblNewCustomerName.AutoSize = true;
+			lblNewCustomerName.Location = new Point(90, 29);
+			lblNewCustomerName.Name = "lblNewCustomerName";
+			lblNewCustomerName.Size = new Size(100, 15);
+			lblNewCustomerName.TabIndex = 0;
+			lblNewCustomerName.Text = "Customer Name :";
 			// 
-			// lblCusCard
+			// txtNewCusName
 			// 
-			lblCusCard.AutoSize = true;
-			lblCusCard.Location = new Point(14, 158);
-			lblCusCard.Name = "lblCusCard";
-			lblCusCard.Size = new Size(93, 15);
-			lblCusCard.TabIndex = 8;
-			lblCusCard.Text = "Customer Card :";
+			txtNewCusName.Location = new Point(26, 50);
+			txtNewCusName.Name = "txtNewCusName";
+			txtNewCusName.Size = new Size(243, 23);
+			txtNewCusName.TabIndex = 1;
 			// 
-			// txtCusCard
+			// lblNewCustSurname
 			// 
-			txtCusCard.Enabled = false;
-			txtCusCard.Location = new Point(132, 151);
-			txtCusCard.Name = "txtCusCard";
-			txtCusCard.Size = new Size(188, 23);
-			txtCusCard.TabIndex = 9;
+			lblNewCustSurname.Location = new Point(79, 88);
+			lblNewCustSurname.Name = "lblNewCustSurname";
+			lblNewCustSurname.Size = new Size(141, 23);
+			lblNewCustSurname.TabIndex = 2;
+			lblNewCustSurname.Text = "Custumer Surname :";
+			// 
+			// txtNewCusSurname
+			// 
+			txtNewCusSurname.Location = new Point(28, 109);
+			txtNewCusSurname.Name = "txtNewCusSurname";
+			txtNewCusSurname.Size = new Size(241, 23);
+			txtNewCusSurname.TabIndex = 3;
+			// 
+			// button1
+			// 
+			button1.Location = new Point(79, 150);
+			button1.Name = "button1";
+			button1.Size = new Size(127, 22);
+			button1.TabIndex = 4;
+			button1.Text = "Add New Customer";
+			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click_1;
+			// 
+			// lblhint
+			// 
+			lblhint.AutoSize = true;
+			lblhint.Location = new Point(38, 186);
+			lblhint.Name = "lblhint";
+			lblhint.Size = new Size(215, 15);
+			lblhint.TabIndex = 5;
+			lblhint.Text = "Customer's Card will be auto generated";
 			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(666, 525);
+			ClientSize = new Size(667, 480);
 			Controls.Add(grbNewCustomer);
 			Controls.Add(grbUserDetails);
 			Controls.Add(dgvCustomers);
@@ -219,6 +270,11 @@
 		private TextBox txtCusCard;
 		private Label lblCusCard;
 		private GroupBox grbNewCustomer;
-		private Label label1;
+		private Label lblNewCustomerName;
+		private Button button1;
+		private TextBox txtNewCusSurname;
+		private Label lblNewCustSurname;
+		private TextBox txtNewCusName;
+		private Label lblhint;
 	}
 }

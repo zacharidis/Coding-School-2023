@@ -70,5 +70,10 @@ namespace GZFuelWinClient
 				MessageBox.Show("Customer Deleted!");
 			}
 		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
