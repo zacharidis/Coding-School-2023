@@ -95,7 +95,7 @@ namespace GZFuelWinClient
 
 		private void btnAddNewCustomer_Click(object sender, EventArgs e)
 		{
-
+			string newCard = CardGenerator();
 		}
 
 		private void button1_Click_2(object sender, EventArgs e)
@@ -108,6 +108,13 @@ namespace GZFuelWinClient
 			{
 				this.Width = 711;
 			}
+		}
+
+		public string CardGenerator()
+		{
+			Random random = new Random();
+			string cardNumber = 'A' + random.Next(100000000, 999999999).ToString();
+			return cardNumber;
 		}
 	}
 }
