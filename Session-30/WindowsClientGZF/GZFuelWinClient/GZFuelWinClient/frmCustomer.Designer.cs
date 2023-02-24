@@ -48,9 +48,13 @@
 			txtNewCusName = new TextBox();
 			lblNewCustomerName = new Label();
 			button1 = new Button();
+			gpbTransactions = new GroupBox();
+			dataGridView1 = new DataGridView();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			grbUserDetails.SuspendLayout();
 			grbNewCustomer.SuspendLayout();
+			gpbTransactions.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
 			// 
 			// dgvCustomers
@@ -246,11 +250,32 @@
 			button1.UseVisualStyleBackColor = true;
 			button1.Click += button1_Click_2;
 			// 
+			// gpbTransactions
+			// 
+			gpbTransactions.Controls.Add(dataGridView1);
+			gpbTransactions.Location = new Point(704, 11);
+			gpbTransactions.Name = "gpbTransactions";
+			gpbTransactions.Size = new Size(469, 392);
+			gpbTransactions.TabIndex = 4;
+			gpbTransactions.TabStop = false;
+			gpbTransactions.Text = "Customers Transactions";
+			// 
+			// dataGridView1
+			// 
+			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView1.Location = new Point(17, 25);
+			dataGridView1.Name = "dataGridView1";
+			dataGridView1.ReadOnly = true;
+			dataGridView1.RowTemplate.Height = 25;
+			dataGridView1.Size = new Size(436, 352);
+			dataGridView1.TabIndex = 0;
+			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(695, 480);
+			ClientSize = new Size(1183, 480);
+			Controls.Add(gpbTransactions);
 			Controls.Add(button1);
 			Controls.Add(grbNewCustomer);
 			Controls.Add(grbUserDetails);
@@ -264,6 +289,8 @@
 			grbUserDetails.PerformLayout();
 			grbNewCustomer.ResumeLayout(false);
 			grbNewCustomer.PerformLayout();
+			gpbTransactions.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -289,5 +316,7 @@
 		private Label lblhint;
 		private Button btnAddNewCustomer;
 		private Button button1;
+		private GroupBox gpbTransactions;
+		private DataGridView dataGridView1;
 	}
 }
