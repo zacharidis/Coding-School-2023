@@ -58,6 +58,7 @@ namespace GZFuelWinClient
 			var responce = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 			if (responce == DialogResult.Yes)
 			{
+				
 				Application.Exit();
 			}
 		}
