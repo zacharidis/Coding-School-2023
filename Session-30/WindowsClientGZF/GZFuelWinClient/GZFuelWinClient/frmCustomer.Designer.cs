@@ -41,12 +41,13 @@
 			txtCustomerId = new TextBox();
 			lblCustomerId = new Label();
 			grbNewCustomer = new GroupBox();
+			btnAddNewCustomer = new Button();
 			lblhint = new Label();
 			txtNewCusSurname = new TextBox();
 			lblNewCustSurname = new Label();
 			txtNewCusName = new TextBox();
 			lblNewCustomerName = new Label();
-			btnAddNewCustomer = new Button();
+			button1 = new Button();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			grbUserDetails.SuspendLayout();
 			grbNewCustomer.SuspendLayout();
@@ -185,6 +186,16 @@
 			grbNewCustomer.TabStop = false;
 			grbNewCustomer.Text = "Add New Customer";
 			// 
+			// btnAddNewCustomer
+			// 
+			btnAddNewCustomer.Location = new Point(69, 146);
+			btnAddNewCustomer.Name = "btnAddNewCustomer";
+			btnAddNewCustomer.Size = new Size(140, 37);
+			btnAddNewCustomer.TabIndex = 6;
+			btnAddNewCustomer.Text = "Add";
+			btnAddNewCustomer.UseVisualStyleBackColor = true;
+			btnAddNewCustomer.Click += btnAddNewCustomer_Click;
+			// 
 			// lblhint
 			// 
 			lblhint.AutoSize = true;
@@ -225,21 +236,22 @@
 			lblNewCustomerName.TabIndex = 0;
 			lblNewCustomerName.Text = "Customer Name :";
 			// 
-			// btnAddNewCustomer
+			// button1
 			// 
-			btnAddNewCustomer.Location = new Point(69, 146);
-			btnAddNewCustomer.Name = "btnAddNewCustomer";
-			btnAddNewCustomer.Size = new Size(140, 37);
-			btnAddNewCustomer.TabIndex = 6;
-			btnAddNewCustomer.Text = "Add";
-			btnAddNewCustomer.UseVisualStyleBackColor = true;
-			btnAddNewCustomer.Click += btnAddNewCustomer_Click;
+			button1.Location = new Point(657, 20);
+			button1.Name = "button1";
+			button1.Size = new Size(32, 446);
+			button1.TabIndex = 3;
+			button1.Text = "->";
+			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click_2;
 			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(667, 480);
+			ClientSize = new Size(695, 480);
+			Controls.Add(button1);
 			Controls.Add(grbNewCustomer);
 			Controls.Add(grbUserDetails);
 			Controls.Add(dgvCustomers);
@@ -276,5 +288,6 @@
 		private TextBox txtNewCusName;
 		private Label lblhint;
 		private Button btnAddNewCustomer;
+		private Button button1;
 	}
 }

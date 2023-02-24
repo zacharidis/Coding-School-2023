@@ -80,5 +80,16 @@ namespace GZFuelWinClient
 		{
 
 		}
+
+		private void button1_Click_2(object sender, EventArgs e)
+		{
+			if (this.Width== 711)
+			{
+				this.Width = 900;
+			} else
+			{
+				this.Width = 711;
+			}
+		}
 	}
 }
