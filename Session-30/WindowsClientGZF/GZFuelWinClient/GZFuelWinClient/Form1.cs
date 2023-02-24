@@ -1,6 +1,8 @@
 using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -65,7 +67,7 @@ namespace GZFuelWinClient
 
 		private void lblUnlock_Click(object sender, EventArgs e)
 		{
-		 
+
 			string input = string.Empty;
 			if (ShowInputDialog(ref input) == DialogResult.OK)
 			{
@@ -80,7 +82,7 @@ namespace GZFuelWinClient
 					MessageBox.Show("Invalid Password");
 				}
 			}
-			
+
 
 		}
 
@@ -123,5 +125,26 @@ namespace GZFuelWinClient
 			input = textBox.Text;
 			return result;
 		}
+
+		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			try
+			{
+				VisitLink();
+			} catch (Exception ex) { }
+		}
+
+
+
+		private void VisitLink()
+		{
+			// Change the color of the link text by setting LinkVisited
+			// to true.
+			linkLabel1.LinkVisited = true;
+			//Call the Process.Start method to open the default browser
+			//with a URL:
+			System.Diagnostics.Process.Start("http://www.microsoft.com");
+		}
+
 	}
 }

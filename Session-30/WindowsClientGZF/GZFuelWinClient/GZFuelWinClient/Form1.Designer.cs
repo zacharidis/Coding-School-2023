@@ -133,6 +133,7 @@
 			linkLabel1.TabIndex = 5;
 			linkLabel1.TabStop = true;
 			linkLabel1.Text = "my github";
+			linkLabel1.LinkClicked += linkLabel1_LinkClicked;
 			// 
 			// Form1
 			// 
