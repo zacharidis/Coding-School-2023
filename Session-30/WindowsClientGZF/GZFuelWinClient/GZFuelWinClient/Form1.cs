@@ -84,7 +84,7 @@ namespace GZFuelWinClient
 
 		}
 
-
+		// doing that in VB was way easier !!! InputBox for the win !
 		private static DialogResult ShowInputDialog(ref string input)
 		{
 			System.Drawing.Size size = new System.Drawing.Size(200, 70);
