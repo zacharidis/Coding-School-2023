@@ -128,23 +128,12 @@ namespace GZFuelWinClient
 
 		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			try
-			{
-				VisitLink();
-			} catch (Exception ex) { }
+
 		}
 
 
 
-		private void VisitLink()
-		{
-			// Change the color of the link text by setting LinkVisited
-			// to true.
-			linkLabel1.LinkVisited = true;
-			//Call the Process.Start method to open the default browser
-			//with a URL:
-			System.Diagnostics.Process.Start("http://www.microsoft.com");
-		}
+
 
 	}
 }

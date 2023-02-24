@@ -37,7 +37,6 @@
 			lblUnlock = new Label();
 			pictureBox1 = new PictureBox();
 			lblExit = new Label();
-			linkLabel1 = new LinkLabel();
 			groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
@@ -123,24 +122,11 @@
 			lblExit.Text = "Exit";
 			lblExit.Click += lblExit_Click;
 			// 
-			// linkLabel1
-			// 
-			linkLabel1.AutoSize = true;
-			linkLabel1.BorderStyle = BorderStyle.FixedSingle;
-			linkLabel1.Location = new Point(400, 466);
-			linkLabel1.Name = "linkLabel1";
-			linkLabel1.Size = new Size(64, 17);
-			linkLabel1.TabIndex = 5;
-			linkLabel1.TabStop = true;
-			linkLabel1.Text = "my github";
-			linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(474, 618);
-			Controls.Add(linkLabel1);
 			Controls.Add(lblExit);
 			Controls.Add(pictureBox1);
 			Controls.Add(lblUnlock);
@@ -168,6 +154,5 @@
 		private Button btnCustomers;
 		private PictureBox pictureBox1;
 		private Label lblExit;
-		private LinkLabel linkLabel1;
 	}
 }
