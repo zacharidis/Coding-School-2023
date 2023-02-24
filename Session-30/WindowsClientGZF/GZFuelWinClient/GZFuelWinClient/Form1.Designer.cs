@@ -34,9 +34,9 @@
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1306, 708);
+			ClientSize = new Size(882, 545);
 			Name = "Form1";
-			Text = "Form1";
+			Text = "GZFuel  Made For Epsilon Net Coding School 2023";
 			Load += Form1_Load;
 			ResumeLayout(false);
 		}
