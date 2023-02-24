@@ -49,5 +49,15 @@ namespace GZFuelWinClient
 			txtCustomerName.Text = Convert.ToString(dgvCustomers[1, row].Value);
 			txtCustomerSurname.Text = Convert.ToString(dgvCustomers[2, row].Value);
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var responce = MessageBox.Show("Are you sure you want to delete this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+			if (responce == DialogResult.Yes)
+			{
+				// prohibit simple users from deleting customers without a password 
+				MessageBox.Show("Customer Deleted!");
+			}
+		}
 	}
 }
