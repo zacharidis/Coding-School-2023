@@ -222,14 +222,9 @@ namespace GZFuelWinClient
 				HttpClient client = new HttpClient();
 				client.BaseAddress = new Uri("https://localhost:7068/");
 
-				// ----------------- IT TOOK ME ALMOST A DAY TO FIND THIS OUT !!!!
+				
 
-				var json = JsonConvert.SerializeObject(customer);
-
-				// Create a StringContent object with the JSON data and specify the content type
-				var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-				var response = client.PutAsync($"Customer",content).Result;
+				var response = client.PutAsJsonAsync($"Customer",customer).Result;
 
 
 
