@@ -38,14 +38,14 @@
 			dgvCustomers.Location = new Point(14, 18);
 			dgvCustomers.Name = "dgvCustomers";
 			dgvCustomers.RowTemplate.Height = 25;
-			dgvCustomers.Size = new Size(810, 308);
+			dgvCustomers.Size = new Size(457, 308);
 			dgvCustomers.TabIndex = 0;
 			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(836, 611);
+			ClientSize = new Size(972, 639);
 			Controls.Add(dgvCustomers);
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "frmCustomer";
