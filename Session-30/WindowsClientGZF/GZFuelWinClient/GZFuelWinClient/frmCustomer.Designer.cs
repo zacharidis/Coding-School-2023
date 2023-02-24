@@ -38,8 +38,13 @@
 			txtCustomerName = new TextBox();
 			txtCustomerId = new TextBox();
 			lblCustomerId = new Label();
+			grbNewCustomer = new GroupBox();
+			label1 = new Label();
+			lblCusCard = new Label();
+			txtCusCard = new TextBox();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			grbUserDetails.SuspendLayout();
+			grbNewCustomer.SuspendLayout();
 			SuspendLayout();
 			// 
 			// dgvCustomers
@@ -50,13 +55,15 @@
 			dgvCustomers.Name = "dgvCustomers";
 			dgvCustomers.ReadOnly = true;
 			dgvCustomers.RowTemplate.Height = 25;
-			dgvCustomers.Size = new Size(457, 185);
+			dgvCustomers.Size = new Size(637, 185);
 			dgvCustomers.TabIndex = 0;
 			dgvCustomers.CellContentClick += dgvCustomers_CellContentClick;
 			dgvCustomers.CellDoubleClick += dgvCustomers_CellDoubleClick;
 			// 
 			// grbUserDetails
 			// 
+			grbUserDetails.Controls.Add(txtCusCard);
+			grbUserDetails.Controls.Add(lblCusCard);
 			grbUserDetails.Controls.Add(btnUpCustomer);
 			grbUserDetails.Controls.Add(btnDelCustomer);
 			grbUserDetails.Controls.Add(lblCustomerSurname);
@@ -65,18 +72,18 @@
 			grbUserDetails.Controls.Add(txtCustomerName);
 			grbUserDetails.Controls.Add(txtCustomerId);
 			grbUserDetails.Controls.Add(lblCustomerId);
-			grbUserDetails.Location = new Point(494, 12);
+			grbUserDetails.Location = new Point(14, 230);
 			grbUserDetails.Name = "grbUserDetails";
-			grbUserDetails.Size = new Size(327, 191);
+			grbUserDetails.Size = new Size(327, 236);
 			grbUserDetails.TabIndex = 1;
 			grbUserDetails.TabStop = false;
 			grbUserDetails.Text = "Customer Details";
 			// 
 			// btnUpCustomer
 			// 
-			btnUpCustomer.Location = new Point(193, 152);
+			btnUpCustomer.Location = new Point(182, 205);
 			btnUpCustomer.Name = "btnUpCustomer";
-			btnUpCustomer.Size = new Size(127, 25);
+			btnUpCustomer.Size = new Size(138, 25);
 			btnUpCustomer.TabIndex = 7;
 			btnUpCustomer.Text = "Update Customer";
 			btnUpCustomer.UseVisualStyleBackColor = true;
@@ -84,7 +91,7 @@
 			// 
 			// btnDelCustomer
 			// 
-			btnDelCustomer.Location = new Point(16, 152);
+			btnDelCustomer.Location = new Point(15, 203);
 			btnDelCustomer.Name = "btnDelCustomer";
 			btnDelCustomer.Size = new Size(120, 27);
 			btnDelCustomer.TabIndex = 6;
@@ -141,11 +148,48 @@
 			lblCustomerId.TabIndex = 0;
 			lblCustomerId.Text = "Customer ID : ";
 			// 
+			// grbNewCustomer
+			// 
+			grbNewCustomer.Controls.Add(label1);
+			grbNewCustomer.Location = new Point(357, 230);
+			grbNewCustomer.Name = "grbNewCustomer";
+			grbNewCustomer.Size = new Size(294, 191);
+			grbNewCustomer.TabIndex = 2;
+			grbNewCustomer.TabStop = false;
+			grbNewCustomer.Text = "Add New Customer";
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Location = new Point(90, 29);
+			label1.Name = "label1";
+			label1.Size = new Size(94, 15);
+			label1.TabIndex = 0;
+			label1.Text = "Customer Name";
+			// 
+			// lblCusCard
+			// 
+			lblCusCard.AutoSize = true;
+			lblCusCard.Location = new Point(14, 158);
+			lblCusCard.Name = "lblCusCard";
+			lblCusCard.Size = new Size(93, 15);
+			lblCusCard.TabIndex = 8;
+			lblCusCard.Text = "Customer Card :";
+			// 
+			// txtCusCard
+			// 
+			txtCusCard.Enabled = false;
+			txtCusCard.Location = new Point(132, 151);
+			txtCusCard.Name = "txtCusCard";
+			txtCusCard.Size = new Size(188, 23);
+			txtCusCard.TabIndex = 9;
+			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(842, 639);
+			ClientSize = new Size(666, 525);
+			Controls.Add(grbNewCustomer);
 			Controls.Add(grbUserDetails);
 			Controls.Add(dgvCustomers);
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -155,6 +199,8 @@
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
 			grbUserDetails.ResumeLayout(false);
 			grbUserDetails.PerformLayout();
+			grbNewCustomer.ResumeLayout(false);
+			grbNewCustomer.PerformLayout();
 			ResumeLayout(false);
 		}
 
@@ -170,5 +216,9 @@
 		private Label lblCustomerId;
 		private Button btnUpCustomer;
 		private Button btnDelCustomer;
+		private TextBox txtCusCard;
+		private Label lblCusCard;
+		private GroupBox grbNewCustomer;
+		private Label label1;
 	}
 }

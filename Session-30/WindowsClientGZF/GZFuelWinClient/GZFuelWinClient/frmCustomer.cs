@@ -48,6 +48,7 @@ namespace GZFuelWinClient
 			txtCustomerId.Text = Convert.ToString(dgvCustomers[0, row].Value);
 			txtCustomerName.Text = Convert.ToString(dgvCustomers[1, row].Value);
 			txtCustomerSurname.Text = Convert.ToString(dgvCustomers[2, row].Value);
+			txtCusCard.Text = Convert.ToString(dgvCustomers[3, row].Value);
 		}
 
 		private void button1_Click(object sender, EventArgs e)
