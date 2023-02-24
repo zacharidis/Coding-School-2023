@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace GZFuelWinClient
 {
@@ -142,7 +144,7 @@ namespace GZFuelWinClient
 
 
 
-		//------------------------------- private static DialogResult ShowInputDialog(ref string input)
+		
 
 		private static DialogResult ShowInputDialog(ref string input)
 		{
@@ -219,7 +221,19 @@ namespace GZFuelWinClient
 			{
 				HttpClient client = new HttpClient();
 				client.BaseAddress = new Uri("https://localhost:7068/");
-				var response = client.PutAsJsonAsync("Customer",customer).Result;
+
+				// ----------------- IT TOOK ME ALMOST A DAY TO FIND THIS OUT !!!!
+
+				var json = JsonConvert.SerializeObject(customer);
+
+				// Create a StringContent object with the JSON data and specify the content type
+				var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+				var response = client.PutAsync($"Customer",content).Result;
+
+
+
+				
 				dgvCustomers.Refresh();
 				MessageBox.Show("Customer Updated!");
 			} catch (Exception ex)
