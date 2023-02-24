@@ -78,6 +78,7 @@
 			btnCustomers.TabIndex = 0;
 			btnCustomers.Text = "Customers";
 			btnCustomers.UseVisualStyleBackColor = true;
+			btnCustomers.Click += btnCustomers_Click;
 			// 
 			// lblAbout
 			// 
