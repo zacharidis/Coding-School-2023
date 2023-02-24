@@ -104,8 +104,10 @@ namespace GZFuelWinClient
 			var responce = MessageBox.Show("Are you sure you want to update this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 			if (responce == DialogResult.Yes)
 			{
+				int selectedId = Convert.ToInt32(txtCustomerId.Text);
+				UpdateCustomer(selectedId);
 				// prohibit simple users from deleting customers without a password 
-				MessageBox.Show("Customer updated!");
+				
 			}
 		}
 
@@ -215,7 +217,14 @@ namespace GZFuelWinClient
 
 			try
 			{
-				
+				HttpClient client = new HttpClient();
+				client.BaseAddress = new Uri("https://localhost:7068/");
+				var response = client.PutAsJsonAsync("Customer",customer).Result;
+				dgvCustomers.Refresh();
+				MessageBox.Show("Customer Updated!");
+			} catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString());
 			}
 
 
