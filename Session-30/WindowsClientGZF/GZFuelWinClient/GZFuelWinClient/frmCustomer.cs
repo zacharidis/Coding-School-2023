@@ -182,9 +182,28 @@ namespace GZFuelWinClient
 		}
 
 
+		private void DeleteCustomer(int id)
+		{
+			try
+			{
 
-		
+				HttpClient client = new HttpClient();
+				client.BaseAddress = new Uri("https://localhost:7068/");
+				var response = client.DeleteAsync($"customer/{id}").Result;
+				dgvCustomers.Refresh();
+				MessageBox.Show("Customer Deleted!");
 
 
-}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString());
+			}
+
+
+		}
+
+
+
+	}
 }
