@@ -36,5 +36,10 @@ namespace GZFuelWinClient
 				MessageBox.Show(ex.Message.ToString());
 			}
 		}
+
+		private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
 	}
 }

@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			dgvCustomers = new DataGridView();
+			grbUserDetails = new GroupBox();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
 			SuspendLayout();
 			// 
@@ -36,16 +37,29 @@
 			// 
 			dgvCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvCustomers.Location = new Point(14, 18);
+			dgvCustomers.MultiSelect = false;
 			dgvCustomers.Name = "dgvCustomers";
+			dgvCustomers.ReadOnly = true;
 			dgvCustomers.RowTemplate.Height = 25;
-			dgvCustomers.Size = new Size(457, 308);
+			dgvCustomers.Size = new Size(457, 185);
 			dgvCustomers.TabIndex = 0;
+			dgvCustomers.CellContentClick += dgvCustomers_CellContentClick;
+			// 
+			// grbUserDetails
+			// 
+			grbUserDetails.Location = new Point(494, 12);
+			grbUserDetails.Name = "grbUserDetails";
+			grbUserDetails.Size = new Size(466, 191);
+			grbUserDetails.TabIndex = 1;
+			grbUserDetails.TabStop = false;
+			grbUserDetails.Text = "Customer Details";
 			// 
 			// frmCustomer
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(972, 639);
+			ClientSize = new Size(980, 639);
+			Controls.Add(grbUserDetails);
 			Controls.Add(dgvCustomers);
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "frmCustomer";
@@ -58,5 +72,6 @@
 		#endregion
 
 		private DataGridView dgvCustomers;
+		private GroupBox grbUserDetails;
 	}
 }
