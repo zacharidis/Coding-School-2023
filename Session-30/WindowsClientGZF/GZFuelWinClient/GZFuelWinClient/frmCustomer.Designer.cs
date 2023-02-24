@@ -30,7 +30,14 @@
 		{
 			dgvCustomers = new DataGridView();
 			grbUserDetails = new GroupBox();
+			lblCustomerId = new Label();
+			txtCustomerId = new TextBox();
+			txtCustomerName = new TextBox();
+			txtCustomerSurname = new TextBox();
+			lblCustomerName = new Label();
+			lblCustomerSurname = new Label();
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
+			grbUserDetails.SuspendLayout();
 			SuspendLayout();
 			// 
 			// dgvCustomers
@@ -44,15 +51,70 @@
 			dgvCustomers.Size = new Size(457, 185);
 			dgvCustomers.TabIndex = 0;
 			dgvCustomers.CellContentClick += dgvCustomers_CellContentClick;
+			dgvCustomers.CellDoubleClick += dgvCustomers_CellDoubleClick;
 			// 
 			// grbUserDetails
 			// 
+			grbUserDetails.Controls.Add(lblCustomerSurname);
+			grbUserDetails.Controls.Add(lblCustomerName);
+			grbUserDetails.Controls.Add(txtCustomerSurname);
+			grbUserDetails.Controls.Add(txtCustomerName);
+			grbUserDetails.Controls.Add(txtCustomerId);
+			grbUserDetails.Controls.Add(lblCustomerId);
 			grbUserDetails.Location = new Point(494, 12);
 			grbUserDetails.Name = "grbUserDetails";
-			grbUserDetails.Size = new Size(466, 191);
+			grbUserDetails.Size = new Size(327, 191);
 			grbUserDetails.TabIndex = 1;
 			grbUserDetails.TabStop = false;
 			grbUserDetails.Text = "Customer Details";
+			// 
+			// lblCustomerId
+			// 
+			lblCustomerId.AutoSize = true;
+			lblCustomerId.Location = new Point(15, 29);
+			lblCustomerId.Name = "lblCustomerId";
+			lblCustomerId.Size = new Size(82, 15);
+			lblCustomerId.TabIndex = 0;
+			lblCustomerId.Text = "Customer ID : ";
+			// 
+			// txtCustomerId
+			// 
+			txtCustomerId.Location = new Point(130, 26);
+			txtCustomerId.Name = "txtCustomerId";
+			txtCustomerId.Size = new Size(190, 23);
+			txtCustomerId.TabIndex = 1;
+			// 
+			// txtCustomerName
+			// 
+			txtCustomerName.Location = new Point(130, 68);
+			txtCustomerName.Name = "txtCustomerName";
+			txtCustomerName.Size = new Size(190, 23);
+			txtCustomerName.TabIndex = 2;
+			// 
+			// txtCustomerSurname
+			// 
+			txtCustomerSurname.Location = new Point(130, 114);
+			txtCustomerSurname.Name = "txtCustomerSurname";
+			txtCustomerSurname.Size = new Size(190, 23);
+			txtCustomerSurname.TabIndex = 3;
+			// 
+			// lblCustomerName
+			// 
+			lblCustomerName.AutoSize = true;
+			lblCustomerName.Location = new Point(15, 71);
+			lblCustomerName.Name = "lblCustomerName";
+			lblCustomerName.Size = new Size(100, 15);
+			lblCustomerName.TabIndex = 4;
+			lblCustomerName.Text = "Customer Name :";
+			// 
+			// lblCustomerSurname
+			// 
+			lblCustomerSurname.AutoSize = true;
+			lblCustomerSurname.Location = new Point(9, 117);
+			lblCustomerSurname.Name = "lblCustomerSurname";
+			lblCustomerSurname.Size = new Size(115, 15);
+			lblCustomerSurname.TabIndex = 5;
+			lblCustomerSurname.Text = "Customer Surname :";
 			// 
 			// frmCustomer
 			// 
@@ -66,6 +128,8 @@
 			Text = "Customers";
 			Load += frmCustomer_Load;
 			((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
+			grbUserDetails.ResumeLayout(false);
+			grbUserDetails.PerformLayout();
 			ResumeLayout(false);
 		}
 
@@ -73,5 +137,11 @@
 
 		private DataGridView dgvCustomers;
 		private GroupBox grbUserDetails;
+		private Label lblCustomerSurname;
+		private Label lblCustomerName;
+		private TextBox txtCustomerSurname;
+		private TextBox txtCustomerName;
+		private TextBox txtCustomerId;
+		private Label lblCustomerId;
 	}
 }

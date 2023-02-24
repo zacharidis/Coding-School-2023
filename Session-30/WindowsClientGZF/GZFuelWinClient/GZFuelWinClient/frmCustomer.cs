@@ -41,5 +41,13 @@ namespace GZFuelWinClient
 		{
 
 		}
+
+		private void dgvCustomers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+			int row = e.RowIndex;
+			txtCustomerId.Text = Convert.ToString(dgvCustomers[0, row].Value);
+			txtCustomerName.Text = Convert.ToString(dgvCustomers[1, row].Value);
+			txtCustomerSurname.Text = Convert.ToString(dgvCustomers[2, row].Value);
+		}
 	}
 }
