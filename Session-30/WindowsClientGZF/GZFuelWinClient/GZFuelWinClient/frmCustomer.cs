@@ -55,7 +55,7 @@ namespace GZFuelWinClient
 				HttpClient client = new HttpClient();
 				client.BaseAddress = new Uri("https://localhost:7068/");
 				var response = client.GetAsync($"transaction/{txtCustomerId.Text}").Result;
-				var transactionlist = response.Content.ReadFromJsonAsync<IEnumerable<Customer>>().Result;
+				var transactionlist = response.Content.ReadFromJsonAsync<IEnumerable<Transaction>>().Result;
 				dgvTransactions.DataSource = transactionlist;
 
 			}
