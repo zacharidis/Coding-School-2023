@@ -83,6 +83,7 @@
 
     <hr /> 
     <h2> Add a New Transaction </h2>
+    <button class="btn btn-primary" @onclick="CreateItem">Add New Transaction</button>
 
 
 
@@ -107,5 +108,10 @@
 		
 		transactions = await httpClient.GetFromJsonAsync<List<TransactionDTO>>("transaction");
 		isLoading = false;
+	}
+
+private void CreateItem()
+	{
+		NavigationManager.NavigateTo("/transaction/addtransaction");
 	}
 }
