@@ -30,6 +30,7 @@
         {
             grbTransactions = new GroupBox();
             dgvTransactions = new DataGridView();
+            grbAddNewTransaction = new GroupBox();
             grbTransactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
             SuspendLayout();
@@ -53,11 +54,21 @@
             dgvTransactions.Size = new Size(859, 264);
             dgvTransactions.TabIndex = 0;
             // 
+            // grbAddNewTransaction
+            // 
+            grbAddNewTransaction.Location = new Point(22, 337);
+            grbAddNewTransaction.Name = "grbAddNewTransaction";
+            grbAddNewTransaction.Size = new Size(896, 231);
+            grbAddNewTransaction.TabIndex = 1;
+            grbAddNewTransaction.TabStop = false;
+            grbAddNewTransaction.Text = "Add New Transaction";
+            // 
             // frmTransactions
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(934, 540);
+            ClientSize = new Size(934, 580);
+            Controls.Add(grbAddNewTransaction);
             Controls.Add(grbTransactions);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmTransactions";
@@ -71,5 +82,6 @@
 
         private GroupBox grbTransactions;
         private DataGridView dgvTransactions;
+        private GroupBox grbAddNewTransaction;
     }
 }
