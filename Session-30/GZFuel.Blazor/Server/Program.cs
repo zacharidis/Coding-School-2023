@@ -12,6 +12,8 @@ builder.Services.AddScoped<IEntityRepo<Admin>,AdminRepository>();
 builder.Services.AddScoped<IEntityRepo<Customer>,CustomerRepository>();
 builder.Services.AddScoped<IEntityRepo<Employee>,EmployeeRepository>();
 builder.Services.AddScoped<IEntityRepo<Transaction>,TransactionRepository>();
+builder.Services.AddScoped<IEntityRepo<Item>,ItemRepository>();
+
 
 
 var app = builder.Build();
