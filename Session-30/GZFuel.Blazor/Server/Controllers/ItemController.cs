@@ -1,4 +1,5 @@
-﻿using GZFuel.EF.Repositories;
+﻿using GZFuel.Blazor.Shared.DTO.Item;
+using GZFuel.EF.Repositories;
 using GZFuel.Model.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,11 +26,14 @@ namespace GZFuel.Blazor.Server.Controllers
             var result = _itemRepo.GetAll();
             return result.Select(x => new ItemDTO
 			{
-                Id = x.ID,
-                Name = x.Name,
+                ID = x.ID,
+                Code = x.Code,
+                Description = x.Description,
+                ItemType = x.ItemType,
                 Price = x.Price,
-                Quantity = x.Quantity
+                Cost = x.Cost
             });
+            
         }
 
 
