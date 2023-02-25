@@ -37,5 +37,15 @@ namespace GZFuel.Blazor.Server.Controllers
         }
 
 
+        // create new item 
+        [HttpPost]
+        public async Task Post(ItemDTO item)
+        {
+            var newItem = new Item(item.Code, item.Description, item.Price, item.Cost, item.ItemType);
+            _itemRepo.Add(newItem);
+            
+
+        }
+
 	}
 }
