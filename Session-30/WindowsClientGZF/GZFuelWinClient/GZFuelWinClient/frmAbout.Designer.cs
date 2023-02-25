@@ -34,21 +34,25 @@
             // 
             // lblAbout
             // 
-            lblAbout.Location = new Point(12, 9);
+            lblAbout.BorderStyle = BorderStyle.Fixed3D;
+            lblAbout.FlatStyle = FlatStyle.Flat;
+            lblAbout.Location = new Point(14, 10);
             lblAbout.Name = "lblAbout";
-            lblAbout.Size = new Size(516, 355);
+            lblAbout.Size = new Size(590, 402);
             lblAbout.TabIndex = 0;
             lblAbout.Text = resources.GetString("lblAbout.Text");
+            lblAbout.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // frmAbout
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(526, 396);
+            ClientSize = new Size(617, 428);
             Controls.Add(lblAbout);
+            Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmAbout";
-            Text = "frmAbout";
+            Text = "GZFuel Windows Client v 0.1";
             ResumeLayout(false);
         }
 
