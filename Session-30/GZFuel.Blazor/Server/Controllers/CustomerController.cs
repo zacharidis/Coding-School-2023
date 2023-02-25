@@ -10,13 +10,7 @@ namespace GZFuel.Blazor.Server.Controllers
 	[ApiController]
 	public class CustomerController : ControllerBase
 	{
-		// all controllers should have a repo 
-		// and a constructor to inject the repo
-		// so we have a Get method to get all the customers
-		// and a Get method to get a customer by id
-		//TODO  and we have a Post method to create a new customer
-		//TODO  and we have a Put method to update a customer
-		//TODO  and we have a Delete method to delete a customer
+		
 
 		private readonly IEntityRepo<Customer> _customerRepo;
 
