@@ -50,6 +50,7 @@
             dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTransactions.Location = new Point(20, 26);
             dgvTransactions.Name = "dgvTransactions";
+            dgvTransactions.ReadOnly = true;
             dgvTransactions.RowTemplate.Height = 25;
             dgvTransactions.Size = new Size(859, 264);
             dgvTransactions.TabIndex = 0;
