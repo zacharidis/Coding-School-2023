@@ -123,8 +123,16 @@ namespace GZFuelWinClient
         {
             frmTransactions frmTransactions = new frmTransactions();
             frmTransactions.ShowDialog();
+
+
+        }
+
+        private void lblAbout_Click(object sender, EventArgs e)
+        {
+           
+            frmAbout frmAbout = new frmAbout();
+            frmAbout.ShowDialog();
             
-          
         }
     }
 }

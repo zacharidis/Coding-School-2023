@@ -91,6 +91,7 @@
             lblAbout.Size = new Size(42, 17);
             lblAbout.TabIndex = 1;
             lblAbout.Text = "About";
+            lblAbout.Click += lblAbout_Click;
             // 
             // lblUnlock
             // 
