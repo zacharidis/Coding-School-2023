@@ -59,9 +59,63 @@
 
 
 
+	<p> List of Transactions </p>
 
+	<div class="row">
+<div class="col-md-12">
 
+			<h3>Transactions</h3>
 
+			<table class="table table-striped table-bordered">
+
+				<thead>
+
+					<tr>
+
+						<th>Id</th>
+
+						<th>Total Value</th>
+
+						<th>Payment Method</th>
+
+						<th>Customer Id</th>
+
+						<th>Employee Id</th>
+
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					@foreach (var transaction in transactions)
+
+					{
+
+						<tr>
+
+							<td>@transaction.ID</td>
+
+							<td>@transaction.TotalValue</td>
+
+							<td>@transaction.PaymentMethod</td>
+
+							
+
+							<td>@transaction.CustomerID</td>
+
+							<td>@transaction.EmployeeID</td>
+
+						</tr>
+
+					}
+
+				</tbody>
+
+			</table>
+
+		</div>
+	</div>
 	
 
 }
@@ -96,7 +150,7 @@
 			customer = await httpClient.GetFromJsonAsync<CustomerEditDTO>($"customer/{Id}");
             int cusId = customer.Id;
 
-			//transactions = await httpClient.GetFromJsonAsync<IEnumerable<Transaction>>($"transaction/{Id}");
+			transactions = await httpClient.GetFromJsonAsync<IEnumerable<Transaction>>($"transaction/{Id}");
 
 		}
 
@@ -152,6 +206,8 @@
 		return cardNumber;
 	}
 
+
+	
 	//Load the transactions of this specific customer 
 
     //private async Task LoadTransactionsFromServer()
