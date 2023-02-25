@@ -73,6 +73,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmTransactions";
             Text = "Transactions";
+            Load += frmTransactions_Load;
             grbTransactions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
             ResumeLayout(false);
