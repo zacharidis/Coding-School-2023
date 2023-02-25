@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmAbout";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
+            lblAbout = new Label();
+            SuspendLayout();
+            // 
+            // lblAbout
+            // 
+            lblAbout.Location = new Point(12, 9);
+            lblAbout.Name = "lblAbout";
+            lblAbout.Size = new Size(516, 355);
+            lblAbout.TabIndex = 0;
+            lblAbout.Text = resources.GetString("lblAbout.Text");
+            // 
+            // frmAbout
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(526, 396);
+            Controls.Add(lblAbout);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Name = "frmAbout";
+            Text = "frmAbout";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Label lblAbout;
     }
 }
