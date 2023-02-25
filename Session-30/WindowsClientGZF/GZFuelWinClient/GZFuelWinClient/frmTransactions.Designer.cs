@@ -28,19 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            grbTransactions = new GroupBox();
+            dgvTransactions = new DataGridView();
+            grbTransactions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
             SuspendLayout();
+            // 
+            // grbTransactions
+            // 
+            grbTransactions.Controls.Add(dgvTransactions);
+            grbTransactions.Location = new Point(15, 14);
+            grbTransactions.Name = "grbTransactions";
+            grbTransactions.Size = new Size(903, 310);
+            grbTransactions.TabIndex = 0;
+            grbTransactions.TabStop = false;
+            grbTransactions.Text = "Transactions";
+            // 
+            // dgvTransactions
+            // 
+            dgvTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTransactions.Location = new Point(20, 26);
+            dgvTransactions.Name = "dgvTransactions";
+            dgvTransactions.RowTemplate.Height = 25;
+            dgvTransactions.Size = new Size(859, 264);
+            dgvTransactions.TabIndex = 0;
             // 
             // frmTransactions
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(942, 540);
+            ClientSize = new Size(934, 540);
+            Controls.Add(grbTransactions);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmTransactions";
             Text = "Transactions";
+            grbTransactions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private GroupBox grbTransactions;
+        private DataGridView dgvTransactions;
     }
 }
