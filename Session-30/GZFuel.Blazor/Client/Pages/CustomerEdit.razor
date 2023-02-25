@@ -56,17 +56,18 @@
 
 		</div>
 	</div>
+	}
 
-
-
+@if(hasTransactions)
+{
 	<p> List of Transactions </p>
 
 	<div class="row">
-<div class="col-md-12">
+		<div class="col-md-12">
 
 			<h3>Transactions</h3>
 
-			<table class="table table-striped table-bordered">
+			<table class="table table-sm">
 
 				<thead>
 
@@ -100,7 +101,7 @@
 
 							<td>@transaction.PaymentMethod</td>
 
-							
+
 
 							<td>@transaction.CustomerID</td>
 
@@ -116,9 +117,14 @@
 
 		</div>
 	</div>
-	
+
+
+
 
 }
+
+
+	
 
 
 
@@ -136,6 +142,7 @@
 
 
 	private Boolean isLoading = true;
+	private Boolean hasTransactions = false;
 
 	private async Task LoadItemsFromServer()
 	{
@@ -148,9 +155,10 @@
 		{
 
 			customer = await httpClient.GetFromJsonAsync<CustomerEditDTO>($"customer/{Id}");
-            int cusId = customer.Id;
+			int cusId = customer.Id;
 
 			transactions = await httpClient.GetFromJsonAsync<IEnumerable<Transaction>>($"transaction/{Id}");
+			hasTransactions = true;
 
 		}
 
