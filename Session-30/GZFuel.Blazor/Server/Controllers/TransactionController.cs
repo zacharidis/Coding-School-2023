@@ -60,6 +60,8 @@ namespace GZFuel.Blazor.Server.Controllers
 				ID = x.ID,
 				PaymentMethod = x.PaymentMethod,
 				TotalValue = x.TotalValue,
+				CustomerID = x.CustomerID,
+				EmployeeID = x.EmployeeID,
 		
 			});
 
