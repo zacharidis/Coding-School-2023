@@ -28,6 +28,8 @@ namespace GZFuel.Model.Entities
             Cost = cost;
         }
 
+        //it works :)
+
 
         // relationships
 
