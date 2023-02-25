@@ -95,4 +95,18 @@ private async Task LoadItems()
 
 	}
 
+
+     private void EditItem(int id)
+	{
+		NavigationManager.NavigateTo($"/item/{id}");
+	}
+
+
+private async Task DeleteItem(int id)
+	{
+		await httpClient.DeleteAsync($"item/{id}");
+		await LoadItems();
+	}
+
+
 }
