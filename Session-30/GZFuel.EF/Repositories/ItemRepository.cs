@@ -14,7 +14,7 @@ namespace GZFuel.EF.Repositories
         public void Add(Item entity)
         {
             using var ctx = new FuelDbContext();
-            if (entity.ID == 0) {
+            if (entity.ID != 0) {
                 
                 throw new ArgumentException("Item cannot have a predefined ID", nameof(entity));
             } else
