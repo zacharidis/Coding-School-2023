@@ -2,6 +2,7 @@
 @inject HttpClient httpClient;
 @inject NavigationManager NavigationManager;
 @using GZFuel.Blazor.Shared.DTO.Transaction;
+
 @using GZFuel.Model.Entities;
 
 <h3>add transaction</h3>
@@ -11,7 +12,34 @@
 	<p> Loading ... </p>
 } else
 {
-	
+	<div class="row">
+
+       <div class="col-md-6">
+		   <label class="form-label">Customer Id</label>
+		   <input class="form-control" @bind="@transaction.CustomerID"/> 
+		   <button class="btn btn-primary" @onclick="ChooseCustomer">Choose Customer</button>
+
+       </div>
+
+		<div class="col-md-6">
+			<label class="form-label">Employee Id</label>
+			<input class="form-control" @bind="@transaction.EmployeeID" />
+			<button class="btn btn-primary" @onclick="ChooseCustomer">Choose Employee</button>
+
+
+		</div>
+
+		<div class="col-md-6">
+			<label class="form-label">Date</label>
+			<input class="form-control" type="datetime" @bind="@transaction.Date" />
+
+		</div>
+
+
+
+
+
+	</div>
 
 }
 
@@ -32,9 +60,18 @@
 		transactionLines = new List<TransactionLine>();
 		isLoading = false;
 	}
+
+
+
+	private void ChooseCustomer()
+	{
 		
+	}
 
-
+	private void ChooseEmployee()
+	{
+		
+	}
 
 
 
