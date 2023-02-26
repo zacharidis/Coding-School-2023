@@ -4,6 +4,7 @@ using GZFuel.Model.Entities;
 using GZFuel.Model.Enums;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
 
 namespace GZFuel.Blazor.Server.Controllers
 {
@@ -87,22 +88,39 @@ namespace GZFuel.Blazor.Server.Controllers
 		// create new transaction
 		[HttpPost]
 
-		public async Task Post(TransactionEditDTO transaction)
+		public async Task Post(TransactionEditDTO transaction , List<TransactionLine> transactionLines)
 		{
 
 			var newTransaction = new Transaction
 			{
-				
+
 				PaymentMethod = transaction.PaymentMethod,
 
-				
+
 				CustomerID = transaction.CustomerID,
 				EmployeeID = transaction.EmployeeID,
 				Date = transaction.Date,
-				TotalValue= transaction.TotalValue,
-			};
+				TotalValue = transaction.TotalValue,
+				
+		};
 
-			 transaction.TransactionLines = new List<TransactionLine>();
+			newTransaction.TransactionLines = new List<TransactionLine>();
+
+			foreach (var item in transactionLines)
+			{
+				newTransaction.TransactionLines.Add(new TransactionLine(item.Quantity , item.ItemPrice, item.ItemID, item.TransactionID, item.TotalValue)
+				{
+					ItemID = item.ItemID,
+					Quantity = item.Quantity,
+					ItemPrice = item.ItemPrice,
+					TransactionID = item.TransactionID,
+					TotalValue = item.TotalValue
+				});
+				
+			}
+
+
+
 
 			_transactionRepo.Add(newTransaction);
 		}
