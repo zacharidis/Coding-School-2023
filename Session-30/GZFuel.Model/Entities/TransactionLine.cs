@@ -18,6 +18,9 @@ namespace GZFuel.Model.Entities
         public decimal NetValue { get; set; }
         public decimal DiscountValue { get; set; }
 
+        //def
+        public TransactionLine() { }
+
 
         // constructor
         public TransactionLine(int quantity, decimal itemPrice, decimal totalValue, decimal discountPercent, decimal discountValue)
