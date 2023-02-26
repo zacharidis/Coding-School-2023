@@ -66,7 +66,7 @@ else
 					</td>
 
 					<td>
-						<button class="btn btn-primary" @onclick="() => EditItem(item.ID)">Edit</button>
+						
 						<button class="btn btn-danger" @onclick="() => DeleteItem(item.ID)">Delete</button>
 					</td>
 				</tr>
@@ -74,6 +74,10 @@ else
 		</tbody>
 	</table>
 	
+	<hr />
+	<button class="btn btn-outline-primary" @onclick="GoToCreateItem">Create New</button>
+
+
 }
 
 @code {
@@ -96,10 +100,12 @@ private async Task LoadItems()
 	}
 
 
-     private void EditItem(int id)
+
+	private void GoToCreateItem()
 	{
-		NavigationManager.NavigateTo($"/item/{id}");
+		NavigationManager.NavigateTo("/itemadd");
 	}
+  
 
 
 private async Task DeleteItem(int id)
