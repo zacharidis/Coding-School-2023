@@ -225,13 +225,13 @@ namespace GZFuelWinClient
                 client.BaseAddress = new Uri("https://localhost:7068/");
 
 
-                //TODO Put not working
-                var response = client.PutAsJsonAsync($"Customer", customer).Result;
+				//TODO Put not working
+				var response = client.PutAsJsonAsync($"Customer", customer);
 
 
 
 
-                dgvCustomers.Refresh();
+				dgvCustomers.Refresh();
                 MessageBox.Show("Customer Updated!");
             }
             catch (Exception ex)
