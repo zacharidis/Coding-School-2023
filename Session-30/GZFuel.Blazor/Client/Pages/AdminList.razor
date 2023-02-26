@@ -1,5 +1,6 @@
 ﻿@page "/adminlist"
 @using GZFuel.Blazor.Shared.DTO.Admin;
+@using Microsoft.AspNetCore.Components.QuickGrid
 @inject HttpClient httpClient; 
 @inject NavigationManager NavigationManager;
 
@@ -9,7 +10,29 @@
     <p>Loading </p>
 } else
 {
+    <QuickGrid Items="admins.AsQueryable()">
+            
+          <PropertyColumn Property="a=> a.Id" Title="ID" Sortable="true" />
+          <PropertyColumn Property="a=> a.Surname" Title="Surname" Sortable="true" />
+          <PropertyColumn Property="a=> a.Name" Title = "Name" Sortable = "true"/>
+          <PropertyColumn Property="a=>a.Username"  Title ="Username" Sortable="true"> 
+
+              <ColumnOptions>
+                  <ColumnOption>
+                      <input />
+                  </ColumnOption>
+				  
+              </ColumnOptions>
+
+          </PropertyColumn>
+          <PropertyColumn Property="a=>a.Password" Title="Password" />
+
+
+    </QuickGrid>
     
+    
+
+
 
 
 <h3> List of admins </h3>
