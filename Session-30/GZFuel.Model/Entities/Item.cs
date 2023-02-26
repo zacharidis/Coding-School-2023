@@ -28,6 +28,7 @@ namespace GZFuel.Model.Entities
             Cost = cost;
         }
 
+        public Item() { }
         //it works :)
 
 
