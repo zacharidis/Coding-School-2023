@@ -1,4 +1,5 @@
-﻿using GZFuel.Model.Enums;
+﻿using GZFuel.Model.Entities;
+using GZFuel.Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,12 @@ namespace GZFuel.Blazor.Shared.DTO.Transaction
         public int CustomerID { get; set; }
         public PaymentMethod PaymentMethod { get; set; }
         public decimal TotalValue { get; set; }
-       
 
-        public TransactionEditDTO() { }
+		public List<TransactionLine> TransactionLines { get; set; }
+
+
+
+
+		public TransactionEditDTO() { }
     }
 }
