@@ -108,7 +108,7 @@ namespace GZFuel.Blazor.Server.Controllers
 
 			foreach (var item in transactionLines)
 			{
-				newTransaction.TransactionLines.Add(new TransactionLine(item.Quantity , item.ItemPrice, item.ItemID, item.TransactionID, item.TotalValue)
+				newTransaction.TransactionLines.Add(new TransactionLine(item.Quantity ,item.ItemPrice ,item.TotalValue,item.DiscountPercent,item.DiscountValue)
 				{
 					ItemID = item.ItemID,
 					Quantity = item.Quantity,
