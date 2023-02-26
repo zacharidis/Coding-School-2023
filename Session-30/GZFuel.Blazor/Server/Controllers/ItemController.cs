@@ -47,5 +47,13 @@ namespace GZFuel.Blazor.Server.Controllers
 
         }
 
+
+		[HttpDelete("{id}")]
+
+		public async Task Delete(int id)
+		{
+			_itemRepo.Delete(id);
+		}
+
 	}
 }
