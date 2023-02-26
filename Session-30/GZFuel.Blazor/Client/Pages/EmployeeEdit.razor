@@ -37,12 +37,15 @@
 
 		</div>
 
-		<div class="col-md-6">
+		
+		     <p>Employee Type</p>
+			<select class="form-select" aria-label="Default select example" @bind="@employee.EmployeeType">
+				<option value="Manager" selected>Manager</option>
+				<option value="Staff">Staff</option>
+				<option value="Cashier">Cashier</option>
+			</select>
 
-			<label class="form-label"> Type : </label>
-			<input class="form-control" @bind= "@employee.EmployeeType" />
-
-		</div>
+	
 
 		<div class="col-md-6"> 
 
