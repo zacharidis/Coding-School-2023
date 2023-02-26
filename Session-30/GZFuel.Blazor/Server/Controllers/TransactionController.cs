@@ -102,6 +102,8 @@ namespace GZFuel.Blazor.Server.Controllers
 				TotalValue= transaction.TotalValue,
 			};
 
+			 transaction.TransactionLines = new List<TransactionLine>();
+
 			_transactionRepo.Add(newTransaction);
 		}
 
