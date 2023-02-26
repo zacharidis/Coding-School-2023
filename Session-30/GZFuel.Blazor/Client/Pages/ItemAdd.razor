@@ -1,7 +1,92 @@
 ﻿@page "/itemadd"
+@inject HttpClient httpClient
+@inject NavigationManager NavigationManager
+@using GZFuel.Blazor.Shared.DTO.Item
+
 
 <h3>Item A New Item </h3>
 
+@if(isLoading){
+
+	<div class="spinner-border text-primary" role="status">
+		<span class="sr-only">Loading...</span>
+	</div>
+
+
+} else {
+
+
+<div class="form-group">
+		<label for="Code">Code</label>
+		<input type="text" class="form-control" id="Code" placeholder="Enter Code" disabled @bind="@item.Code">
+	</div>
+
+	<div class="form-group">
+		<label for="Description">Description</label>
+		<input type="text" class="form-control" id="Description" placeholder="Enter Description" @bind="@item.Description">
+	</div>
+
+	<div class="form-group">
+		<label for="Price">Price</label>
+		<input type="text" class="form-control" id="Price" placeholder="Enter Price" @bind="@item.Price">
+	</div>
+
+	<div class="form-group">
+		<label for="Cost">Cost</label>
+		<input type="text" class="form-control" id="Cost" placeholder="Enter Cost" @bind="@item.Cost">
+	</div>
+
+	<select class="form-select" aria-label="Default select example" @bind="@item.ItemType">
+		<option value="Fuel" selected>Fuel</option>
+		<option value="Product">Product</option>
+		<option value="Service">Service</option>
+	</select>
+
+
+	<button class="btn btn-primary" @onclick="AddItem">Add Item</button>
+
+
+		
+}
+
+
+
 @code {
+	private Boolean isLoading = false;
+	private ItemDTO item = new ItemDTO();
+
+
+	protected override async Task OnInitializedAsync()
+	{
+		string code = CreateCode();
+		item.Code = code;
+		isLoading = false;
+	}
+
+
+	private async Task AddItem()
+	{
+	
+		var response = await httpClient.PostAsJsonAsync("/item", item);
+		response.EnsureSuccessStatusCode();
+
+		NavigationManager.NavigateTo("/itemlist");
+	}
+
+
+
+    private string CreateCode()
+	{
+
+	Random random = new Random();
+	int randomNumber = random.Next(10000, 99999);
+	string randomLetters = new string(Enumerable.Repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 2)
+									.Select(s => s[random.Next(s.Length)]).ToArray());
+			return randomLetters + randomNumber.ToString();
+
+	}
+
+	
+
 
 }
