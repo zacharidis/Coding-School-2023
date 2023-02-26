@@ -13,6 +13,7 @@ builder.Services.AddScoped<IEntityRepo<Customer>,CustomerRepository>();
 builder.Services.AddScoped<IEntityRepo<Employee>,EmployeeRepository>();
 builder.Services.AddScoped<IEntityRepo<Transaction>,TransactionRepository>();
 builder.Services.AddScoped<IEntityRepo<Item>,ItemRepository>();
+builder.Services.AddScoped<IEntityRepo<TransactionLine>,TransactionLineRepository>();
 
 
 
