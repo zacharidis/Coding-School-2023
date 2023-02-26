@@ -62,8 +62,51 @@
 	<hr /> 
 	<hr />
 
-	<div class="col-md-6">
+	<div class="col-md-3">
 		<label class="form-label">Add Items </label>
+		<br>
+
+		<select class="form-select" aria-label="Default select example">
+			<option selected>Choose Product Category</option>
+			<option value="1">Fuel</option>
+			<option value="2">Product</option>
+			<option value="3">Service</option>
+		</select>
+
+
+		<select class="form-select" aria-label="Default select example">
+			<option selected>Category Product</option>
+			<option value="1">Fuel</option>
+			<option value="2">Product</option>
+			<option value="3">Service</option>
+		</select>
+
+
+
+		<div class="col-md-3">
+			<label class="form-label">Quantity</label>
+			<input class="form-control" @bind="@transactionLine.Quantity" />
+
+		</div>
+
+		<div class="col-md-3">
+			<label class="form-label">Item Price</label>
+			<input class="form-control" @bind="@transactionLine.ItemPrice" disabled/>
+
+		</div>
+
+		<div class="col-md-3">
+			<label class="form-label">Total Value</label>
+			<input class="form-control" @bind="@transactionLine.TotalValue" disabled />
+
+		</div>
+
+		<div class="col-md-3">
+			<label class="form-label">Discount Value</label>
+			<input class="form-control" @bind="@transactionLine.DiscountValue" disabled />
+
+		</div>
+
 		
 		<button class="btn btn-primary" @onclick="AddTransactionLine">Add Items To Transaction</button>
 
@@ -79,6 +122,8 @@
 	private Boolean isLoading = true;
 	Transaction transaction { get; set; }
 	IEnumerable <TransactionLine> transactionLines { get; set; }
+	TransactionLine transactionLine { get; set; }
+	private Boolean hasTransactionLines = false;
 
 
 
@@ -89,6 +134,7 @@
 		transaction = new Transaction();
 		transactionLines = new List<TransactionLine>();
 		isLoading = false;
+		transactionLine = new TransactionLine();
 	}
 
 
@@ -105,8 +151,17 @@
 
 	private void AddTransactionLine()
 	{
-		
+
+
+
+
+
+
+
+
 	}
+
+
 
 
 }
