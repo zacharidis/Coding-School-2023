@@ -89,7 +89,7 @@ namespace GZFuel.Blazor.Server.Controllers
 		// create new transaction
 		[HttpPost]
 
-		public async Task Post(TransactionEditDTO transaction , List<TransactionLine> transactionLines)
+		public async Task Post(TransactionEditDTO transaction )
 		{
 
 			var newTransaction = new Transaction
@@ -107,18 +107,6 @@ namespace GZFuel.Blazor.Server.Controllers
 
 			newTransaction.TransactionLines = new List<TransactionLine>();
 
-			foreach (var item in transactionLines)
-			{
-				newTransaction.TransactionLines.Add(new TransactionLine(item.Quantity ,item.ItemPrice ,item.TotalValue,item.DiscountPercent,item.DiscountValue)
-				{
-					ItemID = item.ItemID,
-					Quantity = item.Quantity,
-					ItemPrice = item.ItemPrice,
-					TransactionID = item.TransactionID,
-					TotalValue = item.TotalValue
-				});
-				
-			}
 
 
 
