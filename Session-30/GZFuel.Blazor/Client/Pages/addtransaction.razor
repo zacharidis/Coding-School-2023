@@ -5,7 +5,7 @@
 
 @using GZFuel.Model.Entities;
 
-<h3>add transaction</h3>
+<h3>Add New Transaction</h3>
 
 @if(isLoading)
 {
@@ -31,35 +31,45 @@
 
 		<div class="col-md-6">
 			<label class="form-label">Date</label>
-			<input class="form-control" type="datetime" @bind="@transaction.Date" />
+			<input class="form-control" type="date" @bind="@transaction.Date" />
 
 		</div>
+		 <hr> 
 
-		<div class="col-md-6">
+		<div class="col-md-6 border-5">
 
 			<label class="form-label">Payment Method</label>
-			<div class="form-check">
-				<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="0" checked>
-				<label class="form-check-label" for="exampleRadios1">
-					Cash
+			    <br> 
+				<input class="form-check-input" type="checkbox" value="0" id="flexCheckDefault" @bind="@transaction.PaymentMethod">
+				<label class="form-check-label" for="flexCheckDefault">
+					Pay With Credit Card (Uncheck to pay with Cash)
 				</label>
-			</div>
-			<div class="form-check">
-				<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="1">
-				<label class="form-check-label" for="exampleRadios2">
-					Credit Card
-				</label>
-			</div>
+			
+			
 
 		</div>
 
+		<br>
 
+		<div class="col-md-6">
+			<label class="form-label">Total value</label>
+			<input class="form-control" @bind="@transaction.TotalValue" />
 
-
-
-
+		</div>
 
 	</div>
+
+	<hr /> 
+	<hr />
+
+	<div class="col-md-6">
+		<label class="form-label">Add Items </label>
+		
+		<button class="btn btn-primary" @onclick="AddTransactionLine">Add Items To Transaction</button>
+
+	</div>
+
+
 
 }
 
@@ -85,15 +95,18 @@
 
 	private void ChooseCustomer()
 	{
-		
+
 	}
 
 	private void ChooseEmployee()
 	{
-		
+
 	}
 
-
+	private void AddTransactionLine()
+	{
+		
+	}
 
 
 }
