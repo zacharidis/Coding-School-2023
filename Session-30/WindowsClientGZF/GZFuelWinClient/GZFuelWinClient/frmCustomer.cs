@@ -120,11 +120,14 @@ namespace GZFuelWinClient
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-           if(isAuthenticated() == true)
+           if(isAuthenticated())
             {
-                string newCard = CardGenerator();
-                // call the json apy 
 
+                CreateCustomer();
+
+            } else
+            {
+                MessageBox.Show("AUTHENTICATION ERROR , PLEASE LOGIN", "ERROR");
             }
             
            
@@ -314,5 +317,29 @@ namespace GZFuelWinClient
         }
 
 
+
+        private void CreateCustomer()
+        {
+            Customer customer = new();
+
+            customer.Name = txtNewCusName.Text;
+            customer.Surname = txtNewCusSurname.Text;
+            customer.CardNumber = CardGenerator();
+
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7068/");
+
+                var response = client.PostAsJsonAsync("Customer", customer).Result;
+                LoadCustomers();
+                dgvCustomers.Refresh();
+                MessageBox.Show("Customer Added!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
