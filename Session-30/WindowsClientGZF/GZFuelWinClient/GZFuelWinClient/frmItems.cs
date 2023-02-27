@@ -16,5 +16,10 @@ namespace GZFuelWinClient
         {
             InitializeComponent();
         }
+
+        private void frmItems_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

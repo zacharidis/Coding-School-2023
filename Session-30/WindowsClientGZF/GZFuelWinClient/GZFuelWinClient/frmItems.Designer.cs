@@ -34,10 +34,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(695, 510);
+            ClientSize = new Size(746, 495);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmItems";
             Text = "frmItems";
+            Load += frmItems_Load;
             ResumeLayout(false);
         }
 
