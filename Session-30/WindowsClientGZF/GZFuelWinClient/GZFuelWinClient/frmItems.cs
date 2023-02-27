@@ -20,6 +20,7 @@ namespace GZFuelWinClient
 
         private void frmItems_Load(object sender, EventArgs e)
         {
+            txtPassword.PasswordChar = '*';
             LoadItems();
         }
 
