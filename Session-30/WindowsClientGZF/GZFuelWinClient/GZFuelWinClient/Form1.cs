@@ -77,10 +77,12 @@ namespace GZFuelWinClient
             inputBox.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             inputBox.ClientSize = size;
             inputBox.Text = "Password";
+            
 
             System.Windows.Forms.TextBox textBox = new TextBox();
             textBox.Size = new System.Drawing.Size(size.Width - 10, 23);
             textBox.Location = new System.Drawing.Point(5, 5);
+            textBox.PasswordChar = '*';
             textBox.Text = input;
             inputBox.Controls.Add(textBox);
 
