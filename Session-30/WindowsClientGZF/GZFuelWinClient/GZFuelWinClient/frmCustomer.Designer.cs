@@ -50,11 +50,19 @@
             button1 = new Button();
             gpbTransactions = new GroupBox();
             dgvTransactions = new DataGridView();
+            groupBox2 = new GroupBox();
+            label1 = new Label();
+            btnLogin = new Button();
+            txtPassword = new TextBox();
+            txtUsername = new TextBox();
+            label2 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
             grbUserDetails.SuspendLayout();
             grbNewCustomer.SuspendLayout();
             gpbTransactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).BeginInit();
+            groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // dgvCustomers
@@ -270,11 +278,79 @@
             dgvTransactions.Size = new Size(436, 352);
             dgvTransactions.TabIndex = 0;
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(btnLogin);
+            groupBox2.Controls.Add(txtPassword);
+            groupBox2.Controls.Add(txtUsername);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Location = new Point(14, 460);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(402, 137);
+            groupBox2.TabIndex = 6;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Security Panel";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(19, 99);
+            label1.Name = "label1";
+            label1.Size = new Size(119, 25);
+            label1.TabIndex = 5;
+            label1.Text = "NO ACCESS ";
+            // 
+            // btnLogin
+            // 
+            btnLogin.Location = new Point(247, 30);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(141, 57);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "Get Access";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(90, 63);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(134, 23);
+            txtPassword.TabIndex = 3;
+            // 
+            // txtUsername
+            // 
+            txtUsername.Location = new Point(89, 30);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(135, 23);
+            txtUsername.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(19, 63);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Password : ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(16, 31);
+            label4.Name = "label4";
+            label4.Size = new Size(69, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Username : ";
+            // 
             // frmCustomer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(696, 594);
+            ClientSize = new Size(696, 603);
+            Controls.Add(groupBox2);
             Controls.Add(gpbTransactions);
             Controls.Add(button1);
             Controls.Add(grbNewCustomer);
@@ -291,6 +367,8 @@
             grbNewCustomer.PerformLayout();
             gpbTransactions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvTransactions).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -318,5 +396,12 @@
         private Button button1;
         private GroupBox gpbTransactions;
         private DataGridView dgvTransactions;
+        private GroupBox groupBox2;
+        private Label label1;
+        private Button btnLogin;
+        private TextBox txtPassword;
+        private TextBox txtUsername;
+        private Label label2;
+        private Label label4;
     }
 }

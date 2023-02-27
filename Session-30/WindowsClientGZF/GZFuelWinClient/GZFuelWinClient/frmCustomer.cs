@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace GZFuelWinClient
 {
-    
+
     //TODO async await all server calls
     public partial class frmCustomer : Form
     {
@@ -251,7 +251,9 @@ namespace GZFuelWinClient
 
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
