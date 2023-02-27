@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http.Json;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,11 @@ namespace GZFuelWinClient
 {
     public partial class frmItems : Form
     {
+
+        public Boolean IsManager { get; set; }
+        public Boolean IsStaff { get; set; }
+
+
         public frmItems()
         {
             InitializeComponent();
@@ -20,6 +26,8 @@ namespace GZFuelWinClient
 
         private void frmItems_Load(object sender, EventArgs e)
         {
+            
+            IsManager = false; IsStaff = false;
             txtPassword.PasswordChar = '*';
             LoadItems();
         }
@@ -71,7 +79,15 @@ namespace GZFuelWinClient
 
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
-            DeleteItem(Convert.ToInt32(txtItemId.Text));
+           if(IsStaff || IsManager)
+            {
+                DeleteItem(Convert.ToInt32(txtItemId.Text));
+            } else
+            {
+                MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "AUTHENTICATION ERROR");
+            }
+            
+            
         }
 
         private void DeleteItem(int id)
@@ -101,7 +117,10 @@ namespace GZFuelWinClient
             if (txtUsername.Text == "Manager" && txtPassword.Text == "Manager")
             {
                 MessageBox.Show("Login Successful!");
+                IsManager = true;
                 lblStatus.Text = "Logged in as Manager";
+                txtUsername.Text = "";
+                txtPassword.Text = "";
                 return;
             }
             else
@@ -112,7 +131,10 @@ namespace GZFuelWinClient
             if(txtUsername.Text == "Staff" && txtPassword.Text == "Staff")
             {
                 MessageBox.Show("Login Successful!");
+                IsStaff = true;
                 lblStatus.Text = "Logged in as Staff";
+                txtPassword.Text = "";
+                txtUsername.Text = "";
                 return;
             }
             else
