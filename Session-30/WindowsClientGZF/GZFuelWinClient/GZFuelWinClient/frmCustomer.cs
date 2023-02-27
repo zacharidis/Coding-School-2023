@@ -64,9 +64,7 @@ namespace GZFuelWinClient
             var responce = MessageBox.Show("Are you sure you want to delete this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (responce == DialogResult.Yes)
             {
-                string input = string.Empty;
-                if (ShowInputDialog(ref input) == DialogResult.OK)
-                {
+                
                    
 
                         int selectedId = Convert.ToInt32(txtCustomerId.Text);
@@ -78,7 +76,7 @@ namespace GZFuelWinClient
                   
                         
                     
-                }
+                
 
 
 
