@@ -254,13 +254,15 @@ namespace GZFuelWinClient
 
 
                 //TODO Put not working
-                var response = client.PutAsJsonAsync($"Customer", customer);
+                var response = client.PutAsJsonAsync("Customer", customer)
 
 
-
+                
+                LoadCustomers();
 
                 dgvCustomers.Refresh();
                 MessageBox.Show("Customer Updated!");
+
             }
             catch (Exception ex)
             {
