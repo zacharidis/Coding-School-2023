@@ -29,6 +29,9 @@ namespace GZFuelWinClient
 
         private void frmCustomer_Load(object sender, EventArgs e)
         {
+            isManager = false;
+            isCashier = false;
+            txtPassword.PasswordChar = '*';
             LoadCustomers();
         }
 
