@@ -40,6 +40,7 @@
             dgvItems.RowTemplate.Height = 25;
             dgvItems.Size = new Size(698, 307);
             dgvItems.TabIndex = 0;
+            dgvItems.CellDoubleClick += dgvItems_CellDoubleClick;
             // 
             // frmItems
             // 
