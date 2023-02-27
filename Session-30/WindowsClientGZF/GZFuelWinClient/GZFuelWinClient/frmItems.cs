@@ -95,7 +95,7 @@ namespace GZFuelWinClient
             }
             else
             {
-                MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "AUTHENTICATION ERROR");
+                MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "AUTHENTICATION ERROR",MessageBoxButtons.OK);
             }
 
 
@@ -164,6 +164,28 @@ namespace GZFuelWinClient
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClearNewItemFields_Click(object sender, EventArgs e)
+        {
+
+            txtNewItemDescription.Text = "";
+            txtNewItemPrice.Text = "";
+            txtNewItemCost.Text = "";
+
+
+        }
+
+        private void btnAddNewItem_Click(object sender, EventArgs e)
+        {
+            if (isManager || isStaff)
+            {
+                // Add to the repo
+                // send to repo
+            } else
+            {
+                MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "ERROR", MessageBoxButtons.OK);
+            }
         }
     }
 }

@@ -45,6 +45,18 @@
             label2 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            btnClearNewItemFields = new Button();
+            cmbNewItemType = new ComboBox();
+            txtNewItemCost = new TextBox();
+            txtNewItemPrice = new TextBox();
+            txtNewItemDescription = new TextBox();
+            txtNewItemCode = new TextBox();
+            btnAddNewItem = new Button();
+            label12 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
             groupBox3 = new GroupBox();
             lblStatus = new Label();
             btnLogin = new Button();
@@ -55,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvItems).BeginInit();
             groupBox1.SuspendLayout();
             gbxItemDetails.SuspendLayout();
+            groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
@@ -215,12 +228,128 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(btnClearNewItemFields);
+            groupBox2.Controls.Add(cmbNewItemType);
+            groupBox2.Controls.Add(txtNewItemCost);
+            groupBox2.Controls.Add(txtNewItemPrice);
+            groupBox2.Controls.Add(txtNewItemDescription);
+            groupBox2.Controls.Add(txtNewItemCode);
+            groupBox2.Controls.Add(btnAddNewItem);
+            groupBox2.Controls.Add(label12);
+            groupBox2.Controls.Add(label11);
+            groupBox2.Controls.Add(label10);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(label8);
             groupBox2.Location = new Point(9, 407);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(641, 137);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Add New Item";
+            // 
+            // btnClearNewItemFields
+            // 
+            btnClearNewItemFields.Location = new Point(513, 97);
+            btnClearNewItemFields.Name = "btnClearNewItemFields";
+            btnClearNewItemFields.Size = new Size(109, 28);
+            btnClearNewItemFields.TabIndex = 11;
+            btnClearNewItemFields.Text = "Clear All Fields";
+            btnClearNewItemFields.UseVisualStyleBackColor = true;
+            btnClearNewItemFields.Click += btnClearNewItemFields_Click;
+            // 
+            // cmbNewItemType
+            // 
+            cmbNewItemType.FormattingEnabled = true;
+            cmbNewItemType.Items.AddRange(new object[] { "Fuel", "Product", "Service" });
+            cmbNewItemType.Location = new Point(94, 67);
+            cmbNewItemType.Name = "cmbNewItemType";
+            cmbNewItemType.Size = new Size(169, 23);
+            cmbNewItemType.TabIndex = 10;
+            // 
+            // txtNewItemCost
+            // 
+            txtNewItemCost.Location = new Point(344, 70);
+            txtNewItemCost.Name = "txtNewItemCost";
+            txtNewItemCost.Size = new Size(149, 23);
+            txtNewItemCost.TabIndex = 9;
+            // 
+            // txtNewItemPrice
+            // 
+            txtNewItemPrice.Location = new Point(344, 28);
+            txtNewItemPrice.Name = "txtNewItemPrice";
+            txtNewItemPrice.Size = new Size(147, 23);
+            txtNewItemPrice.TabIndex = 8;
+            // 
+            // txtNewItemDescription
+            // 
+            txtNewItemDescription.Location = new Point(111, 99);
+            txtNewItemDescription.Name = "txtNewItemDescription";
+            txtNewItemDescription.Size = new Size(380, 23);
+            txtNewItemDescription.TabIndex = 7;
+            // 
+            // txtNewItemCode
+            // 
+            txtNewItemCode.Location = new Point(91, 29);
+            txtNewItemCode.Name = "txtNewItemCode";
+            txtNewItemCode.ReadOnly = true;
+            txtNewItemCode.Size = new Size(172, 23);
+            txtNewItemCode.TabIndex = 6;
+            txtNewItemCode.Text = "Will Be Added by The System";
+            // 
+            // btnAddNewItem
+            // 
+            btnAddNewItem.Location = new Point(508, 29);
+            btnAddNewItem.Name = "btnAddNewItem";
+            btnAddNewItem.Size = new Size(118, 31);
+            btnAddNewItem.TabIndex = 5;
+            btnAddNewItem.Text = "Add New Item";
+            btnAddNewItem.UseVisualStyleBackColor = true;
+            btnAddNewItem.Click += btnAddNewItem_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(271, 67);
+            label12.Name = "label12";
+            label12.Size = new Size(67, 15);
+            label12.TabIndex = 4;
+            label12.Text = "Item Cost : ";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(269, 31);
+            label11.Name = "label11";
+            label11.Size = new Size(69, 15);
+            label11.TabIndex = 3;
+            label11.Text = "Item Price : ";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(10, 67);
+            label10.Name = "label10";
+            label10.Size = new Size(67, 15);
+            label10.TabIndex = 2;
+            label10.Text = "Item Type : ";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(10, 107);
+            label9.Name = "label9";
+            label9.Size = new Size(94, 15);
+            label9.TabIndex = 1;
+            label9.Text = "Item Description";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(10, 30);
+            label8.Name = "label8";
+            label8.Size = new Size(71, 15);
+            label8.TabIndex = 0;
+            label8.Text = "Item Code : ";
             // 
             // groupBox3
             // 
@@ -305,6 +434,8 @@
             groupBox1.ResumeLayout(false);
             gbxItemDetails.ResumeLayout(false);
             gbxItemDetails.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ResumeLayout(false);
@@ -336,5 +467,17 @@
         private Label label3;
         private Button btnLogin;
         private Label lblStatus;
+        private Button btnClearNewItemFields;
+        private ComboBox cmbNewItemType;
+        private TextBox txtNewItemCost;
+        private TextBox txtNewItemPrice;
+        private TextBox txtNewItemDescription;
+        private TextBox txtNewItemCode;
+        private Button btnAddNewItem;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label label8;
     }
 }
