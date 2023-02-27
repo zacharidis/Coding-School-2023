@@ -144,3 +144,9 @@ namespace GZFuelWinClient
         }
     }
 }
+
+
+
+// THE END ! Last Commit and the time is 11:30 PM 27/02/2023 !
+// Thank you EpsilonNET for the ride 
+// May the force of .NET and the mighty Entity Framework be with us all !
