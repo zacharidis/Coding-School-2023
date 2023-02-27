@@ -244,7 +244,7 @@
             // 
             button1.Location = new Point(657, 20);
             button1.Name = "button1";
-            button1.Size = new Size(32, 446);
+            button1.Size = new Size(32, 434);
             button1.TabIndex = 3;
             button1.Text = "->";
             button1.UseVisualStyleBackColor = true;

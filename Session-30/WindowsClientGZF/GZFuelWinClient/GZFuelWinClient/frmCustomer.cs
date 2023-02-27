@@ -14,10 +14,14 @@ using Newtonsoft.Json;
 
 namespace GZFuelWinClient
 {
-
+    
     //TODO async await all server calls
     public partial class frmCustomer : Form
     {
+
+        public Boolean isManager { get; set; }
+        public Boolean isCashier { get; set; }
+
         public frmCustomer()
         {
             InitializeComponent();
