@@ -15,8 +15,8 @@ namespace GZFuelWinClient
     public partial class frmItems : Form
     {
 
-        public Boolean IsManager { get; set; }
-        public Boolean IsStaff { get; set; }
+        public Boolean isManager { get; set; }
+        public Boolean isStaff { get; set; }
 
 
         public frmItems()
@@ -26,8 +26,8 @@ namespace GZFuelWinClient
 
         private void frmItems_Load(object sender, EventArgs e)
         {
-            
-            IsManager = false; IsStaff = false;
+
+            isManager = false; isStaff = false;
             txtPassword.PasswordChar = '*';
             LoadItems();
         }
@@ -79,24 +79,26 @@ namespace GZFuelWinClient
 
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
-           if(IsStaff || IsManager)
+            if (isStaff || isManager)
             {
-                if(txtItemId.Text == "")
+                if (txtItemId.Text == "")
                 {
                     MessageBox.Show("No item selected");
-                }  else
+                }
+                else
                 {
                     DeleteItem(Convert.ToInt32(txtItemId.Text));
                 }
-                
-                
-                
-            } else
+
+
+
+            }
+            else
             {
                 MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "AUTHENTICATION ERROR");
             }
-            
-            
+
+
         }
 
         private void DeleteItem(int id)
@@ -126,7 +128,7 @@ namespace GZFuelWinClient
             if (txtUsername.Text == "Manager" && txtPassword.Text == "Manager")
             {
                 MessageBox.Show("Login Successful!");
-                IsManager = true;
+                isManager = true;
                 lblStatus.Text = "Logged in as Manager";
                 txtUsername.Text = "";
                 txtPassword.Text = "";
@@ -134,13 +136,13 @@ namespace GZFuelWinClient
             }
             else
             {
-                lblStatus.Text= "Login Failed";
+                lblStatus.Text = "Login Failed";
             }
 
-            if(txtUsername.Text == "Staff" && txtPassword.Text == "Staff")
+            if (txtUsername.Text == "Staff" && txtPassword.Text == "Staff")
             {
                 MessageBox.Show("Login Successful!");
-                IsStaff = true;
+                isStaff = true;
                 lblStatus.Text = "Logged in as Staff";
                 txtPassword.Text = "";
                 txtUsername.Text = "";
@@ -156,6 +158,11 @@ namespace GZFuelWinClient
 
 
 
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }
