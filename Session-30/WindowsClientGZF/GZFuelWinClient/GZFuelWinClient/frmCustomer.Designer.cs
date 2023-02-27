@@ -84,7 +84,7 @@
             grbUserDetails.Controls.Add(lblCustomerId);
             grbUserDetails.Location = new Point(14, 230);
             grbUserDetails.Name = "grbUserDetails";
-            grbUserDetails.Size = new Size(327, 236);
+            grbUserDetails.Size = new Size(327, 224);
             grbUserDetails.TabIndex = 1;
             grbUserDetails.TabStop = false;
             grbUserDetails.Text = "Customer Details";
@@ -108,9 +108,9 @@
             // 
             // btnUpCustomer
             // 
-            btnUpCustomer.Location = new Point(182, 205);
+            btnUpCustomer.Location = new Point(178, 186);
             btnUpCustomer.Name = "btnUpCustomer";
-            btnUpCustomer.Size = new Size(138, 25);
+            btnUpCustomer.Size = new Size(143, 27);
             btnUpCustomer.TabIndex = 7;
             btnUpCustomer.Text = "Update Customer";
             btnUpCustomer.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             // 
             // btnDelCustomer
             // 
-            btnDelCustomer.Location = new Point(15, 203);
+            btnDelCustomer.Location = new Point(14, 186);
             btnDelCustomer.Name = "btnDelCustomer";
             btnDelCustomer.Size = new Size(120, 27);
             btnDelCustomer.TabIndex = 6;
@@ -185,7 +185,7 @@
             grbNewCustomer.Controls.Add(lblNewCustomerName);
             grbNewCustomer.Location = new Point(357, 230);
             grbNewCustomer.Name = "grbNewCustomer";
-            grbNewCustomer.Size = new Size(294, 236);
+            grbNewCustomer.Size = new Size(294, 224);
             grbNewCustomer.TabIndex = 2;
             grbNewCustomer.TabStop = false;
             grbNewCustomer.Text = "Add New Customer";
@@ -274,7 +274,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(694, 480);
+            ClientSize = new Size(696, 594);
             Controls.Add(gpbTransactions);
             Controls.Add(button1);
             Controls.Add(grbNewCustomer);

@@ -81,7 +81,16 @@ namespace GZFuelWinClient
         {
            if(IsStaff || IsManager)
             {
-                DeleteItem(Convert.ToInt32(txtItemId.Text));
+                if(txtItemId.Text == "")
+                {
+                    MessageBox.Show("No item selected");
+                }  else
+                {
+                    DeleteItem(Convert.ToInt32(txtItemId.Text));
+                }
+                
+                
+                
             } else
             {
                 MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "AUTHENTICATION ERROR");

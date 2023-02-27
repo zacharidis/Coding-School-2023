@@ -25,7 +25,7 @@ namespace GZFuelWinClient
 
         private void frmCustomer_Load(object sender, EventArgs e)
         {
-           LoadCustomers();
+            LoadCustomers();
         }
 
         private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -64,19 +64,19 @@ namespace GZFuelWinClient
             var responce = MessageBox.Show("Are you sure you want to delete this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (responce == DialogResult.Yes)
             {
-                
-                   
-
-                        int selectedId = Convert.ToInt32(txtCustomerId.Text);
-                        DeleteCustomer(selectedId);
 
 
 
+                int selectedId = Convert.ToInt32(txtCustomerId.Text);
+                DeleteCustomer(selectedId);
 
-                  
-                        
-                    
-                
+
+
+
+
+
+
+
 
 
 
@@ -226,13 +226,13 @@ namespace GZFuelWinClient
                 client.BaseAddress = new Uri("https://localhost:7068/");
 
 
-				//TODO Put not working
-				var response = client.PutAsJsonAsync($"Customer", customer);
+                //TODO Put not working
+                var response = client.PutAsJsonAsync($"Customer", customer);
 
 
 
 
-				dgvCustomers.Refresh();
+                dgvCustomers.Refresh();
                 MessageBox.Show("Customer Updated!");
             }
             catch (Exception ex)
