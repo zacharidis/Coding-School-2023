@@ -187,5 +187,32 @@ namespace GZFuelWinClient
                 MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "ERROR", MessageBoxButtons.OK);
             }
         }
+
+
+        private void CreateItem()
+        {
+            Item item = new Item();
+
+            item.Code = CreateCode();
+            item.Description = txtNewItemDescription.Text;
+            item.Cost = (Decimal.Parse(txtNewItemCost.Text));    
+            item.Price= (Decimal.Parse(txtNewItemPrice.Text));
+            try
+            {
+                HttpClient httpClient = new HttpClient();
+                httpClient.BaseAddress = new Uri("https://localhost:7068");
+                var response = httpClient.PostAsJsonAsync("Item", item).Result;
+                LoadItems();
+                dgvItems.Refresh();
+                MessageBox.Show("Item Added!");
+            } catch (Exception ex) {
+                MessageBox.Show(ex.ToString());
+            }
+
+  
+        }
+
+
+       
     }
 }
