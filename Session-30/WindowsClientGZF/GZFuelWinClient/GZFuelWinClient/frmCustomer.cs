@@ -68,39 +68,49 @@ namespace GZFuelWinClient
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var responce = MessageBox.Show("Are you sure you want to delete this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (responce == DialogResult.Yes)
+
+            if (isAuthenticated())
             {
+                var responce = MessageBox.Show("Are you sure you want to delete this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (responce == DialogResult.Yes)
+                {
 
 
 
-                int selectedId = Convert.ToInt32(txtCustomerId.Text);
-                DeleteCustomer(selectedId);
+                    int selectedId = Convert.ToInt32(txtCustomerId.Text);
+                    DeleteCustomer(selectedId);
 
+                }
 
-
-
-
-
-
-
-
-
-
-
+            } else
+            {
+                MessageBox.Show("AUTHENTICATION ERROR , PLEASE LOGIN ", "ERROR");
             }
+         
+            
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var responce = MessageBox.Show("Are you sure you want to update this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (responce == DialogResult.Yes)
+            
+            if(isAuthenticated())
             {
-                int selectedId = Convert.ToInt32(txtCustomerId.Text);
-                UpdateCustomer(selectedId);
-                // prohibit simple users from deleting customers without a password 
+                var responce = MessageBox.Show("Are you sure you want to update this customer ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (responce == DialogResult.Yes)
+                {
+                    int selectedId = Convert.ToInt32(txtCustomerId.Text);
+                    UpdateCustomer(selectedId);
+                    // prohibit simple users from deleting customers without a password 
 
+                }
+
+            }else
+            {
+                MessageBox.Show("AUTHENTICATION ERROR , PLEASE LOGIN", "ERROR");
             }
+            
+          
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -110,7 +120,14 @@ namespace GZFuelWinClient
 
         private void btnAddNewCustomer_Click(object sender, EventArgs e)
         {
-            string newCard = CardGenerator();
+           if(isAuthenticated() == true)
+            {
+                string newCard = CardGenerator();
+                // call the json apy 
+
+            }
+            
+           
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -284,5 +301,18 @@ namespace GZFuelWinClient
                 lblStatus.Text = "Login Failed";
             }
         }
+
+
+
+        public Boolean isAuthenticated()
+        {
+            if(isManager || isCashier )
+            {
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }
