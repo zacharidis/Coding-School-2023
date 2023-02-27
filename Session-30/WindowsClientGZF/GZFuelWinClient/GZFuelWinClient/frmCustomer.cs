@@ -253,7 +253,33 @@ namespace GZFuelWinClient
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (txtUsername.Text == "Manager" && txtPassword.Text == "Manager")
+            {
+                MessageBox.Show("Login Successful!");
+                isManager = true;
+                lblStatus.Text = "Logged in as Manager";
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                return;
+            }
+            else
+            {
+                lblStatus.Text = "Login Failed";
+            }
 
+            if (txtUsername.Text == "Cashier" && txtPassword.Text == "Cashier")
+            {
+                MessageBox.Show("Login Successful!");
+                isCashier = true;
+                lblStatus.Text = "Logged in as Cashier";
+                txtPassword.Text = "";
+                txtUsername.Text = "";
+                return;
+            }
+            else
+            {
+                lblStatus.Text = "Login Failed";
+            }
         }
     }
 }

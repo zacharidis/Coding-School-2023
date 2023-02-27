@@ -51,7 +51,7 @@
             gpbTransactions = new GroupBox();
             dgvTransactions = new DataGridView();
             groupBox2 = new GroupBox();
-            label1 = new Label();
+            lblStatus = new Label();
             btnLogin = new Button();
             txtPassword = new TextBox();
             txtUsername = new TextBox();
@@ -280,7 +280,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(lblStatus);
             groupBox2.Controls.Add(btnLogin);
             groupBox2.Controls.Add(txtPassword);
             groupBox2.Controls.Add(txtUsername);
@@ -293,15 +293,15 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Security Panel";
             // 
-            // label1
+            // lblStatus
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(19, 99);
-            label1.Name = "label1";
-            label1.Size = new Size(119, 25);
-            label1.TabIndex = 5;
-            label1.Text = "NO ACCESS ";
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblStatus.Location = new Point(19, 99);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(119, 25);
+            lblStatus.TabIndex = 5;
+            lblStatus.Text = "NO ACCESS ";
             // 
             // btnLogin
             // 
@@ -397,7 +397,7 @@
         private GroupBox gpbTransactions;
         private DataGridView dgvTransactions;
         private GroupBox groupBox2;
-        private Label label1;
+        private Label lblStatus;
         private Button btnLogin;
         private TextBox txtPassword;
         private TextBox txtUsername;
