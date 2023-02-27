@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dgvItems = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvItems).BeginInit();
             SuspendLayout();
+            // 
+            // dgvItems
+            // 
+            dgvItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvItems.Location = new Point(17, 23);
+            dgvItems.Name = "dgvItems";
+            dgvItems.RowTemplate.Height = 25;
+            dgvItems.Size = new Size(698, 307);
+            dgvItems.TabIndex = 0;
             // 
             // frmItems
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(746, 495);
+            Controls.Add(dgvItems);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmItems";
             Text = "frmItems";
             Load += frmItems_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvItems).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dgvItems;
     }
 }
