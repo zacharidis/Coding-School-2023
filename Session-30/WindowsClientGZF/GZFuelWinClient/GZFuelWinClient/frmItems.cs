@@ -54,5 +54,10 @@ namespace GZFuelWinClient
             //txtCustomerSurname.Text = Convert.ToString(dgvCustomers[2, row].Value);
             //txtCusCard.Text = Convert.ToString(dgvCustomers[3, row].Value);
         }
+
+        private void dgvItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
