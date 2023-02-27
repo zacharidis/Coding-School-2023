@@ -25,20 +25,7 @@ namespace GZFuelWinClient
 
         private void frmCustomer_Load(object sender, EventArgs e)
         {
-            try
-            {
-                HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri("https://localhost:7068/");
-                var response = client.GetAsync("customer").Result;
-                var emp = response.Content.ReadFromJsonAsync<IEnumerable<Customer>>().Result;
-                dgvCustomers.DataSource = emp;
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message.ToString());
-            }
+           LoadCustomers();
         }
 
         private void dgvCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -146,6 +133,25 @@ namespace GZFuelWinClient
 
 
 
+        private void LoadCustomers()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7068/");
+                var response = client.GetAsync("customer").Result;
+                var emp = response.Content.ReadFromJsonAsync<IEnumerable<Customer>>().Result;
+                dgvCustomers.DataSource = emp;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+
 
 
         private static DialogResult ShowInputDialog(ref string input)
@@ -196,6 +202,7 @@ namespace GZFuelWinClient
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7068/");
                 var response = client.DeleteAsync($"customer/{id}").Result;
+                LoadCustomers();
                 dgvCustomers.Refresh();
                 MessageBox.Show("Customer Deleted!");
 
