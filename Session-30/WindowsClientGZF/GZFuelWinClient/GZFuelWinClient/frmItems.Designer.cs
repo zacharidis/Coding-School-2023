@@ -43,6 +43,7 @@
             lblItemDescription = new Label();
             label2 = new Label();
             label1 = new Label();
+            btnDeleteItem = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvItems).BeginInit();
             groupBox1.SuspendLayout();
             gbxItemDetails.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // gbxItemDetails
             // 
+            gbxItemDetails.Controls.Add(btnDeleteItem);
             gbxItemDetails.Controls.Add(cmbItemType);
             gbxItemDetails.Controls.Add(txtItemCost);
             gbxItemDetails.Controls.Add(txtItemPrice);
@@ -191,6 +193,16 @@
             label1.TabIndex = 0;
             label1.Text = "Item ID : ";
             // 
+            // btnDeleteItem
+            // 
+            btnDeleteItem.Location = new Point(266, 303);
+            btnDeleteItem.Name = "btnDeleteItem";
+            btnDeleteItem.Size = new Size(111, 28);
+            btnDeleteItem.TabIndex = 13;
+            btnDeleteItem.Text = "Delete Item";
+            btnDeleteItem.UseVisualStyleBackColor = true;
+            btnDeleteItem.Click += btnDeleteItem_Click;
+            // 
             // frmItems
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -225,5 +237,6 @@
         private ComboBox cmbItemType;
         private TextBox txtItemCost;
         private TextBox txtItemPrice;
+        private Button btnDeleteItem;
     }
 }

@@ -54,7 +54,7 @@ namespace GZFuelWinClient
 
             txtItemCode.Text = Convert.ToString(dgvItems[1, row].Value);
 
-            lblItemDescription.Text = Convert.ToString(dgvItems[2, row].Value);
+            txtItemDescription.Text = Convert.ToString(dgvItems[2, row].Value);
 
             cmbItemType.Text = Convert.ToString(dgvItems[3, row].Value);
 
@@ -67,5 +67,17 @@ namespace GZFuelWinClient
         {
 
         }
+
+        private void btnDeleteItem_Click(object sender, EventArgs e)
+        {
+           DeleteItem(Convert.ToInt32(txtItemId.Text));
+        }
+
+        private void DeleteItem(int id)
+        {
+
+        }
+
+
     }
 }
