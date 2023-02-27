@@ -67,9 +67,7 @@ namespace GZFuelWinClient
                 string input = string.Empty;
                 if (ShowInputDialog(ref input) == DialogResult.OK)
                 {
-                    if (input == "manager" || input == "cashier")
-                    {
-
+                   
 
                         int selectedId = Convert.ToInt32(txtCustomerId.Text);
                         DeleteCustomer(selectedId);
@@ -77,11 +75,9 @@ namespace GZFuelWinClient
 
 
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid Password");
-                    }
+                  
+                        
+                    
                 }
 
 
