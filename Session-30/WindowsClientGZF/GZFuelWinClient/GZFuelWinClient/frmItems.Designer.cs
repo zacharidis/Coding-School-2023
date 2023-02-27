@@ -46,11 +46,12 @@
             label1 = new Label();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            lblStatus = new Label();
+            btnLogin = new Button();
             txtPassword = new TextBox();
             txtUsername = new TextBox();
             label7 = new Label();
             label3 = new Label();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvItems).BeginInit();
             groupBox1.SuspendLayout();
             gbxItemDetails.SuspendLayout();
@@ -222,7 +223,8 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(lblStatus);
+            groupBox3.Controls.Add(btnLogin);
             groupBox3.Controls.Add(txtPassword);
             groupBox3.Controls.Add(txtUsername);
             groupBox3.Controls.Add(label7);
@@ -233,6 +235,26 @@
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
             groupBox3.Text = "Security Panel";
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblStatus.Location = new Point(19, 99);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(119, 25);
+            lblStatus.TabIndex = 5;
+            lblStatus.Text = "NO ACCESS ";
+            // 
+            // btnLogin
+            // 
+            btnLogin.Location = new Point(247, 30);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(141, 57);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "Get Access";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // txtPassword
             // 
@@ -265,15 +287,6 @@
             label3.Size = new Size(69, 15);
             label3.TabIndex = 0;
             label3.Text = "Username : ";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(247, 30);
-            button1.Name = "button1";
-            button1.Size = new Size(141, 57);
-            button1.TabIndex = 4;
-            button1.Text = "Get Access";
-            button1.UseVisualStyleBackColor = true;
             // 
             // frmItems
             // 
@@ -320,6 +333,7 @@
         private TextBox txtUsername;
         private Label label7;
         private Label label3;
-        private Button button1;
+        private Button btnLogin;
+        private Label lblStatus;
     }
 }
