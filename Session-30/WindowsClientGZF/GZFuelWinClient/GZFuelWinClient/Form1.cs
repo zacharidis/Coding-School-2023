@@ -129,10 +129,16 @@ namespace GZFuelWinClient
 
         private void lblAbout_Click(object sender, EventArgs e)
         {
-           
+
             frmAbout frmAbout = new frmAbout();
             frmAbout.ShowDialog();
-            
+
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            frmItems frmItems = new frmItems();
+            frmItems.ShowDialog();
         }
     }
 }

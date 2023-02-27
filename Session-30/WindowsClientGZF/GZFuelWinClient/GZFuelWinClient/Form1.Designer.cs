@@ -70,6 +70,7 @@
             btnInventory.TabIndex = 1;
             btnInventory.Text = "Inventory (Items)";
             btnInventory.UseVisualStyleBackColor = true;
+            btnInventory.Click += btnInventory_Click;
             // 
             // btnCustomers
             // 
