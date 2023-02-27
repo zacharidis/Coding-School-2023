@@ -31,6 +31,7 @@
             dgvItems = new DataGridView();
             groupBox1 = new GroupBox();
             gbxItemDetails = new GroupBox();
+            btnDeleteItem = new Button();
             cmbItemType = new ComboBox();
             txtItemCost = new TextBox();
             txtItemPrice = new TextBox();
@@ -43,7 +44,6 @@
             lblItemDescription = new Label();
             label2 = new Label();
             label1 = new Label();
-            btnDeleteItem = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvItems).BeginInit();
             groupBox1.SuspendLayout();
             gbxItemDetails.SuspendLayout();
@@ -93,6 +93,16 @@
             gbxItemDetails.TabIndex = 1;
             gbxItemDetails.TabStop = false;
             gbxItemDetails.Text = "Item Details";
+            // 
+            // btnDeleteItem
+            // 
+            btnDeleteItem.Location = new Point(266, 303);
+            btnDeleteItem.Name = "btnDeleteItem";
+            btnDeleteItem.Size = new Size(111, 28);
+            btnDeleteItem.TabIndex = 13;
+            btnDeleteItem.Text = "Delete Item";
+            btnDeleteItem.UseVisualStyleBackColor = true;
+            btnDeleteItem.Click += btnDeleteItem_Click;
             // 
             // cmbItemType
             // 
@@ -193,21 +203,11 @@
             label1.TabIndex = 0;
             label1.Text = "Item ID : ";
             // 
-            // btnDeleteItem
-            // 
-            btnDeleteItem.Location = new Point(266, 303);
-            btnDeleteItem.Name = "btnDeleteItem";
-            btnDeleteItem.Size = new Size(111, 28);
-            btnDeleteItem.TabIndex = 13;
-            btnDeleteItem.Text = "Delete Item";
-            btnDeleteItem.UseVisualStyleBackColor = true;
-            btnDeleteItem.Click += btnDeleteItem_Click;
-            // 
             // frmItems
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1083, 587);
+            ClientSize = new Size(1083, 561);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "frmItems";

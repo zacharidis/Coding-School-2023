@@ -70,7 +70,7 @@ namespace GZFuelWinClient
 
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
-           DeleteItem(Convert.ToInt32(txtItemId.Text));
+            DeleteItem(Convert.ToInt32(txtItemId.Text));
         }
 
         private void DeleteItem(int id)
@@ -81,8 +81,9 @@ namespace GZFuelWinClient
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7068/");
                 var response = client.DeleteAsync($"item/{id}").Result;
-                dgvItems.Refresh();
+
                 MessageBox.Show("Item Deleted!");
+                dgvItems.Refresh();
 
 
             }
