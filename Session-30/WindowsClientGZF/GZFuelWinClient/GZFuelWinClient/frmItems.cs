@@ -212,7 +212,18 @@ namespace GZFuelWinClient
   
         }
 
+        // thanks chatGPT for this code
+        private string CreateCode()
+        {
 
-       
+            Random random = new Random();
+            int randomNumber = random.Next(10000, 99999);
+            string randomLetters = new string(Enumerable.Repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 2)
+                                            .Select(s => s[random.Next(s.Length)]).ToArray());
+            return randomLetters + randomNumber.ToString();
+
+        }
+
+
     }
 }
