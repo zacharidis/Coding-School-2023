@@ -83,6 +83,7 @@ namespace GZFuelWinClient
                 var response = client.DeleteAsync($"item/{id}").Result;
 
                 MessageBox.Show("Item Deleted!");
+                LoadItems();
                 dgvItems.Refresh();
 
 
