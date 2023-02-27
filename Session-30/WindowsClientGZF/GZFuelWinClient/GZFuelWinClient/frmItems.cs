@@ -180,8 +180,7 @@ namespace GZFuelWinClient
         {
             if (isManager || isStaff)
             {
-                // Add to the repo
-                // send to repo
+                CreateItem();
             } else
             {
                 MessageBox.Show("ACCESS DENIED , PLEASE LOGIN", "ERROR", MessageBoxButtons.OK);
