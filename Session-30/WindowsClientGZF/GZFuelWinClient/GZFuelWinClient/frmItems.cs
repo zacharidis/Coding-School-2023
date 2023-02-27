@@ -75,6 +75,21 @@ namespace GZFuelWinClient
 
         private void DeleteItem(int id)
         {
+            try
+            {
+
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7068/");
+                var response = client.DeleteAsync($"item/{id}").Result;
+                dgvItems.Refresh();
+                MessageBox.Show("Item Deleted!");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
         }
 
